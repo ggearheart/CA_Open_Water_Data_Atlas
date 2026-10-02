@@ -7,6 +7,7 @@ const PLATES = [
   ["plates/scorecard.html", "IV · Scorecard"],
   ["plates/ecosystem.html", "V · Ecosystem"],
   ["plates/today.html", "VI · Today"],
+  ["plates/dashboard.html", "VII · Dashboard"],
 ];
 
 const ROOT = document.documentElement.dataset.root || "";

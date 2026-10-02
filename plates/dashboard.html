@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Water Data Dashboard · CA Open Water Data Atlas</title>
+<link rel="stylesheet" href="../assets/atlas.css">
+<style>
+  .bar-filters { position: sticky; top: 0; z-index: 5; background: var(--page); padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .seg button { font: inherit; font-size: 13px; padding: 6px 11px; border: 0; background: var(--surface); color: var(--ink-2); cursor: pointer; }
+  .seg button + button { border-left: 1px solid var(--border); }
+  .seg button[aria-pressed="true"] { background: var(--accent-wash); color: var(--ink); font-weight: 600; }
+  .flabel { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-right: 6px; }
+  .kpis { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); margin: 18px 0; }
+  .kpis .v { font-size: 28px; font-weight: 700; line-height: 1.1; }
+  .kpis .l { font-size: 13px; color: var(--ink-2); }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13px; color: var(--ink-2); margin-bottom: 8px; }
+  .chart svg { width: 100%; height: auto; display: block; }
+  .two { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+  .two > * { min-width: 0; }
+  @media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) { .bar-filters { position: static; } .seg button { padding: 6px 8px; } }
+  .card h3 { margin: 0 0 4px; }
+  .card .sub { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .note { font-size: 13px; color: var(--ink-2); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="plate-no">Plate VII</div>
+  <h1>Dashboard: published water datasets</h1>
+  <p class="lede">Every dataset in the <a href="https://data.ca.gov/group/water">Water group on data.ca.gov</a> and the <a href="https://data.cnra.ca.gov/group/water">Water group on data.cnra.ca.gov</a>, broken down by year, topic, publisher and use. The final section asks how consistently the two portals federate the same datasets.</p>
+
+  <div class="bar-filters" id="filters">
+    <div><span class="flabel">Portal</span><span class="seg" data-f="portal">
+      <button data-v="both" aria-pressed="true">Both (deduplicated)</button><button data-v="data.ca.gov">data.ca.gov</button><button data-v="data.cnra.ca.gov">data.cnra.ca.gov</button></span></div>
+    <div><span class="flabel">Publisher</span><span class="seg" data-f="pub">
+      <button data-v="all" aria-pressed="true">All</button><button data-v="DWR">DWR</button><button data-v="Water Boards">Water Boards</button><button data-v="CDFW">CDFW</button><button data-v="Federal">Federal</button><button data-v="Other">Other</button></span></div>
+    <div><span class="flabel">Measure</span><span class="seg" data-f="metric">
+      <button data-v="n" aria-pressed="true">Datasets</button><button data-v="views">Page views</button></span></div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="card chart"><h3 id="yearTitle">By year first published</h3><p class="sub">Year the dataset was first published on either portal (harvested copies keep the upstream issue date).</p><div class="legend" id="leg1"></div><div id="byYear"></div></div>
+
+  <div class="two" style="margin-top:14px">
+    <div class="card chart"><h3 id="topicTitle">By topic</h3><p class="sub">Keyword classification of title, tags and description. <a href="#method">Method</a></p><div id="byTopic"></div></div>
+    <div class="card"><h3>By publisher</h3><p class="sub">Page views are CKAN dataset-page visits, all time and last 14 days.</p><div class="tbl-scroll"><table id="byPub"></table></div></div>
+  </div>
+
+  <div class="card" style="margin-top:14px"><h3>Most-viewed datasets</h3><p class="sub" id="topSub"></p><div class="tbl-scroll"><table id="top"></table></div></div>
+
+  <h2 id="federation">Federation: one dataset, two catalogs</h2>
+  <p>AB 1755 relies on federation: the same dataset should be findable, and described the same way, on both portals. The portals harvest each other. DWR, CDFW and Ocean Protection Council records flow from CNRA to data.ca.gov, and Water Board records flow the other way through a harvest source CNRA names <em>"AB1755 - CA Water Boards."</em> These charts test how well the copies line up. They ignore the filters above, except Publisher.</p>
+  <div class="kpis" id="fedKpis"></div>
+  <div class="two">
+    <div class="card chart"><h3>Is the copy also filed under Water?</h3><p class="sub">Federated pairs where at least one copy is in a Water group.</p><div class="legend" id="legGroup"></div><div id="groupMap"></div></div>
+    <div class="card chart"><h3>Where the views land</h3><p class="sub">Share of page views on the origin portal vs. the harvested copy, federated pairs.</p><div class="legend" id="legViews"></div><div id="viewSplit"></div></div>
+  </div>
+  <div class="card chart" style="margin-top:14px"><h3>Harvesting resets the clock</h3><p class="sub">data.ca.gov copies harvested from CNRA: year first published vs. year the copy was (re)created on data.ca.gov.</p><div class="legend" id="legDates"></div><div id="dates"></div></div>
+  <div class="card" style="margin-top:14px"><h3>What feeds the CNRA Water group</h3><p class="sub">Records by harvest source. Sources whose names start with "AB1755" are the statute's federal-data harvests.</p><div class="tbl-scroll"><table id="sources"></table></div></div>
+
+  <h2 id="method">Method and caveats</h2>
+  <ul class="note">
+    <li><b>Data</b>: CKAN API on both portals (<code>package_search</code>, <code>package_show?include_tracking=true</code>), fetched <span id="fetched"></span>. Full table: <a href="../data/water_datasets.csv">water_datasets.csv</a>. Rebuild with <code>python3 scripts/build_water_dashboard_data.py</code>.</li>
+    <li><b>"Published water dataset"</b>: a record in the portal's Water group. In "Both" mode, a federated pair counts once, and its views are the sum across both copies.</li>
+    <li><b>Federation match</b>: exact, through harvest metadata (the harvested copy's <code>guid</code> equals the upstream record's id). Unlinked records are also matched on title and publisher.</li>
+    <li><b>Views</b>: CKAN's built-in tracking counts unique visitors per day on the dataset page. It does not count API calls, direct downloads from external URLs, or ArcGIS service hits, so heavily automated datasets are under-counted. The tracking start date differs by portal and is not published, so compare views within a portal more confidently than across portals.</li>
+    <li><b>Topic</b>: the first match in an ordered keyword list (see <code>TOPICS</code> in the script). Each dataset gets exactly one topic, and edge cases will be imperfect.</li>
+    <li><b>Publisher</b>: DWR, State Water Board, CDFW. "Federal" covers federal agency organizations and CNRA's Water Data Partners harvest. "Other" includes the Ocean Protection Council, BCDC, the Delta Stewardship Council and others.</li>
+  </ul>
+</main>
+<script src="../assets/atlas.js"></script>
+<script>
+(async () => {
+  const PUBS = ["DWR", "Water Boards", "CDFW", "Federal", "Other"];
+  const PC = { DWR: "var(--s1)", "Water Boards": "var(--s2)", CDFW: "var(--s3)", Federal: "var(--s4)", Other: "var(--neutral)" };
+  const fmt = n => Math.round(n).toLocaleString();
+  const short = n => n >= 1e6 ? (n / 1e6).toFixed(1) + "M" : n >= 1e4 ? Math.round(n / 1e3) + "k" : n >= 1e3 ? (n / 1e3).toFixed(1) + "k" : String(Math.round(n));
+
+  const [rows, meta] = await Promise.all([loadCSV("data/water_datasets.csv"), fetch("../data/water_datasets_meta.json").then(r => r.json())]);
+  document.getElementById("fetched").textContent = meta.fetched.replace("T", " ") + " UTC";
+  rows.forEach(r => { r.w = r.in_water_group === "1"; r.v = +r.views_total || 0; r.vr = +r.views_recent_14d || 0; r.yr = r.published.slice(0, 4); });
+  const byKey = new Map(rows.map(r => [r.portal + "|" + r.id, r]));
+  const other = p => p === "data.ca.gov" ? "data.cnra.ca.gov" : "data.ca.gov";
+  rows.forEach(r => r.twin = r.twin_id ? byKey.get(other(r.portal) + "|" + r.twin_id) : null);
+
+  // A "unit" is what gets counted: one record (single portal) or one deduplicated dataset (both).
+  function units(portal, pub) {
+    let u;
+    if (portal === "both") {
+      const seen = new Set(); u = [];
+      for (const r of rows) {
+        if (!(r.w || (r.twin && r.twin.w))) continue;
+        const k = r.twin ? [r.portal + r.id, r.twin.portal + r.twin.id].sort().join() : r.portal + r.id;
+        if (seen.has(k)) continue; seen.add(k);
+        // Describe the pair by its origin copy (the one not harvested from the other portal).
+        const o = r.twin && /^data\./.test(r.harvested_from) ? r.twin : r;
+        u.push({ ...o, v: r.v + (r.twin ? r.twin.v : 0), vr: r.vr + (r.twin ? r.twin.vr : 0), copies: [r, r.twin].filter(Boolean) });
+      }
+    } else u = rows.filter(r => r.portal === portal && r.w).map(r => ({ ...r, copies: [r] }));
+    return pub === "all" ? u : u.filter(r => r.publisher === pub);
+  }
+
+  const state = { portal: "both", pub: "all", metric: "n" };
+  document.getElementById("filters").addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    const seg = b.parentElement; state[seg.dataset.f] = b.dataset.v;
+    seg.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    render();
+  });
+
+  const legend = (id, keys, colors) => document.getElementById(id).innerHTML = keys.map(k => `<span class="badge"><span class="dot" style="background:${colors[k]}"></span>${esc(k)}</span>`).join("");
+  const val = (list, m) => m === "n" ? list.length : list.reduce((a, r) => a + r.v, 0);
+  const hover = (host, fn) => host.querySelectorAll("[data-tip]").forEach(g => {
+    g.addEventListener("mousemove", e => tip.show(fn(g.dataset.tip), e)); g.addEventListener("mouseleave", tip.hide);
+  });
+
+  // Vertical stacked bars: cats on x, series stacked.
+  const yl = (c, W) => W < 600 ? "’" + c.slice(2) : c;
+  function vstack(host, cats, series, colors, get, unit) {
+    const W = Math.max(320, host.clientWidth), H = W < 600 ? 240 : 300, L = 56, R = 10, T = 12, B = 28;
+    const tot = cats.map(c => series.reduce((a, s) => a + get(c, s), 0));
+    const max = Math.max(1, ...tot), step = niceStep(max);
+    const top = Math.ceil(max / step) * step;
+    const bw = (W - L - R) / cats.length, w = Math.min(46, bw * 0.7);
+    const y = v => T + (1 - v / top) * (H - T - B);
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img">`;
+    for (let v = 0; v <= top; v += step) s += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="${v ? "var(--grid)" : "var(--axis)"}"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end" font-size="12" fill="var(--muted)">${short(v)}</text>`;
+    cats.forEach((c, i) => {
+      const cx = L + bw * i + bw / 2; let acc = 0;
+      series.forEach(sr => {
+        const v = get(c, sr); if (!v) return;
+        const y0 = y(acc), y1 = y(acc + v); acc += v;
+        const h = Math.max(y0 - y1 - 2, 1); // 2px surface gap between segments
+        s += `<rect x="${cx - w / 2}" y="${y1}" width="${w}" height="${h}" rx="2" fill="${colors[sr]}" data-tip="${i}|${sr}"/>`;
+      });
+      s += `<rect x="${cx - bw / 2}" y="${T}" width="${bw}" height="${H - T - B}" fill="transparent" data-tip="${i}|"/>`;
+      s += `<text x="${cx}" y="${H - 8}" text-anchor="middle" font-size="12" fill="var(--muted)">${yl(c, W)}</text>`;
+    });
+    host.innerHTML = s + "</svg>";
+    hover(host, k => {
+      const [i, sr] = k.split("|"); const c = cats[i];
+      const lines = series.filter(x => get(c, x)).map(x => `<span class="badge"><span class="dot" style="background:${colors[x]}"></span>${esc(x)}: <b>${fmt(get(c, x))}</b></span>`).join("<br>");
+      return `<b>${c}</b> · ${fmt(tot[i])} ${unit}<br>${lines}`;
+    });
+  }
+  // Horizontal stacked bars: cats as rows.
+  function hstack(host, cats, series, colors, get, unit, pct = false) {
+    const W = Math.max(320, host.clientWidth), rowH = 26, L = Math.min(W * 0.55, Math.max(...cats.map(c => c.length)) * 6.6 + 14), R = 76, H = cats.length * rowH + 6;
+    const tot = cats.map(c => series.reduce((a, s) => a + get(c, s), 0));
+    const max = Math.max(1, ...tot);
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img">`;
+    cats.forEach((c, i) => {
+      // pct: every row spans the full width, so rows compare as shares.
+      const x = v => v / (pct ? tot[i] || 1 : max) * (W - L - R);
+      const y = i * rowH + 4; let acc = 0;
+      s += `<text x="${L - 8}" y="${y + rowH / 2 + 3}" text-anchor="end" font-size="12" fill="var(--ink-2)">${esc(c)}</text>`;
+      series.forEach(sr => {
+        const v = get(c, sr); if (!v) return;
+        const ww = Math.max(x(v) - 2, 1);
+        s += `<rect x="${L + x(acc)}" y="${y + 4}" width="${ww}" height="${rowH - 10}" rx="2" fill="${colors[sr]}"/>`; acc += v;
+      });
+      s += `<text x="${L + x(acc) + 6}" y="${y + rowH / 2 + 3}" font-size="12" fill="var(--ink)">${short(tot[i])}${pct ? " " + unit : ""}</text>`;
+      s += `<rect x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent" data-tip="${i}"/>`;
+    });
+    host.innerHTML = s + `<line x1="${L}" x2="${L}" y1="0" y2="${H}" stroke="var(--axis)"/></svg>`;
+    hover(host, i => {
+      const c = cats[i];
+      return `<b>${esc(c)}</b> · ${fmt(tot[i])} ${unit}<br>` + series.filter(x => get(c, x)).map(x => `<span class="badge"><span class="dot" style="background:${colors[x]}"></span>${esc(x)}: <b>${fmt(get(c, x))}</b>${pct ? ` (${Math.round(get(c, x) / tot[i] * 100)}%)` : ""}</span>`).join("<br>");
+    });
+  }
+  function niceStep(max) { const r = max / 5, p = 10 ** Math.floor(Math.log10(r)); return [1, 2, 2.5, 5, 10].map(m => m * p).find(s => s >= r); }
+  const group = (list, kf) => { const m = new Map(); list.forEach(r => { const k = kf(r); m.has(k) || m.set(k, []); m.get(k).push(r); }); return m; };
+
+  function render() {
+    const { portal, pub, metric } = state;
+    const U = units(portal, pub);
+    const unit = metric === "n" ? "datasets" : "page views";
+    const pubs = PUBS.filter(p => pub === "all" || p === pub);
+    legend("leg1", pubs, PC);
+
+    const totalV = U.reduce((a, r) => a + r.v, 0), recentV = U.reduce((a, r) => a + r.vr, 0);
+    const med = U.length ? U.map(r => r.v).sort((a, b) => a - b)[Math.floor(U.length / 2)] : 0;
+    const fed = U.filter(r => r.copies.length > 1 || r.twin).length;
+    document.getElementById("kpis").innerHTML = [
+      [fmt(U.length), portal === "both" ? "unique water datasets" : "water datasets on " + portal],
+      [short(totalV), "dataset page views, all time"],
+      [fmt(med), "median views per dataset"],
+      [short(recentV), "views in the last 14 days"],
+      [U.length ? Math.round(fed / U.length * 100) + "%" : "–", "available on both portals"],
+    ].map(([v, l]) => `<div class="card"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+
+    document.getElementById("yearTitle").textContent = `${metric === "n" ? "Datasets" : "Page views"} by year first published`;
+    const years = []; for (let y = 2016; y <= 2026; y++) years.push(String(y));
+    const gy = group(U, r => r.yr + "|" + r.publisher);
+    vstack(document.getElementById("byYear"), years, pubs, PC, (c, s) => val(gy.get(c + "|" + s) || [], metric), unit);
+
+    document.getElementById("topicTitle").textContent = `${metric === "n" ? "Datasets" : "Page views"} by topic`;
+    const gt = group(U, r => r.topic + "|" + r.publisher);
+    const topics = [...new Set(U.map(r => r.topic))].map(t => [t, pubs.reduce((a, p) => a + val(gt.get(t + "|" + p) || [], metric), 0)])
+      .sort((a, b) => (a[0] === "Other / general") - (b[0] === "Other / general") || b[1] - a[1]).map(t => t[0]);
+    hstack(document.getElementById("byTopic"), topics, pubs, PC, (c, s) => val(gt.get(c + "|" + s) || [], metric), unit);
+
+    const gp = group(U, r => r.publisher);
+    document.getElementById("byPub").innerHTML = `<thead><tr><th>Publisher</th><th class="num">Datasets</th><th class="num">Views</th><th class="num">Views / dataset</th><th class="num">Last 14 d</th></tr></thead><tbody>` +
+      pubs.filter(p => gp.has(p)).map(p => { const L = gp.get(p), v = L.reduce((a, r) => a + r.v, 0);
+        return `<tr><td><span class="badge"><span class="dot" style="background:${PC[p]}"></span>${p}</span></td><td class="num">${fmt(L.length)}</td><td class="num">${fmt(v)}</td><td class="num">${fmt(v / L.length)}</td><td class="num">${fmt(L.reduce((a, r) => a + r.vr, 0))}</td></tr>`; }).join("") + "</tbody>";
+
+    const top = [...U].sort((a, b) => b.v - a.v).slice(0, 15);
+    document.getElementById("topSub").textContent = portal === "both" ? "Views summed across both copies; the split shows each portal's share." : `Views on ${portal} only.`;
+    const cv = (r, p) => (r.copies.find(c => c.portal === p) || {}).v;
+    document.getElementById("top").innerHTML = `<thead><tr><th>#</th><th>Dataset</th><th>Publisher</th><th>Topic</th><th class="num">Views</th>${portal === "both" ? '<th class="num">data.ca.gov</th><th class="num">CNRA</th>' : ""}<th class="num">14 d</th></tr></thead><tbody>` +
+      top.map((r, i) => `<tr><td class="num">${i + 1}</td><td><a href="${r.url}">${esc(r.title)}</a></td><td>${r.publisher}</td><td>${esc(r.topic)}</td><td class="num">${fmt(r.v)}</td>${portal === "both" ? `<td class="num">${cv(r, "data.ca.gov") != null ? fmt(cv(r, "data.ca.gov")) : "–"}</td><td class="num">${cv(r, "data.cnra.ca.gov") != null ? fmt(cv(r, "data.cnra.ca.gov")) : "–"}</td>` : ""}<td class="num">${fmt(r.vr)}</td></tr>`).join("") + "</tbody>";
+
+    renderFederation(pub);
+  }
+
+  function renderFederation(pub) {
+    const keep = r => pub === "all" || r.publisher === pub;
+    // Federated pairs, described from the origin side.
+    const pairs = [];
+    const seen = new Set();
+    rows.filter(r => r.twin && keep(r) && (r.w || r.twin.w)).forEach(r => {
+      const k = [r.portal + r.id, r.twin.portal + r.twin.id].sort().join(); if (seen.has(k)) return; seen.add(k);
+      const copy = /^data\./.test(r.harvested_from) ? r : /^data\./.test(r.twin.harvested_from) ? r.twin : r.portal === "data.ca.gov" ? r : r.twin;
+      const origin = copy === r ? r.twin : r;
+      pairs.push({ origin, copy, publisher: r.publisher });
+    });
+    const dcaW = rows.filter(r => r.portal === "data.ca.gov" && r.w && keep(r));
+    const cnraW = rows.filter(r => r.portal === "data.cnra.ca.gov" && r.w && keep(r));
+    const cnraOnly = cnraW.filter(r => !r.twin).length;
+    const both = pairs.filter(p => p.origin.w && p.copy.w).length;
+    document.getElementById("fedKpis").innerHTML = [
+      [fmt(pairs.length), "federated pairs (same dataset on both portals)"],
+      [`${fmt(dcaW.filter(r => r.twin).length)} / ${fmt(dcaW.length)}`, "data.ca.gov water records with a CNRA twin"],
+      [`${fmt(cnraW.filter(r => r.twin).length)} / ${fmt(cnraW.length)}`, "CNRA water records with a data.ca.gov twin"],
+      [fmt(cnraOnly), "CNRA-only water records (mostly federal harvests)"],
+      [pairs.length ? Math.round(both / pairs.length * 100) + "%" : "–", "of pairs filed under Water on both portals"],
+    ].map(([v, l]) => `<div class="card"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+
+    // Group-mapping consistency, by publisher.
+    const GM = { "Water on both": "var(--good)", "Water on CNRA only": "var(--s1)", "Water on data.ca.gov only": "var(--s2)" };
+    legend("legGroup", Object.keys(GM), GM);
+    const gstate = p => p.origin.w && p.copy.w ? "Water on both" : (p.origin.portal === "data.cnra.ca.gov" ? p.origin.w : p.copy.w) ? "Water on CNRA only" : "Water on data.ca.gov only";
+    const gp = group(pairs, p => p.publisher + "|" + gstate(p));
+    const pubsG = PUBS.filter(p => pairs.some(x => x.publisher === p));
+    hstack(document.getElementById("groupMap"), pubsG, Object.keys(GM), GM, (c, s) => (gp.get(c + "|" + s) || []).length, "pairs", true);
+
+    // View split origin vs copy, by publisher (as % of pair views).
+    const VS = { "Origin portal": "var(--s1)", "Harvested copy": "var(--s4)" };
+    legend("legViews", Object.keys(VS), VS);
+    const vs = {}; pubsG.forEach(p => vs[p] = { o: 0, c: 0, op: new Set() });
+    pairs.forEach(p => { vs[p.publisher].o += p.origin.v; vs[p.publisher].c += p.copy.v; vs[p.publisher].op.add(p.origin.portal); });
+    const host = document.getElementById("viewSplit");
+    const W = Math.max(320, host.clientWidth), rowH = 34, L = 140, R = 20, H = pubsG.length * rowH + 6;
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img">`;
+    pubsG.forEach((p, i) => {
+      const t = vs[p].o + vs[p].c || 1, wo = vs[p].o / t * (W - L - R), y = i * rowH + 4;
+      s += `<text x="${L - 8}" y="${y + rowH / 2 - 2}" text-anchor="end" font-size="12" fill="var(--ink-2)">${p}</text><text x="${L - 8}" y="${y + rowH / 2 + 11}" text-anchor="end" font-size="11" fill="var(--muted)">origin: ${[...vs[p].op].join(", ")}</text>`;
+      s += `<rect x="${L}" y="${y + 6}" width="${Math.max(wo - 1, 0)}" height="${rowH - 14}" rx="2" fill="var(--s1)"/><rect x="${L + wo + 1}" y="${y + 6}" width="${Math.max(W - L - R - wo - 1, 0)}" height="${rowH - 14}" rx="2" fill="var(--s4)"/>`;
+      s += `<text x="${L + 6}" y="${y + rowH / 2 + 4}" font-size="12" font-weight="600" fill="#0b0b0b">${Math.round(vs[p].o / t * 100)}%</text>`;
+      s += `<rect x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent" data-tip="${p}"/>`;
+    });
+    host.innerHTML = s + "</svg>";
+    hover(host, p => `<b>${p}</b><br>Origin (${[...vs[p].op].join(", ")}): ${fmt(vs[p].o)} views<br>Harvested copy: ${fmt(vs[p].c)} views`);
+
+    // Date reset on harvested data.ca.gov copies.
+    const H2 = { "First published": "var(--s1)", "Copy created on data.ca.gov": "var(--s4)" };
+    legend("legDates", Object.keys(H2), H2);
+    const hv = rows.filter(r => r.portal === "data.ca.gov" && r.harvested_from === "data.cnra.ca.gov" && keep(r));
+    const years = []; for (let y = 2016; y <= 2026; y++) years.push(String(y));
+    const cnt = (k, y) => hv.filter(r => (k === "First published" ? r.published : r.added_to_portal).startsWith(y)).length;
+    grouped(document.getElementById("dates"), years, Object.keys(H2), H2, cnt, "records");
+
+    // Harvest sources feeding the CNRA Water group.
+    const src = group(cnraW, r => r.harvest_source || (r.harvested_from ? r.harvested_from : "Published directly on CNRA"));
+    document.getElementById("sources").innerHTML = `<thead><tr><th>Harvest source</th><th class="num">Records</th><th class="num">Views</th><th>Top topic</th></tr></thead><tbody>` +
+      [...src.entries()].sort((a, b) => b[1].length - a[1].length).map(([k, L]) => {
+        const tt = [...group(L, r => r.topic).entries()].sort((a, b) => b[1].length - a[1].length)[0];
+        return `<tr><td>${/^AB17[57]5/.test(k) ? "<b>" + esc(k) + "</b>" : esc(k)}</td><td class="num">${fmt(L.length)}</td><td class="num">${fmt(L.reduce((a, r) => a + r.v, 0))}</td><td>${esc(tt[0])} (${Math.round(tt[1].length / L.length * 100)}%)</td></tr>`;
+      }).join("") + "</tbody>";
+  }
+
+  // Grouped (side-by-side) vertical bars.
+  function grouped(host, cats, series, colors, get, unit) {
+    const W = Math.max(320, host.clientWidth), H = W < 600 ? 220 : 260, L = 56, R = 10, T = 12, B = 28;
+    const max = Math.max(1, ...cats.flatMap(c => series.map(s => get(s, c)))), step = niceStep(max), top = Math.ceil(max / step) * step;
+    const bw = (W - L - R) / cats.length, w = Math.min(22, bw * 0.36);
+    const y = v => T + (1 - v / top) * (H - T - B);
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img">`;
+    for (let v = 0; v <= top; v += step) s += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="${v ? "var(--grid)" : "var(--axis)"}"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end" font-size="12" fill="var(--muted)">${short(v)}</text>`;
+    cats.forEach((c, i) => {
+      const cx = L + bw * i + bw / 2;
+      series.forEach((sr, j) => {
+        const v = get(sr, c); const x0 = cx + (j - series.length / 2) * (w + 2) + 1;
+        if (v) s += `<path d="M${x0},${y(0)} V${y(v) + 3} a3,3 0 0 1 3,-3 h${w - 6} a3,3 0 0 1 3,3 V${y(0)} z" fill="${colors[sr]}"/>`;
+      });
+      s += `<rect x="${cx - bw / 2}" y="${T}" width="${bw}" height="${H - T - B}" fill="transparent" data-tip="${i}"/><text x="${cx}" y="${H - 8}" text-anchor="middle" font-size="12" fill="var(--muted)">${yl(c, W)}</text>`;
+    });
+    host.innerHTML = s + "</svg>";
+    hover(host, i => `<b>${cats[i]}</b><br>` + series.map(sr => `<span class="badge"><span class="dot" style="background:${colors[sr]}"></span>${esc(sr)}: <b>${fmt(get(sr, cats[i]))}</b></span>`).join("<br>"));
+  }
+
+  render();
+  let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(render, 150); });
+})();
+</script>
+</body>
+</html>
