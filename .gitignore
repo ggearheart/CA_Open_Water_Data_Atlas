@@ -2,3 +2,4 @@
 # Large, widely available state PDFs: kept locally, extracted .txt is committed
 sources/wrp_2020_final.pdf
 sources/water_supply_strategy_2022.pdf
+__pycache__/
