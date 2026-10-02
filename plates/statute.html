@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Law · CA Open Water Data Atlas</title>
+<link rel="stylesheet" href="../assets/atlas.css">
+<style>
+  .deadlines { position: relative; margin: 28px 0 8px; }
+  .deadlines svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .req td:first-child { white-space: nowrap; font-weight: 600; }
+  .who { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .who h3 { margin-top: 0; }
+  .who ul { margin: 0; padding-left: 18px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="plate-no">Plate I</div>
+  <h1>The Law: AB 1755, the Open and Transparent Water Data Act</h1>
+  <p class="lede">Signed by Governor Brown on September 23, 2016 (Dodd), and in force January 1, 2017. It added Part 4.9 to the Water Code (§12400 et seq.). The Act told DWR, working with the State Water Board, CDFW and the Water Quality Monitoring Council, to build one statewide, integrated water-data platform. It also required protocols that make state data findable, documented and open.</p>
+
+  <h2>Four dates written into statute</h2>
+  <p>Every deadline fell within four years of signing. The hover layer shows what each one required.</p>
+  <div class="deadlines card" id="deadlines"></div>
+  <p class="src">Water Code §12406, §12410. Chaptered text: <a href="https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201520160AB1755">leginfo.legislature.ca.gov</a>.</p>
+
+  <h2>What the platform must carry</h2>
+  <p>§12415 names specific data, not just "water data." That list is the clearest test of whether the platform exists in the form the Legislature described.</p>
+  <div class="tbl-scroll card">
+  <table class="req">
+    <thead><tr><th>Source</th><th>Required data</th><th>Today's primary home (see Plate VI)</th></tr></thead>
+    <tbody>
+      <tr><td>DWR</td><td>State Water Project reservoir operations; groundwater use and levels; urban water use; land use</td><td>CNRA Open Data, CDEC, SGMA Portal, WUEdata</td></tr>
+      <tr><td>State Water Board</td><td>Water rights; diversions; water quality</td><td>eWRIMS → CalWATRS; CEDEN / CIWQS; data.ca.gov</td></tr>
+      <tr><td>CDFW</td><td>Fish abundance and distribution</td><td>BIOS, CNDDB, data.cnra.ca.gov</td></tr>
+      <tr><td>USGS</td><td>Streamflow conditions</td><td>NWIS / Water Data for the Nation</td></tr>
+      <tr><td>USBR</td><td>Central Valley Project operations</td><td>CVO reports, RISE</td></tr>
+      <tr><td>USFWS · USFS · NOAA Fisheries</td><td>Fish abundance</td><td>Program-specific (e.g., SacPAS, CalFish)</td></tr>
+      <tr><td>Water market</td><td>Completed transfers and exchanges: volume, price, delivery method, buyer and seller, water right</td><td>Partial; see Plate VI</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="src">§12415(b)–(c). The right-hand column is the atlas's draft mapping, not statutory text.</p>
+
+  <h2>Who the Act names</h2>
+  <div class="who">
+    <div class="card"><h3>Lead</h3><ul><li>Department of Water Resources: create, operate and maintain the platform</li></ul></div>
+    <div class="card"><h3>In consultation with</h3><ul><li>State Water Resources Control Board</li><li>Department of Fish and Wildlife</li><li>California Water Quality Monitoring Council</li></ul></div>
+    <div class="card"><h3>May partner with</h3><ul><li>Nonprofits and other state agencies to build and run the platform (§12410)</li></ul></div>
+    <div class="card"><h3>Teeth and money</h3><ul><li>State grant and contract recipients must follow the protocols or lose funding eligibility (§12406)</li><li>Water Data Administration Fund, "upon appropriation," with voluntary donations allowed (§12420)</li></ul></div>
+  </div>
+
+  <h2>Reading the statute as a practitioner</h2>
+  <div class="callout">
+    <p>The Act focuses on <em>publication</em>: getting existing data out, documented and interoperable. It does not require new monitoring. The 2018 Strategic Plan deliberately reached further and took on the full data life cycle, from use cases to data-driven decisions. The gap between what the statute mandates and what the plan aspired to explains much of the decade that followed.</p>
+  </div>
+</main>
+<script src="../assets/atlas.js"></script>
+<script>
+(() => {
+  const items = [
+    { d: "2016-09-23", t: "Signed", body: "Governor Brown signs AB 1755 (Dodd)." },
+    { d: "2017-01-01", t: "In force", body: "Water Code Part 4.9 takes effect." },
+    { d: "2018-01-01", t: "Protocols public", body: "Data-sharing, documentation, QC and public-access protocols made public; report to the Legislature." },
+    { d: "2018-04-01", t: "RFP issued", body: "Request for proposals to build and operate the platform." },
+    { d: "2019-09-01", t: "State data live", body: "Platform operational with available state agency water and ecological data." },
+    { d: "2020-08-01", t: "Federal data live", body: "Platform carries named federal data: USGS streamflow, USBR CVO operations, USFWS / USFS / NOAA fish abundance." },
+  ];
+  const host = document.getElementById("deadlines");
+  const W = 960, H = 150, pad = 40;
+  const t0 = new Date("2016-06-01"), t1 = new Date("2020-12-31");
+  const x = d => pad + (new Date(d) - t0) / (t1 - t0) * (W - 2 * pad);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Statutory deadlines 2016 to 2020">`;
+  s += `<line x1="${pad}" x2="${W - pad}" y1="80" y2="80" stroke="var(--axis)" stroke-width="2"/>`;
+  for (let y = 2017; y <= 2020; y++) {
+    const xx = x(`${y}-01-01`);
+    s += `<line x1="${xx}" x2="${xx}" y1="74" y2="86" stroke="var(--axis)"/><text x="${xx}" y="106" text-anchor="middle" font-size="12" fill="var(--muted)">${y}</text>`;
+  }
+  items.forEach((it, i) => {
+    const xx = x(it.d), up = i % 2 === 0, ly = up ? 46 : 130;
+    const anchor = xx < 120 ? "start" : xx > W - 120 ? "end" : "middle";
+    s += `<g class="m" data-i="${i}" style="cursor:default">
+      <line x1="${xx}" x2="${xx}" y1="${up ? 54 : 88}" y2="${up ? 72 : 118}" stroke="var(--axis)"/>
+      <circle cx="${xx}" cy="80" r="16" fill="transparent"/>
+      <circle cx="${xx}" cy="80" r="6" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/>
+      <text x="${xx}" y="${ly}" text-anchor="${anchor}" font-size="13" font-weight="600" fill="var(--ink)">${it.t}</text></g>`;
+  });
+  host.innerHTML = s + "</svg>";
+  host.querySelectorAll(".m").forEach(g => {
+    const it = items[g.dataset.i];
+    const date = new Date(it.d + "T12:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+    g.addEventListener("mousemove", e => tip.show(`<b>${date} · ${esc(it.t)}</b><br>${esc(it.body)}`, e));
+    g.addEventListener("mouseleave", tip.hide);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Plan · CA Open Water Data Atlas</title>
+<link rel="stylesheet" href="../assets/atlas.css">
+<style>
+  #sched svg { width: 100%; height: auto; display: block; }
+  .goals { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .goals .card { border-top: 4px solid var(--c); }
+  .goals h3 { margin: 0 0 4px; }
+  .goals ol { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: var(--ink-2); }
+  .lifecycle { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 14px; }
+  .lifecycle span { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; }
+  .lifecycle span.pub { background: var(--accent-wash); border-color: var(--accent); font-weight: 600; }
+  .lifecycle i { color: var(--muted); font-style: normal; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="plate-no">Plate II</div>
+  <h1>The Plan: Strategic Plan for AB 1755, April 2018</h1>
+  <p class="lede">DWR and the AB 1755 Partner Agency Team (DWR, State Water Board, CDFW, Water Quality Monitoring Council, plus OPR, CNRA, GovOps and the Delta Stewardship Council) answered the statute with a vision of <b>"useful data for sound, sustainable water resource management."</b> They built it as a federation of open data portals, not a single new database.</p>
+
+  <div class="grid" style="margin-top:24px">
+    <div class="card stat"><div class="v">4</div><div class="l">goals</div></div>
+    <div class="card stat"><div class="v">11</div><div class="l">objectives</div></div>
+    <div class="card stat"><div class="v">49</div><div class="l">dated strategic actions</div></div>
+    <div class="card stat"><div class="v" id="pct19">–</div><div class="l">of actions due by the end of 2019</div></div>
+  </div>
+
+  <h2>Four goals, in order of ambition</h2>
+  <div class="goals" id="goals"></div>
+
+  <h2>A front-loaded schedule</h2>
+  <p>Each dot is one strategic action, placed at its planned date. Hollow dots carry a year with no quarter, and the arrows mark actions planned as "ongoing." The schedule assumed a governance structure and protocols by mid-2018 and a functioning federated platform by 2020.</p>
+  <div class="card" id="sched"></div>
+  <p class="src">Source: Strategic Plan for AB 1755, April 2018, pp. 6–14. Data: <a href="../data/strategic_actions.csv">strategic_actions.csv</a>.</p>
+
+  <h2>Federation, the central bet</h2>
+  <div class="callout"><p>The plan used a library analogy. Each portal keeps its own collection, and a shared "card catalog" lets anyone find any book. The first step was to federate <a href="https://data.ca.gov">data.ca.gov</a> (GovOps) and <a href="https://data.cnra.ca.gov">data.cnra.ca.gov</a> (CNRA). Other platforms would join voluntarily as they adopted AB 1755 protocols. That borrows directly from the Aspen Institute's 2017 <em>Internet of Water</em> principles: federated hubs, data stewardship staying with producers, and a backbone organization that coordinates without governing.</p></div>
+
+  <h2>Life cycle: statute vs. plan</h2>
+  <p>The statute targets one stage. The plan, adapted from DataONE, claims all of them.</p>
+  <div class="lifecycle">
+    <span>Use case</span><i>→</i><span>Plan</span><i>→</i><span>Collect</span><i>→</i><span>Assure</span><i>→</i><span>Describe</span><i>→</i><span class="pub">Publish</span><i>→</i><span>Archive</span><i>→</i><span>Information</span><i>→</i><span>Decisions</span>
+  </div>
+  <p class="src">Highlighted: the stage the statute's requirements map to most directly (plan p. 1).</p>
+
+  <h2>Commitments the plan made about itself</h2>
+  <ul>
+    <li>An <b>implementation plan</b> with delivery timelines and metrics would follow.</li>
+    <li>The strategic plan would be <b>updated every five years</b>, in sync with the California Water Plan (2023 would have been the first update).</li>
+    <li>The Partner Agency Team "or future AB 1755 governance structure" would own implementation.</li>
+  </ul>
+  <p>Plate IV scores how those commitments and the 49 actions turned out.</p>
+</main>
+<script src="../assets/atlas.js"></script>
+<script>
+(async () => {
+  const GOALS = [
+    ["Sufficient", "Data are sufficient", "to support water management and answer water questions", "var(--s1)"],
+    ["Accessible", "Data are accessible", "available and discoverable", "var(--s2)"],
+    ["Useful", "Data are useful", "in forms that work in models, visualizations and reports", "var(--s3)"],
+    ["Used", "Data are used", "in decision-making and innovation", "var(--s4)"],
+  ];
+  const rows = await loadCSV("data/strategic_actions.csv");
+
+  // Goal cards with their objectives.
+  document.getElementById("goals").innerHTML = GOALS.map(([k, t, d, c], gi) => {
+    const objs = [...new Set(rows.filter(r => r.goal === k).map(r => r.objective))];
+    const n = rows.filter(r => r.goal === k).length;
+    return `<div class="card" style="--c:${c}"><h3>${gi + 1}. ${t}</h3><div class="src" style="font-size:14px">${d} · ${n} actions</div><ol>${objs.map(o => `<li>${esc(o)}</li>`).join("")}</ol></div>`;
+  }).join("");
+
+  // "2018 Q3 / ongoing" -> {t: fractional year, exact: bool, ongoing: bool}
+  const when = s => {
+    const m = s.match(/(\d{4})(?:\s*Q(\d))?/);
+    const y = +m[1], q = m[2] ? +m[2] : null;
+    return { t: q ? y + (q - 0.5) / 4 : y + 0.5, exact: !!q, ongoing: /ongoing/i.test(s) };
+  };
+  rows.forEach(r => Object.assign(r, when(r.planned)));
+  const by19 = rows.filter(r => r.t < 2020).length;
+  document.getElementById("pct19").textContent = Math.round(by19 / rows.length * 100) + "%";
+
+  const W = 960, rowH = 70, top = 10, left = 110, right = 40, H = top + rowH * 4 + 36;
+  const x = t => left + (t - 2018) / (2022 - 2018) * (W - left - right);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Planned dates of 49 strategic actions by goal">`;
+  for (let y = 2018; y <= 2022; y++) {
+    s += `<line x1="${x(y)}" x2="${x(y)}" y1="${top}" y2="${top + rowH * 4}" stroke="var(--grid)"/>`;
+    if (y < 2022) s += `<text x="${x(y + 0.5)}" y="${H - 10}" text-anchor="middle" font-size="12" fill="var(--muted)">${y}</text>`;
+  }
+  GOALS.forEach(([k, t, , c], gi) => {
+    const cy = top + rowH * gi + rowH / 2;
+    s += `<text x="0" y="${cy + 4}" font-size="13" fill="var(--ink-2)">${k}</text>`;
+    const list = rows.filter(r => r.goal === k).sort((a, b) => a.t - b.t);
+    const seen = {};
+    list.forEach(r => {
+      const key = r.t.toFixed(3); const k2 = seen[key] = (seen[key] || 0) + 1;
+      const dy = (k2 % 2 ? 1 : -1) * Math.floor(k2 / 2) * 12; // stack collisions vertically
+      const cx = x(r.t), y = cy + dy;
+      if (r.ongoing) s += `<line x1="${cx + 6}" x2="${cx + 22}" y1="${y}" y2="${y}" stroke="${c}" stroke-width="2" stroke-dasharray="3 3"/>`;
+      s += `<g class="a" data-id="${r.id}"><circle cx="${cx}" cy="${y}" r="12" fill="transparent"/>
+        <circle cx="${cx}" cy="${y}" r="5" fill="${r.exact ? c : "var(--surface)"}" stroke="${r.exact ? "var(--surface)" : c}" stroke-width="2"/></g>`;
+    });
+  });
+  document.getElementById("sched").innerHTML = s + "</svg>";
+  const byId = Object.fromEntries(rows.map(r => [r.id, r]));
+  document.querySelectorAll("#sched .a").forEach(g => {
+    const r = byId[g.dataset.id];
+    g.addEventListener("mousemove", e => tip.show(`<b>${r.id} · ${esc(r.action)}</b><br>${esc(r.description)}<br><span class="src">Planned: ${esc(r.planned)}</span>`, e));
+    g.addEventListener("mouseleave", tip.hide);
+  });
+})();
+</script>
+</body>
+</html>

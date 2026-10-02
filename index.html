@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CA Open Water Data Atlas</title>
+<meta name="description" content="An atlas of California's Open and Transparent Water Data Act (AB 1755): the law, the 2018 Strategic Plan, and what happened next.">
+<link rel="stylesheet" href="assets/atlas.css">
+<style>
+  .plates { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-top: 24px; }
+  .plates a.card { text-decoration: none; color: var(--ink); display: block; transition: border-color .15s; }
+  .plates a.card:hover { border-color: var(--accent); }
+  .plates .n { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .plates h3 { margin: 4px 0 6px; }
+  .plates p { margin: 0; font-size: 14px; color: var(--ink-2); }
+  .plates .soon { opacity: .55; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="plate-no">An atlas in six plates</div>
+  <h1>California Open Water Data Atlas</h1>
+  <p class="lede">In 2016 California passed the Open and Transparent Water Data Act (AB 1755), promising one integrated, open platform for the state's water and ecological data. This atlas maps the decade since: what the law required, what the 2018 Strategic Plan set out to do, and where things stand today.</p>
+
+  <div class="plates">
+    <a class="card" href="plates/statute.html"><div class="n">Plate I</div><h3>The Law</h3><p>AB 1755's requirements, the data it names, and four statutory deadlines.</p></a>
+    <a class="card" href="plates/plan.html"><div class="n">Plate II</div><h3>The Plan</h3><p>The April 2018 Strategic Plan: 4 goals, 11 objectives, 49 dated actions, and a bet on federation.</p></a>
+    <div class="card soon"><div class="n">Plate III · in progress</div><h3>Timeline</h3><p>2016–2026: platforms, the Water Data Consortium, progress reports, funding.</p></div>
+    <div class="card soon"><div class="n">Plate IV · in progress</div><h3>Scorecard</h3><p>All 49 strategic actions, graded against public evidence.</p></div>
+    <div class="card soon"><div class="n">Plate V · in progress</div><h3>Ecosystem</h3><p>Agencies, portals and partners that make up California's water-data federation.</p></div>
+    <div class="card soon"><div class="n">Plate VI · in progress</div><h3>Today</h3><p>Current status against the statute, and what comes next.</p></div>
+  </div>
+</main>
+<script src="assets/atlas.js"></script>
+</body>
+</html>

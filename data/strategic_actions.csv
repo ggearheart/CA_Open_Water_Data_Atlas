@@ -1,0 +1,50 @@
+id,goal,objective,action,description,planned
+1.1.1,Sufficient,Use cases identify data needs,Use Cases,"Develop an initial, extensible set of use cases defining stakeholders' data and information needs",2018 Q1
+1.1.2,Sufficient,Use cases identify data needs,Synthesize Data Needs,Identify and publish a list of water datasets from use cases,2018 Q3 / ongoing
+1.1.3,Sufficient,Use cases identify data needs,Write Use Case Protocol,Develop protocol for writing use cases from pilot lessons,2019
+1.1.4,Sufficient,Use cases identify data needs,Use Case Solicitation,Continually collect and publish use cases and data needs,2019 / ongoing
+1.2.1,Sufficient,Coordinate existing data collection,Inventory Existing Datasets,Inventory and publish list of water datasets with collecting agency and purpose,2018 Q3
+1.2.2,Sufficient,Coordinate existing data collection,Identify Data Gaps,Identify data needed but not collected for use cases,2019 Q1
+1.2.3,Sufficient,Coordinate existing data collection,Prioritize Datasets,Prioritize existing datasets to publish on an open data platform,2018 Q4
+1.2.4,Sufficient,Coordinate existing data collection,New Programs,Support agency requests to create or expand collection to fill gaps,2019 Q1
+1.2.5,Sufficient,Coordinate existing data collection,Improve Coordination,Improve data coordination among all organizations,2018 Q3
+1.2.6,Sufficient,Coordinate existing data collection,New Data Collection Protocol,Protocols for creating or expanding data collection programs,2019
+1.2.7,Sufficient,Coordinate existing data collection,Streamline Data Reporting,Report on opportunities to streamline local agency reporting requirements,2020
+2.1.1,Accessible,Develop protocols,Initial Minimum Protocol Requirements,"Publish minimum publication protocols: metadata, data dictionary, methods",2018 Q1
+2.1.2,Accessible,Develop protocols,Open Water Information Architecture (OWIA),Leverage OWIA to help stewards transform and standardize datasets,2018 Q4
+2.1.3,Accessible,Develop protocols,Governance for Protocol Evolution,Governance structure and process to guide protocol evolution,2018 Q2
+2.1.4,Accessible,Develop protocols,Enhance Protocols,"Implement governance, stakeholder and third-party recommendations",2019 Q3 / ongoing
+2.2.1,Accessible,Federated open water-data platform,Use Existing Open Data Platforms,"Expand use of data.ca.gov, data.cnra.ca.gov and others to publish AB 1755 datasets",2018 Q1 / ongoing
+2.2.2,Accessible,Federated open water-data platform,Platform Functional Requirements,Functional and technical requirements for the platform,2018 Q4
+2.2.3,Accessible,Federated open water-data platform,Evaluate Existing Platforms,Can existing portals meet the requirements?,2019 Q1
+2.2.4,Accessible,Federated open water-data platform,Implement Platform Enhancements,Initial enhancements based on functional requirements,2019 Q3
+2.2.5,Accessible,Federated open water-data platform,Support Platform,Continually enhance the platform from user and governance input,2020
+2.2.6,Accessible,Federated open water-data platform,Publish Federal Datasets,Federate federal datasets named in the statute,2020 Q3
+2.2.7,Accessible,Federated open water-data platform,Federate with Other Platforms,Federate with other open data platforms,2020
+3.1.1,Useful,Interoperability,Enhance Metadata,Improve metadata for discoverability,2019 Q1 / ongoing
+3.1.2,Useful,Interoperability,Controlled Vocabulary,Adopt subject-matter controlled vocabulary,2020 / ongoing
+3.1.3,Useful,Interoperability,Geo-Referencing,Adopt geo-referencing best practices,2020 / ongoing
+3.1.4,Useful,Interoperability,Organization,Guidance for organizing a dataset and its resources,2019 Q1
+3.1.5,Useful,Interoperability,Keywords,Maintain master list of keywords and categories,2019 Q2
+3.1.6,Useful,Interoperability,Data Format,Collect and implement stakeholder data-format improvements,2019
+3.1.7,Useful,Interoperability,Data Integration,Query and download like data through a single access point,2020
+3.2.1,Useful,Transform data into information,Visualization,Simple visualization tools for the platform,2019 Q3
+3.2.2,Useful,Transform data into information,Reports,Annual report on dataset use,2019 Q3 / ongoing
+3.2.3,Useful,Transform data into information,Download Tools,"Filter, query and subset-download tools",2019 Q3
+3.2.4,Useful,Transform data into information,Collaboration and Innovation,Third-party apps and decision-support tools; feature them on rotation,2019 Q1 / ongoing
+3.2.5,Useful,Transform data into information,Analytics,Analytical sandbox for the water community,2021
+3.2.6,Useful,Transform data into information,Map-Based Web Application,Map app to discover datasets across federated platforms,2020
+3.3.1,Useful,Archive datasets,Archive Data,Archive datasets on the open data platform,2019
+4.1.1,Used,Use case pilot projects,Pilot Projects and Interoperability Test Beds,Pilot early use cases; survey users for feedback,2018 Q3
+4.1.2,Used,Use case pilot projects,Lessons Learned,Publish pilot lessons learned,2019 Q1
+4.2.1,Used,Engage the water community,Communication and Engagement,Communications and engagement strategy,2018 Q2
+4.2.2,Used,Engage the water community,Data Literacy and Consumer Training,Training resources for data consumers,2019 Q3
+4.2.3,Used,Engage the water community,Data Stewardship Training,Training for partner agencies publishing data,2019 Q3
+4.2.4,Used,Engage the water community,User Group,Foster a data steward user group,2019 Q1
+4.3.1,Used,Sustain the platform,Sustainable Governance and Funding,Sustainable governance and funding structure,2018 Q2
+4.3.2,Used,Sustain the platform,Metrics,Usage statistics and success stories,2019 Q1
+4.3.3,Used,Sustain the platform,Improvements,"Recommend platform, documentation, tool and reporting improvements",2019 Q2
+4.3.4,Used,Sustain the platform,User Feedback,Solicit feedback from managers and users,2019 Q1
+4.4.1,Used,Use the data,Analytical Tools,Encourage decision-support tools built on platform data,2019 Q3
+4.4.2,Used,Use the data,Government Publications,Encourage publications to cite platform data,2020 Q3
+4.4.3,Used,Use the data,Civic Engagement Projects,"Data challenges, competitions, hackathons",2018 Q2 / ongoing
