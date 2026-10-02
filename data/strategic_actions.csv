@@ -1,50 +1,50 @@
-id,goal,objective,action,description,planned
-1.1.1,Sufficient,Use cases identify data needs,Use Cases,"Develop an initial, extensible set of use cases defining stakeholders' data and information needs",2018 Q1
-1.1.2,Sufficient,Use cases identify data needs,Synthesize Data Needs,Identify and publish a list of water datasets from use cases,2018 Q3 / ongoing
-1.1.3,Sufficient,Use cases identify data needs,Write Use Case Protocol,Develop protocol for writing use cases from pilot lessons,2019
-1.1.4,Sufficient,Use cases identify data needs,Use Case Solicitation,Continually collect and publish use cases and data needs,2019 / ongoing
-1.2.1,Sufficient,Coordinate existing data collection,Inventory Existing Datasets,Inventory and publish list of water datasets with collecting agency and purpose,2018 Q3
-1.2.2,Sufficient,Coordinate existing data collection,Identify Data Gaps,Identify data needed but not collected for use cases,2019 Q1
-1.2.3,Sufficient,Coordinate existing data collection,Prioritize Datasets,Prioritize existing datasets to publish on an open data platform,2018 Q4
-1.2.4,Sufficient,Coordinate existing data collection,New Programs,Support agency requests to create or expand collection to fill gaps,2019 Q1
-1.2.5,Sufficient,Coordinate existing data collection,Improve Coordination,Improve data coordination among all organizations,2018 Q3
-1.2.6,Sufficient,Coordinate existing data collection,New Data Collection Protocol,Protocols for creating or expanding data collection programs,2019
-1.2.7,Sufficient,Coordinate existing data collection,Streamline Data Reporting,Report on opportunities to streamline local agency reporting requirements,2020
-2.1.1,Accessible,Develop protocols,Initial Minimum Protocol Requirements,"Publish minimum publication protocols: metadata, data dictionary, methods",2018 Q1
-2.1.2,Accessible,Develop protocols,Open Water Information Architecture (OWIA),Leverage OWIA to help stewards transform and standardize datasets,2018 Q4
-2.1.3,Accessible,Develop protocols,Governance for Protocol Evolution,Governance structure and process to guide protocol evolution,2018 Q2
-2.1.4,Accessible,Develop protocols,Enhance Protocols,"Implement governance, stakeholder and third-party recommendations",2019 Q3 / ongoing
-2.2.1,Accessible,Federated open water-data platform,Use Existing Open Data Platforms,"Expand use of data.ca.gov, data.cnra.ca.gov and others to publish AB 1755 datasets",2018 Q1 / ongoing
-2.2.2,Accessible,Federated open water-data platform,Platform Functional Requirements,Functional and technical requirements for the platform,2018 Q4
-2.2.3,Accessible,Federated open water-data platform,Evaluate Existing Platforms,Can existing portals meet the requirements?,2019 Q1
-2.2.4,Accessible,Federated open water-data platform,Implement Platform Enhancements,Initial enhancements based on functional requirements,2019 Q3
-2.2.5,Accessible,Federated open water-data platform,Support Platform,Continually enhance the platform from user and governance input,2020
-2.2.6,Accessible,Federated open water-data platform,Publish Federal Datasets,Federate federal datasets named in the statute,2020 Q3
-2.2.7,Accessible,Federated open water-data platform,Federate with Other Platforms,Federate with other open data platforms,2020
-3.1.1,Useful,Interoperability,Enhance Metadata,Improve metadata for discoverability,2019 Q1 / ongoing
-3.1.2,Useful,Interoperability,Controlled Vocabulary,Adopt subject-matter controlled vocabulary,2020 / ongoing
-3.1.3,Useful,Interoperability,Geo-Referencing,Adopt geo-referencing best practices,2020 / ongoing
-3.1.4,Useful,Interoperability,Organization,Guidance for organizing a dataset and its resources,2019 Q1
-3.1.5,Useful,Interoperability,Keywords,Maintain master list of keywords and categories,2019 Q2
-3.1.6,Useful,Interoperability,Data Format,Collect and implement stakeholder data-format improvements,2019
-3.1.7,Useful,Interoperability,Data Integration,Query and download like data through a single access point,2020
-3.2.1,Useful,Transform data into information,Visualization,Simple visualization tools for the platform,2019 Q3
-3.2.2,Useful,Transform data into information,Reports,Annual report on dataset use,2019 Q3 / ongoing
-3.2.3,Useful,Transform data into information,Download Tools,"Filter, query and subset-download tools",2019 Q3
-3.2.4,Useful,Transform data into information,Collaboration and Innovation,Third-party apps and decision-support tools; feature them on rotation,2019 Q1 / ongoing
-3.2.5,Useful,Transform data into information,Analytics,Analytical sandbox for the water community,2021
-3.2.6,Useful,Transform data into information,Map-Based Web Application,Map app to discover datasets across federated platforms,2020
-3.3.1,Useful,Archive datasets,Archive Data,Archive datasets on the open data platform,2019
-4.1.1,Used,Use case pilot projects,Pilot Projects and Interoperability Test Beds,Pilot early use cases; survey users for feedback,2018 Q3
-4.1.2,Used,Use case pilot projects,Lessons Learned,Publish pilot lessons learned,2019 Q1
-4.2.1,Used,Engage the water community,Communication and Engagement,Communications and engagement strategy,2018 Q2
-4.2.2,Used,Engage the water community,Data Literacy and Consumer Training,Training resources for data consumers,2019 Q3
-4.2.3,Used,Engage the water community,Data Stewardship Training,Training for partner agencies publishing data,2019 Q3
-4.2.4,Used,Engage the water community,User Group,Foster a data steward user group,2019 Q1
-4.3.1,Used,Sustain the platform,Sustainable Governance and Funding,Sustainable governance and funding structure,2018 Q2
-4.3.2,Used,Sustain the platform,Metrics,Usage statistics and success stories,2019 Q1
-4.3.3,Used,Sustain the platform,Improvements,"Recommend platform, documentation, tool and reporting improvements",2019 Q2
-4.3.4,Used,Sustain the platform,User Feedback,Solicit feedback from managers and users,2019 Q1
-4.4.1,Used,Use the data,Analytical Tools,Encourage decision-support tools built on platform data,2019 Q3
-4.4.2,Used,Use the data,Government Publications,Encourage publications to cite platform data,2020 Q3
-4.4.3,Used,Use the data,Civic Engagement Projects,"Data challenges, competitions, hackathons",2018 Q2 / ongoing
+id,goal,objective,action,description,planned,status,evidence,source
+1.1.1,Sufficient,Use cases identify data needs,Use Cases,"Develop an initial, extensible set of use cases defining stakeholders' data and information needs",2018 Q1,done,UC Berkeley/CCST 'Data for Water Decision Making' (Jan 2018) developed 20 initial use cases.,https://doi.org/10.15779/J28H01
+1.1.2,Sufficient,Use cases identify data needs,Synthesize Data Needs,Identify and publish a list of water datasets from use cases,2018 Q3 / ongoing,partial,The same 2018 report synthesized data needs; no standing published list of use-case datasets found.,https://doi.org/10.15779/J28H01
+1.1.3,Sufficient,Use cases identify data needs,Write Use Case Protocol,Develop protocol for writing use cases from pilot lessons,2019,unverified,No use-case writing protocol found.,
+1.1.4,Sufficient,Use cases identify data needs,Use Case Solicitation,Continually collect and publish use cases and data needs,2019 / ongoing,partial,"Use cases now arrive through Consortium projects (groundwater accounting, urban water reporting) rather than a state solicitation.",https://cawaterdata.org
+1.2.1,Sufficient,Coordinate existing data collection,Inventory Existing Datasets,Inventory and publish list of water datasets with collecting agency and purpose,2018 Q3,done,"DWR Implementation Journal reports 2,700+ 'critical water and ecological datasets'; departmental inventories exist (CDFW BIOS, DWR and SWRCB dashboards).",sources/ab1755_implementation_journal_2023-2024.txt
+1.2.2,Sufficient,Coordinate existing data collection,Identify Data Gaps,Identify data needed but not collected for use cases,2019 Q1,partial,No AB 1755 gap analysis found. The SB 19 Stream Gaging Prioritization Plan (2022) is the closest sector-specific gap analysis.,https://www.waterboards.ca.gov/waterrights/water_issues/programs/stream_gaging_plan/
+1.2.3,Sufficient,Coordinate existing data collection,Prioritize Datasets,Prioritize existing datasets to publish on an open data platform,2018 Q4,partial,'Critical datasets' were designated for the Sept 2019 deadline; prioritization method not published.,sources/ab1755_implementation_journal_2023-2024.txt
+1.2.4,Sufficient,Coordinate existing data collection,New Programs,Support agency requests to create or expand collection to fill gaps,2019 Q1,partial,"SB 19 (2019) and the 2022 Water Supply Strategy target 430 new gages, but installation was not funded in the 2022 budget.",sources/water_supply_strategy_2022.txt
+1.2.5,Sufficient,Coordinate existing data collection,Improve Coordination,Improve data coordination among all organizations,2018 Q3,partial,"Partner Agency Team, Water Data Advisory Council (2019), and the Consortium (2020) all coordinate; no statewide coordination of collection.",
+1.2.6,Sufficient,Coordinate existing data collection,New Data Collection Protocol,Protocols for creating or expanding data collection programs,2019,unverified,No protocol for new data collection programs found.,
+1.2.7,Sufficient,Coordinate existing data collection,Streamline Data Reporting,Report on opportunities to streamline local agency reporting requirements,2020,unverified,No streamlining report found. Water Resilience Portfolio action 22.3 (2020) restated the goal; Consortium urban water reporting work is related.,sources/wrp_2020_final.txt
+2.1.1,Accessible,Develop protocols,Initial Minimum Protocol Requirements,"Publish minimum publication protocols: metadata, data dictionary, methods",2018 Q1,done,"Three minimum protocols (data steward; publish and document; access) issued Jan 2018, finalized Apr 2018.",sources/protocols_2018.txt
+2.1.2,Accessible,Develop protocols,Open Water Information Architecture (OWIA),Leverage OWIA to help stewards transform and standardize datasets,2018 Q4,superseded,OWIA v2.0 requirements (Jan 2018) were not carried forward; federation of existing CKAN portals took its place. (Atlas draft judgment.),
+2.1.3,Accessible,Develop protocols,Governance for Protocol Evolution,Governance structure and process to guide protocol evolution,2018 Q2,partial,"Water Data Advisory Council (2019) and Consortium (2020) created, but neither governs protocol evolution.",sources/wdac_recommendations.txt
+2.1.4,Accessible,Develop protocols,Enhance Protocols,"Implement governance, stakeholder and third-party recommendations",2019 Q3 / ongoing,not_done,"Ten protocol topics listed 'to be developed' in Apr 2018 (security, federation, interoperability, QC…); none found adopted. Journal still 'exploring' standards in 2023–24.",sources/protocols_2018.txt
+2.2.1,Accessible,Federated open water-data platform,Use Existing Open Data Platforms,"Expand use of data.ca.gov, data.cnra.ca.gov and others to publish AB 1755 datasets",2018 Q1 / ongoing,done,"data.cnra.ca.gov launched Mar 2018; 21,451 datasets on 2026-10-02.",https://data.cnra.ca.gov/api/3/action/package_search?rows=0
+2.2.2,Accessible,Federated open water-data platform,Platform Functional Requirements,Functional and technical requirements for the platform,2018 Q4,superseded,April 2018 decision to federate existing portals rather than issue an RFP for a new platform made separate requirements moot.,sources/progress_report_apr2018_baydeltalive.txt
+2.2.3,Accessible,Federated open water-data platform,Evaluate Existing Platforms,Can existing portals meet the requirements?,2019 Q1,done,Evaluated and chosen: existing portals (data.ca.gov + data.cnra.ca.gov) serve as the platform.,sources/progress_report_apr2018_baydeltalive.txt
+2.2.4,Accessible,Federated open water-data platform,Implement Platform Enhancements,Initial enhancements based on functional requirements,2019 Q3,partial,"2019 federation harvests (Ocean Data Partners, Water Data Partners) added ~17,000 records; no published enhancement list.",sources/cnra_cumulative_by_metadata_created.csv
+2.2.5,Accessible,Federated open water-data platform,Support Platform,Continually enhance the platform from user and governance input,2020,partial,"Catalog keeps growing (≈ +2,000 since 2020); no public roadmap.",sources/cnra_portal_dataset_counts.csv
+2.2.6,Accessible,Federated open water-data platform,Publish Federal Datasets,Federate federal datasets named in the statute,2020 Q3,done,"Federal records federated by 2020: Water Data Partners 1,410; NOAA 152; USGS 86; USFWS 35; USBR 9; USFS 2. Keyword harvest; Journal says selection needs refining.",https://data.cnra.ca.gov/organization/water-data-partners
+2.2.7,Accessible,Federated open water-data platform,Federate with Other Platforms,Federate with other open data platforms,2020,done,"data.cnra.ca.gov federates to data.ca.gov (3,100+ records, 2024).",sources/ab1755_implementation_journal_2023-2024.txt
+3.1.1,Useful,Interoperability,Enhance Metadata,Improve metadata for discoverability,2019 Q1 / ongoing,unverified,No metadata enhancement program found.,
+3.1.2,Useful,Interoperability,Controlled Vocabulary,Adopt subject-matter controlled vocabulary,2020 / ongoing,unverified,No adopted controlled vocabulary found.,
+3.1.3,Useful,Interoperability,Geo-Referencing,Adopt geo-referencing best practices,2020 / ongoing,unverified,No adopted geo-referencing guidance found.,
+3.1.4,Useful,Interoperability,Organization,Guidance for organizing a dataset and its resources,2019 Q1,unverified,No dataset-organization guidance found.,
+3.1.5,Useful,Interoperability,Keywords,Maintain master list of keywords and categories,2019 Q2,partial,Keyword tagging drives federal harvests; Journal acknowledges keyword selection needs refining.,sources/ab1755_implementation_journal_2023-2024.txt
+3.1.6,Useful,Interoperability,Data Format,Collect and implement stakeholder data-format improvements,2019,unverified,No format-feedback process found.,
+3.1.7,Useful,Interoperability,Data Integration,Query and download like data through a single access point,2020,partial,One catalog search spans both portals; no cross-dataset query of like data.,
+3.2.1,Useful,Transform data into information,Visualization,Simple visualization tools for the platform,2019 Q3,partial,CKAN previews; ~20 visualizations on CNRA portal in 2018.,sources/progress_report_apr2018_baydeltalive.txt
+3.2.2,Useful,Transform data into information,Reports,Annual report on dataset use,2019 Q3 / ongoing,unverified,No annual dataset-use report found; Consortium published one-off usage figures (~2022).,
+3.2.3,Useful,Transform data into information,Download Tools,"Filter, query and subset-download tools",2019 Q3,done,"CKAN API and DataStore support filtering, querying and subset download on both portals.",https://data.cnra.ca.gov/api/3
+3.2.4,Useful,Transform data into information,Collaboration and Innovation,Third-party apps and decision-support tools; feature them on rotation,2019 Q1 / ongoing,partial,"Water Data Challenges (2018, 2019) and the open-source Groundwater Accounting Platform (2021).",https://water.ca.gov/News/News-Releases/2021/May-21/Groundwater-Accounting-Platform-and-Data-Standards
+3.2.5,Useful,Transform data into information,Analytics,Analytical sandbox for the water community,2021,unverified,No analytical sandbox found.,
+3.2.6,Useful,Transform data into information,Map-Based Web Application,Map app to discover datasets across federated platforms,2020,unverified,No map-based discovery app across federated portals found.,
+3.3.1,Useful,Archive datasets,Archive Data,Archive datasets on the open data platform,2019,unverified,No archiving policy found for platform datasets.,
+4.1.1,Used,Use case pilot projects,Pilot Projects and Interoperability Test Beds,Pilot early use cases; survey users for feedback,2018 Q3,partial,Pilots came later via the Consortium (Groundwater Accounting Platform 2021; IoW pilots incl. FHAB ingestion framework).,https://cawaterdata.org
+4.1.2,Used,Use case pilot projects,Lessons Learned,Publish pilot lessons learned,2019 Q1,unverified,No published pilot lessons-learned found.,
+4.2.1,Used,Engage the water community,Communication and Engagement,Communications and engagement strategy,2018 Q2,partial,"Public meetings, Implementation Journal story map (2019–2024), Consortium events (e.g., Data for Lunch).",
+4.2.2,Used,Engage the water community,Data Literacy and Consumer Training,Training resources for data consumers,2019 Q3,unverified,Water Resilience Portfolio 22.1 (2020) restated AB 1755 data training; delivery not verified.,sources/wrp_2020_final.txt
+4.2.3,Used,Engage the water community,Data Stewardship Training,Training for partner agencies publishing data,2019 Q3,unverified,No data-steward training found.,
+4.2.4,Used,Engage the water community,User Group,Foster a data steward user group,2019 Q1,partial,"No state user group found; Consortium working groups (LiDAR, telemetry, groundwater) fill part of the role.",https://cawaterdata.org
+4.3.1,Used,Sustain the platform,Sustainable Governance and Funding,Sustainable governance and funding structure,2018 Q2,partial,Governance: Consortium launched June 2020. Funding: Water Data Administration Fund never capitalized; only AB 1755 line item found is $800k (2018-19).,sources/senate_sub2_2018-05-17_closeout.txt
+4.3.2,Used,Sustain the platform,Metrics,Usage statistics and success stories,2019 Q1,partial,"Consortium published usage figures once (~2022: 73,934 users); no ongoing metrics.",https://cawaterdata.org/about-us/putting-data-to-work/invest-in-water-data-infrastructure/
+4.3.3,Used,Sustain the platform,Improvements,"Recommend platform, documentation, tool and reporting improvements",2019 Q2,partial,Consortium 'Putting Data to Work' (Feb 2023) made 6 recommendations.,https://cawaterdata.org/news/new-report-putting-data-to-work/
+4.3.4,Used,Sustain the platform,User Feedback,Solicit feedback from managers and users,2019 Q1,unverified,No systematic feedback mechanism found.,
+4.4.1,Used,Use the data,Analytical Tools,Encourage decision-support tools built on platform data,2019 Q3,partial,Groundwater Accounting Platform; data-challenge entries.,
+4.4.2,Used,Use the data,Government Publications,Encourage publications to cite platform data,2020 Q3,unverified,No guidance to cite platform data found.,
+4.4.3,Used,Use the data,Civic Engagement Projects,"Data challenges, competitions, hackathons",2018 Q2 / ongoing,done,"Safe Drinking Water Data Challenge (2018), Water Data Challenge (2019), 10-year showcase (2026).",https://www.westbigdatahub.org/water-data-challenge

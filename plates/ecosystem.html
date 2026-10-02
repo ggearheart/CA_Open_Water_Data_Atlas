@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecosystem · CA Open Water Data Atlas</title>
+<link rel="stylesheet" href="../assets/atlas.css">
+<style>
+  .tiers { display: grid; gap: 0; margin-top: 20px; }
+  .tier { display: grid; grid-template-columns: 170px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--grid); }
+  .tier > div:first-child b { display: block; }
+  .tier > div:first-child span { font-size: 13px; color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; font-size: 14px; }
+  .chip small { display: block; color: var(--muted); font-size: 12px; }
+  .chip.key { border-color: var(--accent); background: var(--accent-wash); }
+  .flow { text-align: center; color: var(--muted); font-size: 13px; margin: -4px 0 -4px 184px; }
+  .bars svg { width: 100%; height: auto; display: block; }
+  @media (max-width: 640px) { .tier { grid-template-columns: 1fr; } .flow { margin-left: 0; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="plate-no">Plate V</div>
+  <h1>Ecosystem: who holds California's water data</h1>
+  <p class="lede">The "platform" AB 1755 called for is not one system. It is a stack: agency program databases at the bottom, two federated CKAN catalogs in the middle, and an independent nonprofit backbone on top. Here is the stack as it stands in 2026.</p>
+
+  <div class="tiers">
+    <div class="tier"><div><b>Law &amp; policy</b><span>sets the mandate</span></div><div class="chips">
+      <div class="chip key">AB 1755 (2016)<small>Open and Transparent Water Data Act</small></div>
+      <div class="chip">SB 19 (2019)<small>stream gage plan</small></div>
+      <div class="chip">Water Resilience Portfolio (2020)<small>Action 22: modernize water data</small></div>
+      <div class="chip">Water Supply Strategy (2022)<small>Pillar 4: forecasting &amp; data</small></div>
+      <div class="chip">SB 72 (2025)<small>Water Plan modernization</small></div>
+    </div></div>
+    <div class="tier"><div><b>Partner agencies</b><span>produce and steward data</span></div><div class="chips">
+      <div class="chip key">DWR<small>lead; operates platform</small></div>
+      <div class="chip">State Water Board</div>
+      <div class="chip">CDFW</div>
+      <div class="chip">Water Quality Monitoring Council</div>
+      <div class="chip">CNRA · GovOps · OPR · Delta Stewardship Council<small>supporting partners</small></div>
+    </div></div>
+    <div class="tier"><div><b>Program systems</b><span>where data is born (examples)</span></div><div class="chips">
+      <div class="chip">CDEC · SGMA Portal · WUEdata<small>DWR</small></div>
+      <div class="chip">CalWATRS (2025) · CEDEN · CIWQS<small>State Water Board</small></div>
+      <div class="chip">BIOS · CNDDB<small>CDFW</small></div>
+    </div></div>
+    <div class="flow">↓ published or harvested into ↓</div>
+    <div class="tier"><div><b>Federated catalogs</b><span>the AB 1755 platform</span></div><div class="chips">
+      <div class="chip key">data.cnra.ca.gov<small>21,451 datasets · CNRA</small></div>
+      <div class="chip key">data.ca.gov<small>4,664 datasets · CDT / GovOps</small></div>
+      <div class="chip">Ocean Data Partners<small>16,076 harvested records</small></div>
+      <div class="chip">Water Data Partners<small>1,410 federal records</small></div>
+    </div></div>
+    <div class="tier"><div><b>Backbone &amp; community</b><span>coordinates, doesn't govern</span></div><div class="chips">
+      <div class="chip key">CA Water Data Consortium<small>nonprofit, 2020–; §12410(b)</small></div>
+      <div class="chip">Internet of Water Coalition<small>Consortium joined 2022</small></div>
+      <div class="chip">UC Berkeley · CCST · UC Water<small>use cases, research</small></div>
+      <div class="chip">Water Data Challenges<small>2018, 2019, 2026</small></div>
+    </div></div>
+  </div>
+  <p class="src">Counts from the live CKAN API, 2026-10-02. Program systems are illustrative, not exhaustive.</p>
+
+  <h2>What's actually in the CNRA catalog</h2>
+  <p>Three quarters of data.cnra.ca.gov comes from one federated ocean-data harvest. The three AB 1755 state partners publish about 3,000 records directly between them, and the State Water Board publishes 61 there (most Water Board data lives on data.ca.gov).</p>
+  <div class="card bars" id="pubs"></div>
+  <p class="src">Records by publishing organization, data.cnra.ca.gov, 2026-10-02. Data: <a href="../data/cnra_dataset_counts.csv">cnra_dataset_counts.csv</a>.</p>
+
+  <h2>The backbone grew up</h2>
+  <p>The Consortium spent $73k in its first fiscal year. By FY2025 it was spending $2.4M, funded almost entirely by contributions.</p>
+  <div class="card bars" id="fin"></div>
+  <p class="src">Annual expenses, fiscal years ending June. IRS Form 990 via <a href="https://projects.propublica.org/nonprofits/organizations/842664083">ProPublica Nonprofit Explorer</a>. The state's share of revenue is not broken out. Data: <a href="../data/consortium_finances.csv">consortium_finances.csv</a>.</p>
+</main>
+<script src="../assets/atlas.js"></script>
+<script>
+// Horizontal single-series bar chart; rows = [{label, value, note}]
+function hbar(host, rows, fmt) {
+  const W = 960, rowH = 30, left = 190, right = 90, H = rows.length * rowH + 8;
+  const max = Math.max(...rows.map(r => r.value));
+  const x = v => (v / max) * (W - left - right);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img">`;
+  rows.forEach((r, i) => {
+    const y = i * rowH + 4, w = Math.max(x(r.value), 2);
+    s += `<g class="b" data-i="${i}"><rect x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"/>
+      <text x="${left - 10}" y="${y + rowH / 2 + 4}" text-anchor="end" font-size="13" fill="var(--ink-2)">${esc(r.label)}</text>
+      <path d="M${left},${y + 5} h${w - 4} a4,4 0 0 1 4,4 v${rowH - 18} a4,4 0 0 1 -4,4 h${-(w - 4)} z" fill="${r.color || "var(--s1)"}"/>
+      <text x="${left + w + 6}" y="${y + rowH / 2 + 4}" font-size="13" fill="var(--ink)">${fmt(r.value)}</text></g>`;
+  });
+  host.innerHTML = s + `<line x1="${left}" x2="${left}" y1="0" y2="${H}" stroke="var(--axis)"/></svg>`;
+  host.querySelectorAll(".b").forEach(g => {
+    const r = rows[g.dataset.i];
+    g.addEventListener("mousemove", e => tip.show(`<b>${esc(r.label)}</b><br>${fmt(r.value)}${r.note ? "<br>" + esc(r.note) : ""}`, e));
+    g.addEventListener("mouseleave", tip.hide);
+  });
+}
+(async () => {
+  const total = 21451;
+  const pubs = [
+    { label: "Ocean Data Partners", value: 16076, note: "Federated harvest, 2019" },
+    { label: "CDFW", value: 2424, note: "AB 1755 partner" },
+    { label: "Water Data Partners", value: 1410, note: "Federated federal water records" },
+    { label: "DWR", value: 484, note: "AB 1755 lead agency" },
+    { label: "NOAA", value: 152 },
+    { label: "USGS", value: 86 },
+    { label: "State Water Board", value: 61, note: "Most Water Board data is on data.ca.gov" },
+  ];
+  pubs.push({ label: "All other publishers", value: total - pubs.reduce((a, r) => a + r.value, 0), note: "22 other organizations", color: "var(--neutral)" });
+  pubs.forEach(r => r.note = (r.note ? r.note + " · " : "") + (r.value / total * 100).toFixed(1) + "% of catalog");
+  hbar(document.getElementById("pubs"), pubs, v => v.toLocaleString());
+
+  const fin = await loadCSV("data/consortium_finances.csv");
+  const money = v => v >= 1e6 ? "$" + (v / 1e6).toFixed(1) + "M" : "$" + Math.round(v / 1e3) + "k";
+  hbar(document.getElementById("fin"), fin.map(r => ({ label: r.fiscal_year, value: +r.expenses, note: "Revenue " + money(+r.revenue), color: "var(--s3)" })), money);
+})();
+</script>
+</body>
+</html>

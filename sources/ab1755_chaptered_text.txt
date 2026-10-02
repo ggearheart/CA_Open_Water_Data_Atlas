@@ -1,0 +1,274 @@
+ 
+ 
+ 
+AB 1755 Assembly Bill - CHAPTERED
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BILL NUMBER: AB 1755 CHAPTERED
+ BILL TEXT
+
+ CHAPTER 506
+ FILED WITH SECRETARY OF STATE SEPTEMBER 23, 2016
+ APPROVED BY GOVERNOR SEPTEMBER 23, 2016
+ PASSED THE SENATE AUGUST 22, 2016
+ PASSED THE ASSEMBLY AUGUST 25, 2016
+ AMENDED IN SENATE AUGUST 1, 2016
+ AMENDED IN SENATE JUNE 13, 2016
+ AMENDED IN ASSEMBLY MAY 11, 2016
+ AMENDED IN ASSEMBLY APRIL 5, 2016
+ AMENDED IN ASSEMBLY MARCH 1, 2016
+
+INTRODUCED BY Assembly Member Dodd
+
+ FEBRUARY 2, 2016
+
+ An act to add Part 4.9 (commencing with Section 12400) to Division
+6 of the Water Code, relating to water data.
+
+
+ LEGISLATIVE COUNSEL'S DIGEST
+
+
+ AB 1755, Dodd. The Open and Transparent Water Data Act.
+ Existing law imposes on the Department of Water Resources various
+duties with respect to water in the state. Under existing law, the
+State Water Resources Control Board administers a water rights
+program pursuant to which the state board grants permits and licenses
+to appropriate water. Existing law regulates water transfers and
+authorizes a permittee or licensee to change the point of diversion,
+place of use, or purpose of use due to a transfer or exchange of
+water or water rights if certain conditions are met.
+ This bill would enact the Open and Transparent Water Data Act. The
+act would require the department, in consultation with the
+California Water Quality Monitoring Council, the state board, and the
+Department of Fish and Wildlife, in accordance with a specified
+schedule, to create, operate, and maintain a statewide integrated
+water data platform that, among other things, would integrate
+existing water and ecological data information from multiple
+databases and provide data on completed water transfers and
+exchanges.
+ The act would require the department, in consultation with the
+California Water Quality Monitoring Council, the state board, and the
+Department of Fish and Wildlife, to develop protocols for data
+sharing, documentation, quality control, public access, and promotion
+of open-source platforms and decision support tools related to water
+data and to submit to the Legislature a report on those protocols.
+The act would require a recipient of state funds through a grant or
+contract for research or a project relating to the improvement of
+water or ecological data to adhere to those protocols or be
+ineligible for state funding.
+ The act would create the Water Data Administration Fund. The act
+would specify that moneys in the fund would be available, upon
+appropriation, to the department, the state board, or the Department
+of Fish and Wildlife for the collection, management, and improvement
+of water and ecological data for the purposes of the act.
+
+
+THE PEOPLE OF THE STATE OF CALIFORNIA DO ENACT AS FOLLOWS:
+
+ SECTION 1. Part 4.9 (commencing with Section 12400) is added to
+Division 6 of the Water Code, to read:
+
+ PART 4.9. The Open and Transparent Water Data Act
+
+
+ CHAPTER 1. GENERAL PROVISIONS
+
+
+ 12400. This part shall be known, and may be cited, as the Open
+and Transparent Water Data Act.
+ 12401. The Legislature finds and declares all of the following:
+ (a) The recent drought reveals that California needs to integrate
+existing water and ecological data into an authoritative open-access
+platform to help water managers operate California's water system
+more effectively and help water users make informed decisions based
+on water availability and allocation.
+ (b) State and federal leadership, increased awareness by business,
+governmental, and nongovernmental organizations through open and
+transparent access to data, and improved technology and availability
+of open-source platforms create a unique opportunity that California
+should seize upon to integrate and increase access to existing water
+data.
+ (c) California is working to increase access to water data
+collected by state agencies. The state board is piloting a project to
+make water quality datasets available online through an open data
+portal. The portal creates an opportunity to foster collaboration
+among state agencies, share and integrate existing datasets, improve
+state agency operations through data-driven decisionmaking, and
+improve transparency and accountability.
+ (d) State agencies should promote openness and interoperability of
+water data. Making information accessible, discoverable, and usable
+by the public can foster entrepreneurship, innovation, and scientific
+discovery.
+ (e) Water data and information technology tools and applications
+developed and gathered using state funds should be made publicly
+accessible. State delegation of data management to contractors should
+not result in the public losing access to its own information.
+ (f) The availability of open-source tools makes it easier to
+access and explore water and ecological data and could facilitate the
+creation of an online integrated water data platform without the
+need to create an expensive new centralized database.
+ 12402. Unless the context otherwise requires, the following
+definitions govern the construction of this part:
+ (a) "Department" means the Department of Water Resources.
+ (b) "Metadata" means data that describes data.
+ (c) "Platform" means the statewide integrated water data platform
+described in Section 12415.
+ (d) "State board" means the State Water Resources Control Board.
+ CHAPTER 2. STATEWIDE WATER DATA INTEGRATION
+
+
+
+ Article 1. General Provisions
+
+
+ 12405. The department, the state board, and the Department of
+Fish and Wildlife shall coordinate and integrate existing water and
+ecological data from local, state, and federal agencies. The purposes
+for integrating water and ecological data include, but are not
+limited to, providing adequate information to implement the
+Sustainable Groundwater Management Act (Part 2.74 (commencing with
+Section 10720)), improving the management of the state's water
+resources, and bringing greater transparency to water transfers and
+the market.
+ 12406. (a) The department, in consultation with the California
+Water Quality Monitoring Council, the state board, and the Department
+of Fish and Wildlife, shall develop protocols for data sharing,
+documentation, quality control, public access, and promotion of
+open-source platforms and decision support tools related to water
+data. The department shall develop and submit to the Legislature, in
+compliance with Section 9795 of the Government Code and by January 1,
+2018, a report describing these protocols. The report shall be
+developed in collaboration with the California Water Quality
+Monitoring Council, the state board, the Department of Fish and
+Wildlife, relevant federal agencies, and interested stakeholders,
+including, but not limited to, technology and open data experts and
+water data users.
+ (b) Recipients of state funds through grants or contracts for
+research or projects relating to the improvement of water or
+ecological data shall, as a condition of the receipt of a grant or
+contract, adhere to the protocols developed pursuant to subdivision
+(a) for data sharing, transparency, documentation, and quality
+control.
+ (c) A grant or contract recipient that does not comply with
+subdivision (b) is not eligible for state funding until the grant or
+contract recipient complies with those requirements.
+
+ Article 2. Statewide Integrated Water Data Platform Creation
+
+
+ 12410. (a) The department, in consultation with the California
+Water Quality Monitoring Council, the state board, and the Department
+of Fish and Wildlife, shall create, operate, and maintain a
+statewide integrated water data platform in accordance with Section
+12415 and the following schedule:
+ (1) By January 1, 2018, the department shall do both of the
+following:
+ (A) Make public the protocols developed pursuant to Section 12406.
+
+ (B) Publish a strategic plan for data management to guide the
+implementation of this part.
+ (2) By April 1, 2018, the department shall release any request for
+proposals necessary for the development of a statewide integrated
+water data platform.
+ (3) (A) By September 1, 2019, the department shall make available
+existing water and ecological data held by state agencies on the
+platform.
+ (B) The department shall quarterly add the information described
+in subparagraph (A) not available as of September 1, 2019, that
+becomes available at a later date.
+ (4) (A) By August 1, 2020, the department shall make available on
+the platform available water and ecological data related to
+California water supply and management that is held by the following
+agencies:
+ (i) The United States Bureau of Reclamation.
+ (ii) The United States Fish and Wildlife Service.
+ (iii) The National Oceanic and Atmospheric Administration.
+ (iv) The United States Geological Survey.
+ (v) The United States Forest Service.
+ (B) The department shall quarterly add the information described
+in subparagraph (A) not available as of August 1, 2020, that becomes
+available at a later date.
+ (5) By August 1, 2020, the department shall make available on the
+platform any other existing information listed in Section 12415.
+ (b) The department may partner with an existing nonprofit
+organization, with a new nonprofit organization that the department
+creates, organized under paragraph (3) of subsection (c) of Section
+501 of Title 26 of the United States Code, or with another state
+agency to create, operate, or maintain, or any combination thereof,
+the platform.
+ (c) Notwithstanding subdivision (a), the department may enter into
+an agreement with an existing nonprofit organization, with a new
+nonprofit organization that the department creates, organized under
+paragraph (3) of subsection (c) of Section 501 of Title 26 of the
+United States Code, or with another state agency for that nonprofit
+organization or state agency to create, operate, or maintain, or any
+combination thereof, the platform.
+ (d) The Department of Technology is deemed to have delegated to
+the department any authority over the implementation of this part
+granted to it pursuant to Section 11546 of the Government Code.
+ (e) Nothing in subdivision (a) shall prevent a state agency from
+disseminating, managing, or publishing data separately from the
+platform.
+
+ Article 3. Statewide Integrated Water Data Platform Features
+
+
+ 12415. The statewide integrated water data platform created
+pursuant to Section 12410 shall, at a minimum, do all of the
+following:
+ (a) Integrate existing water and ecological data information from
+multiple autonomous databases managed by federal, state, and local
+agencies and academia using consistent and standardized formats.
+ (b) Integrate the following datasets, as available:
+ (1) The department's information on State Water Project reservoir
+operations, groundwater use, groundwater levels, urban water use, and
+land use.
+ (2) The state board's data on water rights, water diversions, and
+water quality through California Environmental Data Exchange Network
+(CEDEN).
+ (3) The Department of Fish and Wildlife's information on fish
+abundance and distribution.
+ (4) The United States Geological Survey's streamflow conditions
+information through the National Water Information System.
+ (5) The United States Bureau of Reclamation's federal Central
+Valley Project operations information.
+ (6) The United States Fish and Wildlife Service's, United States
+Forest Service's, and National Oceanic and Atmospheric Administration
+Fisheries' fish abundance information.
+ (c) Provide data on completed water transfers and exchanges,
+including publicly available or voluntarily provided data on the
+volume, price, and delivery method, identity of the buyers and
+sellers, and the water right associated with the transfer or
+exchange.
+ (d) Provide documentation of data quality and data formats through
+metadata.
+ (e) Adhere to data protocols developed by state agencies pursuant
+to Section 12406.
+ (f) Be able to receive both spatial and time series data from
+various sources.
+ CHAPTER 3. WATER DATA ADMINISTRATION FUND
+
+
+ 12420. (a) The Water Data Administration Fund is hereby created.
+All moneys in the fund are available, upon appropriation, to the
+department, the state board, or the Department of Fish and Wildlife
+for the collection, management, and improvement of water and
+ecological data for the purposes of this part.
+ (b) The Department of Finance shall develop a standardized
+agreement to allow for the voluntary donation to the fund by any
+person, educational institution, government entity, corporation or
+other business entity, or organization.
+ 
+ 

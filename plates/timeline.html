@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timeline · CA Open Water Data Atlas</title>
+<link rel="stylesheet" href="../assets/atlas.css">
+<style>
+  #lanes svg { width: 100%; height: auto; display: block; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--ink-2); margin: 0 0 10px; }
+  .year { display: grid; grid-template-columns: 64px 1fr; gap: 0 16px; border-top: 1px solid var(--grid); padding: 14px 0; }
+  .year > b { font-size: 20px; }
+  .ev { margin: 0 0 12px; }
+  .ev .h { font-weight: 600; display: flex; gap: 8px; align-items: baseline; }
+  .ev .h .dot { transform: translateY(-1px); }
+  .ev .d { color: var(--ink-2); font-size: 14px; margin-left: 18px; }
+  .ev .d a { font-size: 13px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="plate-no">Plate III</div>
+  <h1>Timeline: a decade in four lanes</h1>
+  <p class="lede">Most of the AB 1755 milestones fell in 2018–2020, when the statute's deadlines were. After 2020 the work moved: platform effort into individual programs such as CalWATRS and groundwater accounting, and coordination into the Water Data Consortium.</p>
+
+  <div class="card" style="margin-top:24px">
+    <div class="legend" id="legend"></div>
+    <div id="lanes"></div>
+  </div>
+  <p class="src">Data: <a href="../data/timeline.csv">timeline.csv</a>. Hover a dot for details. Events known only to the month show month and year.</p>
+
+  <h2>Year by year</h2>
+  <div id="list"></div>
+</main>
+<script src="../assets/atlas.js"></script>
+<script>
+(async () => {
+  const TRACKS = [["Law & policy", "var(--s1)"], ["Platform", "var(--s2)"], ["Governance", "var(--s3)"], ["Funding", "var(--s4)"]];
+  const color = Object.fromEntries(TRACKS);
+  const ev = (await loadCSV("data/timeline.csv")).sort((a, b) => a.date.localeCompare(b.date));
+  ev.forEach((e, i) => { e.i = i; e.month = e.date.length === 7; e.t = new Date((e.month ? e.date + "-15" : e.date) + "T12:00"); });
+
+  document.getElementById("legend").innerHTML = TRACKS.map(([k, c]) => `<span class="badge"><span class="dot" style="background:${c}"></span>${k}</span>`).join("");
+
+  const W = 960, left = 110, right = 20, laneH = 56, H = laneH * TRACKS.length + 34;
+  const t0 = new Date("2016-07-01"), t1 = new Date("2026-12-31");
+  const x = d => left + (d - t0) / (t1 - t0) * (W - left - right);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Timeline of AB 1755 events by track, 2016 to 2026">`;
+  // Shade the statutory-deadline window.
+  s += `<rect x="${x(new Date("2016-09-23"))}" y="0" width="${x(new Date("2020-08-01")) - x(new Date("2016-09-23"))}" height="${laneH * TRACKS.length}" fill="var(--accent-wash)" opacity=".2"/>`;
+  s += `<text x="${x(new Date("2016-10-15"))}" y="${laneH * TRACKS.length - 6}" font-size="11" fill="var(--muted)">statutory deadline window</text>`;
+  for (let y = 2017; y <= 2026; y++) {
+    const xx = x(new Date(`${y}-01-01`));
+    s += `<line x1="${xx}" x2="${xx}" y1="0" y2="${laneH * TRACKS.length}" stroke="var(--grid)"/><text x="${xx}" y="${H - 8}" text-anchor="middle" font-size="12" fill="var(--muted)">${y}</text>`;
+  }
+  TRACKS.forEach(([k, c], li) => {
+    const cy = li * laneH + laneH / 2;
+    s += `<text x="0" y="${cy + 4}" font-size="13" fill="var(--ink-2)">${k}</text>`;
+    s += `<line x1="${left}" x2="${W - right}" y1="${cy}" y2="${cy}" stroke="var(--axis)" stroke-width="1"/>`;
+    let lastX = -99, off = 0;
+    ev.filter(e => e.track === k).forEach(e => {
+      const cx = x(e.t);
+      off = cx - lastX < 11 ? (off === 0 ? -10 : off === -10 ? 10 : 0) : 0; // nudge near-collisions
+      lastX = cx;
+      s += `<g class="e" data-i="${e.i}"><circle cx="${cx}" cy="${cy + off}" r="11" fill="transparent"/><circle cx="${cx}" cy="${cy + off}" r="6" fill="${c}" stroke="var(--surface)" stroke-width="2"/></g>`;
+    });
+  });
+  document.getElementById("lanes").innerHTML = s + "</svg>";
+  const fmt = e => e.t.toLocaleDateString("en-US", e.month ? { year: "numeric", month: "short" } : { year: "numeric", month: "short", day: "numeric" });
+  document.querySelectorAll("#lanes .e").forEach(g => {
+    const e = ev[g.dataset.i];
+    g.addEventListener("mousemove", m => tip.show(`<b>${esc(e.event)}</b><br><span class="src">${fmt(e)} · ${esc(e.track)}</span><br>${esc(e.detail)}`, m));
+    g.addEventListener("mouseleave", tip.hide);
+  });
+
+  const link = src => !src ? "" : ` <a href="${/^https?:/.test(src) ? src : "../" + src}">source</a>`;
+  const years = [...new Set(ev.map(e => e.date.slice(0, 4)))];
+  document.getElementById("list").innerHTML = years.map(y => `<div class="year"><b>${y}</b><div>${
+    ev.filter(e => e.date.startsWith(y)).map(e => `<div class="ev"><div class="h"><span class="dot" style="background:${color[e.track]}"></span>${esc(e.event)}</div><div class="d">${fmt(e)} · ${esc(e.detail)}${link(e.source)}</div></div>`).join("")
+  }</div></div>`).join("");
+})();
+</script>
+</body>
+</html>

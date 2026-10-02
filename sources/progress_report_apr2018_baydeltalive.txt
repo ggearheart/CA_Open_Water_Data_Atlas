@@ -1,0 +1,958 @@
+            Progress Report
+for Implementation of Assembly Bill 1755,
+the Open and Transparent Water Data Act
+
+
+               April 2018
+Progress Report: April 2018
+
+
+
+Contents
+
+   Progress Report on Implementation of Assembly Bill 1755, the Open and Transparent Water
+   Data Act .................................................................................................................................................... 1
+   Introduction ............................................................................................................................................... 1
+   Communication and Engagement (February – April 2018) ...................................................................... 2
+   Implementing the Open and Transparent Water Data Act ........................................................................ 2
+      Strategic Plan ........................................................................................................................................ 3
+      Protocols ............................................................................................................................................... 3
+      Use Cases .............................................................................................................................................. 4
+      Exploration of Governance and Funding Options ................................................................................ 5
+      The California Safe Drinking Water Data Challenge 2018 .................................................................. 6
+      Interoperability Testbeds....................................................................................................................... 6
+      Interagency Implementation Planning .................................................................................................. 7
+      Federated Interoperable Portals ............................................................................................................ 8
+      User Focus and Continuous Improvement ............................................................................................ 8
+      Effects of AB 1755 on Local Agencies............................................................................................... 11
+   What’s Next? .......................................................................................................................................... 12
+      Next Steps ........................................................................................................................................... 12
+      How can you get involved?................................................................................................................. 13
+   Useful Links ............................................................................................................................................ 15
+   Acknowledgements ................................................................................................................................. 16
+
+
+
+Tables
+Table 1 Status of AB 1755 Platform Protocols ......................................................................................... 4
+
+Table 2 Phase I Projects, July 2017–September 2019 .............................................................................. 9
+
+Table 3 Phase II Projects, September 2019–September 2020 ............................................................... 10
+
+Table 4 Phase III Projects, September 2020–Future ............................................................................. 11
+
+Table 5 Ongoing Projects ......................................................................................................................... 11
+
+
+
+
+Figure
+Figure 1 Implementing the Open and Transparent Water Data Act ..................................................... 3
+
+
+
+Note: Titles and terms in blue within this report correspond to links provided in the final section, “Useful
+Web Links.”
+
+
+
+
+                                                                               ii
+                                                        AB 1755: Open and Transparent Water Data Act
+
+
+
+Acronyms and Abbreviations
+
+
+AB 1755           Assembly Bill 1755, the Open and Transparent Water Data Act
+
+CCST              California Council on Science and Technology
+
+CDFW              California Department of Fish and Wildlife
+
+CNRA              California Natural Resources Agency
+
+CWQMC             California Water Quality Monitoring Council
+
+DSC               Delta Stewardship Council
+
+DWR               California Department of Water Resources
+
+GovOps            Government Operations Agency
+
+OPR               Governor’s Office of Planning and Research
+
+Progress Report   Progress Report — Implementing the Open and Transparent Water Data Act with
+                  Initial Draft Strategic Plan and Preliminary Protocols
+
+SWRCB             State Water Resources Control Board
+
+
+
+
+                                              iii
+                                                                 AB 1755: Open and Transparent Water Data Act
+
+
+
+
+Progress Report on Implementation of
+Assembly Bill 1755, the Open and
+Transparent Water Data Act
+Introduction
+This is the second progress report on the implementation of Assembly Bill 1755, the Open and
+Transparent Water Data Act (AB 1755), which directs the California Department of Water Resources
+(DWR), the State Water Resources Control Board (SWRCB), the California Department of Fish and
+Wildlife (CDFW), and the California Water Quality Monitoring Council (CWQMC) to improve the
+accessibility and usability of water and ecological data. Based on extensive stakeholder engagement, the
+intended outcome for AB 1755 is a federated network of data portals with data that are sufficient,
+accessible, useful, and used to support decision making. AB 1755 implementation is an evolving process
+that will adapt over time in response to changing software capabilities and the needs of data users and
+providers.
+
+The role of data in water management is not new. Water managers of all levels have incorporated
+available data into their decision-making processes, and numerous entities have stepped forward to
+collect, manage, and share data for specific purposes, with varying degrees of support. This legacy forms
+a strong foundation for AB 1755; without these accomplishments, we could not hope to realize the vision
+of useful data for sound, sustainable water management. We can build on past successes, while striving
+for—and accelerating—advances in data management, data integration, and decision-making. AB 1755
+aspires to more effectively put data to work across political, disciplinary, and agency boundaries.
+
+This April 2018 progress report includes an updated strategic plan, updates on protocols, supplemental
+information about use cases and their development, discussion of long-term governance and funding
+options, news about upcoming data challenges and testbed activities, a high-level look at interagency
+implementation planning, and opportunities for engagement.
+
+This progress report builds upon the January 2018 document, “Progress Report — Implementing the
+Open and Transparent Water Data Act with Initial Draft Strategic Plan and Preliminary Protocols”. Taken
+together, the Progress Report (January 2018) and this progress report describe the background,
+accomplishments, and next steps in implementation of AB 1755. They reflect a user-centered approach
+that is intended to build the relationships and investments necessary across State, federal, and Tribal
+agencies, and among stakeholders to assure that AB 1755 and the larger data vision will be sustainable
+over time.
+
+State agency staff and other stakeholders involved in this implementation embrace the opportunity AB
+1755 affords us to support greater data sharing and to enable California to address its numerous water
+management challenges through data-driven decision making. Contributions of energy and expertise by
+the State agencies identified in legislation and beyond (i.e., State, federal, and local agencies, researchers,
+and philanthropy) have been awe-inspiring. Indeed, AB 1755 has catalyzed an initiative to strengthen
+State agency alignment, engage data providers and data users, promote partnerships, pool expertise and
+
+
+                                                       1
+Progress Report: April 2018
+
+
+
+resources, and build a culture of open and transparent data exchange – all prerequisites for putting data to
+work to transform the way water is managed in California.
+
+Communication and Engagement (February – April 2018)
+Communication and coordination are critical to the successful implementation of AB 1755, both
+internally and externally. Since the release of the Progress Report (January 2018), the Partner Agencies
+have continued their aggressive schedule of coordination to ensure continuous engagement with the water
+management community as summarized below.
+      • 13 AB 1755 implementation team meetings: February 2018–April 2018
+      • 9 meetings on governance and funding exploration: February 2018–March 2018
+      • 6 partner agency team meetings: February 2018–April 2018
+      • 5 presentations of the early implementation of AB 1755
+           o California Water Quality Monitoring Council Meeting: February 2018
+           o DWR’s Environmental Coordination Committee: February 2018
+           o Public webinar on AB 1755 implementation: March 2018
+           o Public engagement at the Water Board Data Fair: March 2018
+           o Presentation at California Water and Environmental Modeling Forum: April 2018
+      • 2 convenings of State Water Agency Principals: March 2018 and April 2018
+      • 2 meetings with California Council on Science and Technology: February 2018 and April 2018
+      • 11 meetings on Safe Drinking Water Data Challenge: March 2018 and April 2018
+
+Implementing the Open and Transparent Water Data Act
+The Partner Agency Team responsible for implementing AB 1755 is comprised of many agencies
+including those named in legislation, DWR, SWRCB, CDFW, and CWQMC, as well as the Governor’s
+Office of Planning and Research (OPR), the California Natural Resources Agency (CNRA), the
+Government Operations Agency (GovOps), and the Delta Stewardship Council (DSC). The Partner
+Agency Team meets regularly to plan, discuss progress, and offer high-level guidance in the multi-agency
+effort to fulfill requirements of AB 1755. Figure 1 provides a conceptual characterization of the State’s
+approach to implementation. Progress on the efforts shown in Figure 1 will be outlined in the sections to
+follow.
+
+
+
+
+                                                     2
+                                                                AB 1755: Open and Transparent Water Data Act
+
+
+
+Figure 1 Implementing the Open and Transparent Water Data Act
+
+
+
+
+Strategic Plan
+The Progress Report (January 2018) included an initial draft Strategic Plan. The partner agencies received
+many insightful comments that aided us in adapting the Strategic Plan to make it more representative of
+opinions expressed by the water and environmental community. New actions have been added, and many
+actions have been revised. Additionally, work is already underway to transition from a strategic planning
+posture to interagency implementation planning, in which strategic actions are being translated into
+specific projects intended to accomplish the four goals of the strategic plan — data are sufficient,
+accessible, useful, and used. The Strategic Plan (April 2018) has been posted on the AB 1755 website.
+
+Protocols
+The Progress Report (January 2018) included three initial protocols needed to enable early publishing of
+data on open data platforms: (1) identify a data steward, (2) publish and document on an open data
+platform, and (3) access data. Over time, these initial protocols will evolve, and additional protocols will
+be developed. Two protocol topics — data security and federation — have already been identified by
+commenters on the Progress Report (January 2018). These protocol topics and those identified in the
+Open Water Information Architecture and the Strategic Plan (April 2018) will be developed in
+coordination with technical and stakeholder groups throughout the course of AB 1755 implementation.
+The status of existing and prospective AB 1755 Platform protocols is summarized in Table 1.
+
+
+
+
+                                                      3
+Progress Report: April 2018
+
+
+
+Table 1 Status of AB 1755 Platform Protocols
+ Protocols developed to date                     Status
+ Identify a Data Steward                         Available in Progress Report (January 2018)
+ Publish and Document on an Open-Data Platform
+ Access data
+ Protocol topics to be developed                 Status
+ Data Security                                   Informed by comments on Progress Report (January 2018)
+ Federation
+ Use Case Development                            Captured as strategic action in Strategic Plan (April 2018)
+ Interoperability                                Captured as a project in Progress Report (April 2018), Interagency
+                                                 Implementation Planning section
+ Data Acquisition                                Outlined in the Open Water Information Architecture (January 2018)
+ Quality Control
+ Publication
+ Data Traceability
+ System Portability
+ External Interfaces
+
+
+
+Details on developed protocols are available in the Protocols for Assembly Bill 1755, the Open and
+Transparent Water Data Act. Additionally, an abbreviated checklist that summarizes the steps to publish
+data to an open data platform is now available as an appendix to the Protocols. Once developed, protocols
+will be tested using a testbed or similar mechanism to ensure the requirements proposed achieve the
+intended outcomes. A proposed process for developing, vetting, and approving new protocols was
+outlined in the Progress Report (January 2018), which applies adaptive management to respond to
+evolving user needs and technological improvement. The AB 1755 protocols will be a “living document,”
+and up-to-date protocols will be available through the open data platforms and the AB 1755 website.
+
+The partner agencies invite and encourage anyone interested in developing, contributing to, or providing
+feedback on existing or new protocols to contact us and get involved in the process. Additional
+information about phasing of new protocol development is available in the Strategic Plan (April 2018)
+and the Interagency Implementation Planning section below.
+
+Use Cases
+As discussed in the Progress Report (January 2018), DWR, California Council on Science and
+Technology (CCST), and UC Water co-hosted a series of workshops founded on the conviction that, to
+properly enable data-driven decisions, consideration should be given to “decision-driven data.” In these
+workshops and subsequent efforts, researchers and water management professionals interactively
+developed 20 draft use cases — short examinations of how decision processes employ data — to inform a
+decision-driven water-data system. A report on this effort and a compendium of the 20 draft use cases was
+published by the UC Berkeley School of law, Center for Law, Energy & the Environment.
+
+The initial 20 draft use cases are not intended to span the entire decision space of water and
+environmental management, nor are they designed to be a comprehensive library of possible water
+management decisions. Rather, they serve as a proof-of-concept to demonstrate that developing use cases
+
+
+
+                                                          4
+                                                                AB 1755: Open and Transparent Water Data Act
+
+
+
+is an effective means of focusing decision-making and prioritizing data collection and publication. The 20
+draft use cases are a starting point for the kinds of decisions to which the evolving federated,
+interoperable open data portals of AB 1755 must respond.
+
+The development of use cases helps clarify the questions that water resource decision-makers must
+answer and identifies the data necessary to answer those questions. Cooperative development of use cases
+allows water resource managers to examine a decision from multiple perspectives; it yields transparent
+documentation that water resource managers can use to communicate their decision-making process with
+stakeholders, to solicit improvements, and to foster trust in decisions; and it can help decision-makers
+articulate expectations of a data system in such a way that technical experts can analyze and address those
+expectations.
+
+Well-documented use cases can also help inform prioritization of datasets for publication on an open data
+system, although the existence of a use case will certainly not be the only factor. Other tools may exist for
+identifying and connecting water management decisions with the data needed to support those decisions,
+and some datasets will be deemed critical, even absent a formal use case.
+
+Though the initial effort to develop the 20 use cases is complete, the Partner Agencies invite anyone
+involved in water management decision-making to contribute additional use cases, share available
+datasets for publication, or federate additional existing data portals.
+
+The use case approach has broad appeal, because it serves as a "meeting place" for water management
+professionals and information technology experts. It is the understanding of the Partner Agencies and our
+research partners that the State of Texas is embarking on the same path to identify who needs what data,
+in what form, for what decisions.
+
+Exploration of Governance and Funding Options
+Implementation of AB 1755 must include thoughtful choices about long-term governance and funding for
+the open data platform. While the Partner Agencies deliberate over the various expectations of a statewide
+integrated platform and the corresponding development approach, one thing is certain: In the absence of a
+resilient governance structure and stable funding model, the open data platform is not sustainable.
+
+In creating, operating, and maintaining the platform, numerous actions and decisions will have to be
+coordinated — from system architecture to protocols adoption to platform development and use. A
+governance structure is the body of established rules and expectations about how these things will be
+decided and coordinated.
+
+When it comes to funding the operation and maintenance of the open data system, the Open and
+Transparent Water Data Act established the Water Data Administration Fund, which can receive
+voluntary contributions, but the legislation did not include a funding appropriation. This highlights one of
+the biggest challenges the AB 1755 open data platform will face, the need for dedicated resources to keep
+it running.
+
+During the first quarter of 2018, an independent exploration was conducted, in consultation with the
+partner agency team, to consider and evaluate governance and funding options for the platform described
+
+
+
+                                                      5
+Progress Report: April 2018
+
+
+
+in AB 1755. The exploration was initiated by the Water Foundation and conducted by Redstone Strategy
+Group, with funding from the S.D. Bechtel, Jr. Foundation, and it included the voluntary participation of
+a range of distinguished professionals throughout California. This group met to discuss three key
+questions:
+      1. What are the governance needs associated with implementation of AB 1755?
+      2. What organizational structure(s) would best meet these governance needs?
+      3. How can governance promote a sustainable funding model for AB 1755?
+
+Because work on open data in California is a microcosm of a national-level conversation, the exploration
+also included interviews with more than 30 experts and stakeholders throughout the nation.
+
+Redstone conducted the investigation independent of State oversight, acting with autonomy in the
+production of a report of findings and recommendations, and Partner Agency representatives had regular
+opportunities to offer input and feedback.
+
+The Governor’s Office of Planning and Research is leading an effort, with active participation of
+executive management at CNRA, CalEPA, DWR, SWRCB, DFW, and GovOps, to consider and evaluate
+governance and funding options, informed by the independent report described above. This group of
+partner agency executives is charged with developing specific, actionable recommendations for long-term
+platform governance and funding for consideration and decision by the Administration in 2018.
+
+The California Safe Drinking Water Data Challenge 2018
+Annually, as many as 1 million Californians lack access to clean, safe drinking water, and the Governor's
+Office of Planning and Research and the West Big Data Innovation Hub are launching a data challenge to
+demonstrate the power of open data to solve one of California’s most pressing issues. They have initiated
+this data challenge to engage innovators, test data skills, and help develop tools to improve access to safe
+drinking water. In partnership with the Water Foundation, Imagine H2O, and the Bay Area Council, and
+with support from the State agency stewards of critical water data and a growing community of partners,
+this data challenge wants participants to use open data with an emphasis on user-centered design, to
+explore data’s potential to better understand and define the specific challenges faced by communities
+lacking access to safe drinking water, help them anticipate vulnerabilities, and identify and deploy
+community-based solutions. The safe drinking water data challenge will also invite users to provide
+feedback on their experience using open data to respond to the challenge. This feedback will inform our
+AB 1755 efforts.
+
+Stay tuned as more details on this event will be available soon, and follow the progress at
+#CAWaterDataChallenge on social media.
+
+Interoperability Testbeds
+A key attribute of the federated open data system is that it will bring together data from many places to
+form a consistent whole, allowing for the free exchange of information about California’s water and
+ecological resources. The open data system should accommodate many types of analysis and visualization
+to support the transition from data to usable information. To facilitate this federation, the Partner
+Agencies will establish interoperability testbeds.
+
+
+
+
+                                                     6
+                                                                AB 1755: Open and Transparent Water Data Act
+
+
+
+It is imperative that our efforts focus on key decisions needed for California water resources management
+and the data needed for those decisions.
+
+Interoperability is vital to efficient and effective water management decision-making. Much of the data
+needed for water management decisions in California comes from local government, and the State will
+have to integrate local data into a regional view to meet broad, statewide requirements. In addition to
+inherent differences from one data provider to another, we must recognize that computer systems and
+commercial software used by water data providers differ substantially, as well.
+
+To assure interoperability of data coming from a diverse set of sources, it will be necessary to set
+common protocols and data standards to facilitate the useful exchange of information. This is analogous
+to routine protocols for transferring data between different computers; however, achieving the
+interoperability of data from different sources and systems will be a much more difficult task.
+
+Planning is underway to develop and deploy, by fall 2018, interoperability testbeds that allow innovative
+users to test the ability of proposed protocols and data standards to address specific use cases. Participants
+will work together to select and test data formats, quality assurance/quality control levels, update
+frequencies, and exchange protocol choices. It is also necessary to assure that relevant data are properly
+inventoried and available for the selected use cases. Conducting these testbeds will help ensure that
+proposed protocols and standards utilized for the platform are beneficial in achieving the goals of the
+Strategic Plan – that data are accessible, sufficient, useful, and used. Each testbed will conclude with
+documentation of lessons learned and analyses of beneficial or non-beneficial protocols and standards,
+along with specific recommendations for future actions. Testbeds will be a tool for ongoing platform
+development.
+
+Interagency Implementation Planning
+The next step in interagency implementation planning is to prioritize identified projects based on
+legislative mandates and available funds. The Partner Agencies have begun to identify and describe
+projects needed to achieve the goals, objectives, and actions outlined in the updated Strategic Plan (April
+2018). Each Partner Agency brings to bear unique data management skillsets, perspectives, and interests
+toward implementing AB 1755. For example, the CWQMC and its workgroups have expertise in
+coordinating the monitoring, collection, and reporting of data across state agencies and then turning that
+data into useful information using data visualizations and tools to answer specific regulatory management
+questions. In turn, the portals managed by the CWQMC workgroups may consume data from the AB
+1755 federated open data system. Through robust communication and coordination, the Partner Agencies
+seek to leverage one another’s unique expertise and mandates to enhance AB 1755 project outcomes,
+identify areas of overlap, eliminate redundancy, and discover new efficiencies.
+
+Tables 2-5 include the preliminary mapping of strategic goals and objectives to specific projects that are
+critical to achieve the vision of AB 1755. Each table includes projects identified for successive phases
+(time periods) of platform implementation. Due to the iterative and adaptive nature of AB 1755
+implementation, plans will be continuously reviewed and revised as needed to ensure effective and
+efficient progress. Also, the future, long-term governance structure will have the authority to refine
+priorities. Finally, completion of the listed projects by the partner agencies is critically dependent on
+funding; many projects require funding beyond what is currently available.
+
+
+
+                                                      7
+Progress Report: April 2018
+
+
+
+Federated Interoperable Portals
+In March 2018, the CNRA released its new Open Data Portal, which gives agencies, stakeholders, and
+interested parties better access to Natural Resource Agency data. The portal helps State, federal, Tribal,
+and local entities make resources-related decisions by giving them open access to data that may have been
+inaccessible. The portal already features data, showcases, and information visualizations related to water,
+wildlife, conservation, energy, protected lands, and oceans. At the time of this report, State agencies have
+made available through the portal over 1,300 datasets and 20 data visualizations. Additional functionality
+as well as new and updated data will be added to the site on a continuous basis.
+
+Another recent and significant achievement is that the CNRA Open Data Portal successfully federated
+data from three constituent departments. Additionally, the CNRA Open Data Portal and statewide open
+data portal, data.ca.gov, hosted by GovOps and the California Department of Technology, are working to
+federate their combined library of datasets. Once accomplished, users of either portal will be able to
+access datasets across many State agencies and departments. This is significant for two reasons. First, it
+will demonstrate the feasibility of a network of federated interoperable portals in bringing together data
+from disparate sources. Second, successful federation will unify datasets from multiple State agencies (for
+example, CDFW and DWR make data available on the CNRA Open Data Portal, and the SWRCB makes
+data available on data.ca.gov).
+
+The AB 1755 open data platform is being developed by federating the existing CNRA, GovOps, and
+other portals. As such, the partner agencies will not release a request for proposals for the development of
+a statewide integrated water data platform.
+
+User Focus and Continuous Improvement
+Success will be measured by the system’s ability to evolve and improve over time in response to users’
+needs. Performance metrics and user feedback — both positive and suggestions for improvement — will
+be monitored and evaluated and will guide evolution of the system in the long term. Decision-making
+about the system itself will be addressed by a governance structure to be determined.
+
+
+
+
+                                                     8
+                                                             AB 1755: Open and Transparent Water Data Act
+
+
+
+Table 2 Phase I Projects, July 2017–September 2019
+ Goals         Objectives      Project                       Project Description
+ Completed
+ Goal 1        Objective 1.1   Initial Use Cases             Develop an initial set of use cases to define
+                                                             and articulate stakeholders’ data and
+                                                             information needs in terms that are
+                                                             translatable into platform requirements. For
+                                                             more information, see Data for Water
+                                                             Decision Making Report.
+ Goal 2        Objective 2.1   Initial Protocols             Develop and publish minimum protocols for
+                                                             data publication. This includes required
+                                                             and optional metadata requirements, data
+                                                             dictionary if applicable, and optional free
+                                                             text description of the data collection, data
+                                                             management, and data qualification
+                                                             methods.
+ Started
+ Goal 2        Objective 2.1   Sustainable Governance and    A project to establish the governance and
+ Goal 4        Objective 4.3   Funding                       sustained funding business model
+                                                             recommended by the effort led by Water
+                                                             Foundation, OPR, Redstone, and others.
+                                                             Develop governance structure and process
+                                                             to guide evolution of protocols.
+ Goal 2        Objective 2.2   Publish State-Held Datasets   Publish datasets including datasets
+                                                             identified in AB 1755.
+ Goal 2        Objective 2.2   Platform Federation           Develop and publish federation protocol.
+                                                             Federate with other open data platforms.
+ Goal 4        Objective 4.4   Safe Drinking Water Data      Conduct the Safe Drinking Water Data
+                               Challenge                     Challenge. Encourage citizens and
+                                                             government programs to develop decision-
+                                                             support tools and custom web application
+                                                             using datasets from the open data
+                                                             platform.
+ Goal 4        Objective 4.2   Communication and             Develop and implement a communications
+                               Engagement Strategy           and engagement strategy for the water
+                                                             community.
+ Planned
+ Goal 1        Objective 1.1   Data Inventory                Identify and publish a list of water
+               Objective 1.2                                 resources-related datasets from use cases.
+                                                             Inventory and publish list of water
+                                                             resources-related datasets. Include
+                                                             government agency that collected the data,
+                                                             along with the reason the information was
+                                                             collected.
+ Goal 4        Objective 4.1   Testbeds                      Select a few use cases, protocols, and
+                                                             data standards, and use data published on
+                                                             the open data platform to address the
+                                                             issues raised. Publish lessons learned from
+                                                             pilot projects to improve open data platform
+                                                             and protocols.
+
+
+
+
+                                                     9
+Progress Report: April 2018
+
+
+
+Table 3 Phase II Projects, September 2019–September 2020
+ Goals            Objectives      Project                        Project Description
+ Goal 1           Objective 1.1   Use Case Protocol              Develop protocol for writing use cases
+                                                                 based on lessons learned from use case
+                                                                 pilot projects.
+ Goal 1           Objective 1.2   Streamline Data Reporting      Evaluate data currently reported to the
+                                                                 State by local agencies to streamline
+                                                                 reporting and reduce burden on local
+                                                                 agencies. Produce a report with findings
+                                                                 and recommendations.
+ Goal 1           Objective 1.2   Identify Data Gaps             Identify data needed, but not collected,
+                                                                 from existing use cases. Publish identified
+                                                                 data gaps. Support coordination between
+                                                                 data providers and users to address data
+                                                                 gaps.
+ Goal 3           Objective 3.2   Visualization, Querying, and   Develop simple visualization tools for the
+                                  Download Tools                 open data platform. Develop tools for
+                                                                 filtering and querying datasets, and support
+                                                                 downloading subsets of data on open data
+                                                                 platform.
+ Goal 3           Objective 3.2   Custom Web Applications        Collaborate with third parties to develop
+                                  and Decision Support Tools     custom web applications and decision
+                                                                 support tools. Provide a location to feature
+                                                                 third-party tools on a rotational basis.
+ Goal 3           Objective 3.2   Support Spatial Discovery      Develop map-based web application
+                                                                 enabling users to spatially discover
+                                                                 datasets across federated AB 1755 open
+                                                                 data platforms.
+ Goal 4           Objective 4.2   Data Stewardship Training      Develop training resources for Partner
+                                                                 Agencies wishing to elevate their data to
+                                                                 the open data platform.
+ Goal 2           Objective 2.2   Publish Federal Datasets       Federate with platforms publishing federal
+                                                                 datasets identified in legislation on open
+                                                                 data platform.
+ Goal 3           Objective 3.1   Interoperability Protocol      Develop protocol to align vocabulary,
+                                                                 metadata requirements, geo-referencing
+                                                                 practices, keyword use, and organization of
+                                                                 datasets to improve discoverability,
+                                                                 interoperability and to facilitate data
+                                                                 integration.
+
+
+
+
+                                                        10
+                                                                 AB 1755: Open and Transparent Water Data Act
+
+
+
+Table 4 Phase III Projects, September 2020–Future
+ Goals           Objectives      Project                         Project Description
+ Goal 4          Objective 4.2   Data Science Training           Develop training resources for data
+                                                                 consumers to improve data literacy.
+ Goal 3          Objective 3.3   Data Archive                    Archive all versions of datasets on the
+                                                                 open data platform.
+ Goal 3          Objective 3.1   Achieve Interoperability        Utilize interoperability protocol to
+                                                                 standardize datasets to improve
+                                                                 discoverability and usability of datasets on
+                                                                 the federated open data portals.
+ Goal 4          Objective 4.4   Data Citations                  Encourage government publications to
+                                                                 source and cite data published in the open
+                                                                 data platform.
+ Goal 3          Objective 3.2   Information and Accessibility   Foster and support development of an
+                                                                 analytical sandbox for the water
+                                                                 community.
+
+
+
+
+Table 5 Ongoing Projects
+ Goals           Objectives      Project                         Project Description
+ Goal 2          Objective 2.2   Data Publication                Expand use of data.ca.gov,
+                                                                 data.cnra.ca.gov, and other existing open
+                                                                 data platforms for publishing data
+ Goal 1          Objective 1.1   Use Case Solicitation           As needed, collect and publish use cases
+                                                                 and data needs from data consumers and
+                                                                 water resource managers.
+ Goal 1          Objective 1.1   Data Inventory                  Identify, publish, and maintain a list of
+                 Objective 1.2                                   water resources-related datasets from use
+                                                                 cases. Inventory, publish, and maintain a
+                                                                 list of water resources-related datasets.
+                                                                 Include government agency that collected
+                                                                 the data, along with the reason the
+                                                                 information was collected.
+ Goal 4          Objective 4.4   Civic Engagement                Encourage citizens and government
+                                                                 programs to develop decision-support tools
+                                                                 and custom web application using datasets
+                                                                 from the open data platform.
+ Goal 2          Objective 2.2   User Feedback                   Collect information from consumers on
+ Goal 4          Objective 4.3                                   improvements that could be made to the
+                                                                 data, or data format, and implement
+                                                                 recommendations as feasible. Continually
+                                                                 enhance the open data platform based on
+                                                                 input from data consumers, data providers,
+                                                                 and AB 1755 governance.
+
+
+
+
+Effects of AB 1755 on Local Agencies
+An emergent theme of public comment on the Progress Report (January 2018) was an expressed concern
+that AB 1755 will introduce new burdens on local water data collectors — namely new, unfunded data
+reporting mandates and increased legal, safety, and security concerns. The Partner Agencies acknowledge
+
+
+
+                                                      11
+Progress Report: April 2018
+
+
+
+these concerns and understand their origin. History offers many examples of well-intentioned, yet under-
+resourced or unfunded, mandates. The enthusiasm already exhibited for implementing AB 1755, and the
+governance and funding options described above, can and may guarantee a more successful outcome this
+time.
+
+By ensuring that data are sufficient, accessible, useful, and used, the full potential of data can be
+unleashed to make sound, sustainable water management decisions and, through use cases, support more
+fact-based discussion of water management decisions and the data needed to make them. Transparency in
+data may yield new opportunities to course-correct, such as the identification of redundancy in data
+reporting, which would enable greater efficiency and consistency statewide.
+
+It is noteworthy that the Open and Transparent Water Data Act imposes no new obligations on local data
+providers. Data reporting mandates in effect prior to the passage of AB 1755 persist, and only certain
+State-held and federal datasets must be made available on the open data system. While some State-held
+data originate at a local level, such datasets are already publicly available, subject to Public Records Act
+requests. In fact, the AB 1755 open data platform will enable further streamlining, and reduce duplication,
+of State-mandated data reporting and reports from local agencies.
+
+In cases where a State-held dataset represents information collected by locals, it is the responsibility of
+the State data steward to ensure the dataset accurately reflects the local information and to identify
+appropriate disclaimers and terms of use. Additionally, the State data steward would need to coordinate
+with data originators to ensure that metadata documentation is complete and accurate.
+
+The AB 1755 process is still evolving, and not all impacts on local agencies can be identified at this time.
+Local agencies will be involved in developing future protocols, including protocols on data
+standardization, quality control, and data security to assure that potential impacts are considered and to
+exploit opportunities for local agencies to benefit.
+
+What’s Next?
+As described above, the Partner Agency Team, with robust engagement from external stakeholders, is
+producing substantial accomplishments toward implementation of the Open and Transparent Water Data
+Act since its passage in September 2016. Even so, much work remains to achieve the spirit of AB 1755
+and accomplish the vision of useful data for sound, sustainable water management. A few of the steps the
+Partner Agencies will take are outlined below, as well as opportunities for water resource decision-
+makers, interested stakeholders, and the public to engage in AB 1755 implementation to help accelerate
+progress.
+
+Next Steps
+As discussed above, the Partner Agencies are considering the findings and recommendations of the
+Exploration of Governance and Funding Options report and are preparing a proposal to the
+Administration describing a sustainable model for governance and funding for of the AB 1755 open data
+platform. The proposal will be responsive to the needs of stakeholders, including federal, Tribal, State,
+and local agencies involved in water management, as well as people affected by those decisions and the
+consultants interested in creating solutions to California’s myriad water management challenges. After a
+
+
+
+                                                     12
+                                                                AB 1755: Open and Transparent Water Data Act
+
+
+
+governance structure is selected and a new governance group is empowered, it will assess progress and
+refine the path forward, as needed.
+
+Until a formal governance model is in place, the Partner Agencies will continue to lead AB 1755
+implementation and make progress through interagency implementation planning. The preliminary list of
+projects shared earlier in this document is informative, and greater detail will be forthcoming to ensure
+project success. The Partner Agencies will also continue working on projects already underway and will
+launch planned projects to help meet legislative timelines and adhere to the spirit of AB 1755 —
+improving water management in California.
+
+How can you get involved?
+There are many opportunities to be involved in this exciting opportunity to transform data management
+and application in the State of California. Specific organized civic engagement opportunities are
+available, including the California Safe Drinking Water Data Challenge 2018 and the interoperability
+testbeds. Preliminary details of those events were included in respective earlier sections of this report, and
+additional details will be forthcoming. Other opportunities include working on use cases and protocols
+and using the AB 1755 platform.
+
+As discussed earlier, use cases are a foundational component in connecting water management decision-
+making to relevant data sources. While formal efforts to develop the initial 20 draft use cases are
+complete, no use case is ever complete. Since water management decisions can evolve as new data
+becomes available or new considerations come to light, so too must the use cases that support those
+decisions. Admittedly, the 20 draft use cases included, by reference, in the Progress Report (January
+2018) do not capture the range of decisions necessary to efficiently and effectively manage California’s
+complex water landscape. The State must develop and maintain a library of use cases. Those interested in
+water management decisions and the data that supports them are invited to review and suggest additions
+or corrections to existing use cases, and create and submit additional use cases, as needed.
+
+Protocols and data standards must adapt over time to ensure that the needs of data providers and data
+consumers can be met. Three initial protocols have already been developed, available in the Progress
+Report (January 2018), and other protocols are outlined in the OWIA or discussed in the Strategic Plan
+(April 2018) and the Interagency Implementation Planning section of this report. All stakeholders are
+encouraged to review available information for protocol(s) or data standard(s) of interest and suggest
+additions and corrections to the existing content. Likewise, the Partner Agencies will gratefully accept
+additional ideas for protocols and data standards beyond those already outlined. Please keep in mind that
+the more specific the input, the greater the likelihood that we will be able to address your intent.
+
+The Partner Agencies also invite all interested parties to make use of our existing federated open data
+portals. The statewide open data portal, data.ca.gov, hosted by GovOps and the California Department of
+Technology, and the CNRA Open Data Portal offer an extensive and growing list of resources, datasets,
+and visualizations available to users interested in interacting with water and environmental data. Utilizing
+these resources and providing feedback on both the data and interfaces is critical to ensuring that these
+tools continue to meet the needs of decision makers in California.
+
+
+
+
+                                                     13
+Progress Report: April 2018
+
+
+
+The Partner Agencies encourage all users to share with us their data stories and how they were, or were
+not, able to utilize the data available on the open data portals. Interested parties may also get an early start
+on developing decision support tools based on available use cases and datasets. Organizations with data
+they want posted on one of the open data portals, or perhaps wanting to federate an existing data portal,
+are encouraged to contact us at AB1755@water.ca.gov.
+
+The Partner Agencies are also interested in establishing formal user groups and will compile names and
+contact information for those who express interest in participating, as well as other ideas to enhance open
+data use in California.
+
+DWR maintains an AB 1755 program webpage with resources, announcements, and other information.
+You may also wish to subscribe to the AB 1755 listserv by contacting us directly at
+AB1755@water.ca.gov.
+
+
+
+
+                                                       14
+                                                            AB 1755: Open and Transparent Water Data Act
+
+
+
+
+Useful Web Links
+AB 1755 Program
+      https://www.water.ca.gov/Programs/All-Programs/AB-1755
+
+California Safe Drinking Water Data Challenge 2018
+        https://twitter.com/hashtag/CaWaterDataChallenge?src=hash
+
+CNRA Open Data Portal
+     https://data.cnra.ca.gov/
+
+Data for Water Decision Making
+        https://www.law.berkeley.edu/research/clee/research/wheeler/data/
+
+Exploration of Governance and Funding for Open and Transparent Water Data
+       https://www.redstonestrategy.com/publications/ca-open-water-data/
+
+Progress Report — Implementing the Open and Transparent Water Data Act with Initial Draft Strategic
+Plan and Preliminary Protocols (January 2018)
+        https://www.water.ca.gov/-/media/DWR-Website/Web-Pages/Programs/All-Programs/AB-
+        1755/AB1755ProgressReportinitialdraft13018v42.pdf
+
+Protocols for Assembly Bill 1755, the Open and Transparent Water Data Act (April 2018)
+        https://www.water.ca.gov/-/media/DWR-Website/Web-Pages/Programs/All-Programs/AB-
+        1755/Protocols-for-AB1755.pdf
+
+Statewide Open Data Portal hosted by GovOps and the California Department of Technology
+        https://data.ca.gov/
+
+Strategic Plan for Assembly Bill 1755, the Open and Transparent Water Data Act (April 2018)
+        https://www.water.ca.gov/-/media/DWR-Website/Web-Pages/Programs/All-Programs/AB-
+        1755/Strategic-Plan-for-AB1755.pdf
+
+
+
+
+                                                  15
+Progress Report: April 2018
+
+
+
+
+Acknowledgements
+This report was developed through a collaborative process led by the AB1755 Partner Agency Team
+reaching out to stakeholders who share interest in open and transparent water data for California. The
+effort began in July 2017 and continues today. Following is a list of agencies, organization and
+individuals who have provided invaluable input to this ongoing process.
+
+AB 1755 Partner Agency Team
+California Department of Fish and Wildlife
+Steve Goldman
+Tom Lupo
+Karen Miner
+
+California Department of Water Resources
+Matt Correa
+Gary Darling
+Kamyar Guivetchi – AB1755 Program Sponsor
+Julie Haas
+Abdul Khan
+Christina McCready – AB1755 Program Manager
+Paul Shipman
+
+California Natural Resources Agency
+David Harris
+
+California Water Quality Monitoring Council
+Kristopher Jones
+Nick Martorano
+
+Delta Stewardship Council
+George Isaac
+
+Governor’s Office of Planning and Research
+Ken Alex
+Debbie Franco
+
+Government Operations
+Stuart Drown
+Angelica Quirarte
+
+State Water Resources Control Board
+Greg Gearheart
+Rafael Maestu
+
+
+
+                                                    16
+                                           AB 1755: Open and Transparent Water Data Act
+
+
+
+AB1755 Collaborators
+California Council on Science and Technology
+Susan Hackwood
+Brie Lindsey
+Amber Mace
+Shannon Muir
+
+Center for Collaborative Policy
+Ariel Ambruster
+Alexandra Cole-Weiss
+
+Delta Conservancy
+Shakoora Azimi-Gaylon
+
+Lawrence Berkeley National Laboratory
+Debra Agarwal
+Susan Hubbard
+Peter Nico
+Charu Varadharajan
+
+Redstone Strategy Group
+Nathan Huttner
+Kathy King
+John Whitney
+
+San Diego Super Computer Center
+John Helly
+Michael Norman
+
+S.D. Bechtel, Jr. Foundation
+Joya Banerjee
+
+University of California, Berkeley
+Alida Cantor
+Ronan Kennedy
+Michael Kiparsky
+Meredith Lee
+
+University of California, Merced
+Roger Bales
+Leigh Bernacchi
+Martha Conklin
+
+
+
+
+                                     17
+Progress Report: April 2018
+
+
+
+University of California, Santa Barbara
+Jeff Dozier
+
+Water Foundation
+Mike Myatt
+
+OWIA Technical Working Group
+Stephen Abrams, University of California
+Deb Agarwal, Lawrence Berkeley Laboratory
+Roger Bales, University of California, Merced
+David Blodgett, U.S. Geological Survey
+Martha Conklin, University of California, Merced
+Matt Correa, California Department of Water Resources
+Gary Darling, California Department of Water Resources
+Greg Gearheart, California Water Boards
+Kamyar Guivetchi, California Department of Water Resources
+Tony Hale, San Francisco Estuary Institute
+John Helly, University of California, San Diego
+George Isaac, California Delta Stewardship Council
+Sara Larsen, Western States Water Council
+Christina McCready, California Department of Water Resources
+Don Sullivan, NASA Ames
+Dwane Young, U.S. Environmental Protection Agency
+
+Additional Contributors
+Commenters on January 2018 Progress Report Implementing the Open and
+Transparent Water Data Act with Initial Draft Strategic Plan and Preliminary
+Protocols
+Patrick Atwater – California Data Collaborative
+Derek Borba – Borba Farms
+John Callaway – Delta Stewardship Council
+Paul Cook – Irvine Ranch Water District
+Richard Harasick – Los Angeles Department of Water and Power
+Thomas Jabusch – Sacramento - San Joaquin Delta Conservancy
+Jessica Law – Delta Stewardship Council
+Elizabeth Lovsted – Eastern Municipal Water District
+Jay Lund – UC Davis
+Cathleen Pieroni – City of San Diego
+Max Stevenson - Yolo County Flood Control and Water Conservation District
+Devendra Upadhyay – Metropolitan Water District
+
+Publications and Editorial Services by California Department of Water
+Resources
+William O’Daly
+Charlie Olivares
+Scott Olling
+
+
+                                                18
+

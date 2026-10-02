@@ -1,0 +1,18 @@
+date,metric,value,method,source
+2018-04,data.cnra.ca.gov total datasets,1300+,reported ("over 1,300 datasets and 20 data visualizations"),AB 1755 Progress Report April 2018
+2020-11-17,data.cnra.ca.gov total datasets,19486,Wayback snapshot "/dataset" page count,https://web.archive.org/web/20201117174029/https://data.cnra.ca.gov/dataset
+2022-01-26,data.cnra.ca.gov total datasets,19623,Wayback snapshot,https://web.archive.org/web/20220126174004/https://data.cnra.ca.gov/dataset
+2023-07-31,data.cnra.ca.gov total datasets,20353,Wayback snapshot,https://web.archive.org/web/20230731220824/https://data.cnra.ca.gov/dataset
+2024-06-12,data.cnra.ca.gov total datasets,20850,Wayback snapshot,https://web.archive.org/web/20240612011501/https://data.cnra.ca.gov/dataset
+2024-09-25,data.cnra.ca.gov total datasets,20903,Wayback snapshot,https://web.archive.org/web/20240925204451/https://data.cnra.ca.gov/dataset
+2025-01-08,data.cnra.ca.gov total datasets,20946,Wayback snapshot,https://web.archive.org/web/20250108232104/https://data.cnra.ca.gov/dataset
+2025-06-02,data.cnra.ca.gov total datasets,20953,Wayback snapshot,https://web.archive.org/web/20250602012041/https://data.cnra.ca.gov/dataset
+2026-03 (approx),data.cnra.ca.gov total datasets,21026,Wayback snapshot (exact timestamp not captured),https://web.archive.org/web/20260301/https://data.cnra.ca.gov/dataset/
+2026-10-02,data.cnra.ca.gov total datasets,21451,live CKAN API package_search,https://data.cnra.ca.gov/api/3/action/package_search?rows=0
+2026-10-02,data.cnra.ca.gov Water topic group,2275,live CKAN API,https://data.cnra.ca.gov/group/water
+2026-10-02,data.cnra.ca.gov Ocean Data Partners (federated),16076,live CKAN API,https://data.cnra.ca.gov/organization/ocean-data-partners
+2026-10-02,data.cnra.ca.gov Water Data Partners (federated federal),1410,live CKAN API,https://data.cnra.ca.gov/organization/water-data-partners
+2026-10-02,data.cnra.ca.gov CDFW,2424,live CKAN API,
+2026-10-02,data.cnra.ca.gov DWR,484,live CKAN API,
+2026-10-02,data.cnra.ca.gov SWRCB,61,live CKAN API,
+2026-10-02,data.ca.gov total datasets,4664,live CKAN API,https://data.ca.gov/api/3/action/package_search?rows=0

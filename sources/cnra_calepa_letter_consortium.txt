@@ -1,0 +1,152 @@
+April 5, 2019
+
+
+
+Partners,
+
+This letter conveys our support for a new Water Data Consortium in California and expresses our
+agencies’ commitment to coordinate closely with this new Consortium.
+
+Better use of data on water and ecosystems will help us meet growing demands placed on our water
+resources by climate change, population growth and other factors. Data on climate change impacts, for
+example, can help shape local agencies’ infrastructure investments to protect water reliability for their
+customers. Other types of data can help state agencies better understand where Californians are most
+vulnerable to drought, flood, and water quality impacts, which allows state government and local
+communities to strengthen resilience before the next crisis strikes. Data is also critical to implement key
+state goals such as the implementation of the Sustainable Groundwater Management Act (SGMA). For
+SGMA, groundwater data allows local agencies to set baselines and benchmarks for achieving
+groundwater sustainability and is necessary to identify opportunities to increase groundwater recharge
+and enable water trading where local water users find it useful.
+
+Assembly Bill 1755 (AB 1755), the Open and Transparent Water Data Act passed in 2016, acknowledges
+the tremendous potential of California’s water data. It requires the California Department of Water
+Resources (DWR), in consultation with the State Water Resources Control Board (Water Board), the
+California Department of Fish and Wildlife (DFW), and the California Water Quality Monitoring Council
+(Council), to make available important water and ecosystem data for widespread use. In response, DWR
+convened a broad Partner Agency Team comprised of the entities listed above and other state agencies
+that have data, expertise, and interest in implementing AB 1755. The Partner Agency Team then
+developed an AB 1755 Strategic Plan to guide AB 1755 implementation.
+
+Implementing the AB 1755 Strategic Plan promises to improve water decision-making by making water
+and ecosystem data more accessible, useful, and ultimately well-utilized. To achieve this potential, the
+strategic plan acknowledges that broad public engagement is essential. Accordingly, the Partner Agency
+Team has convened collaborative venues and workshops to engage stakeholders and experts. A
+technical group is helping develop data standards and protocols, a UC Berkeley team spearheaded a set
+of sample use cases to demonstrate the connection between decisions and data, and public “water data
+challenges” have been developed that provide opportunity for civic engagement.
+
+Development of a shared governance model to coordinate water data will build upon this public
+engagement and collaboration and will ensure that AB 1755 is implemented in a manner that enables
+data to be accessible, useful and well-utilized. For this governance model, AB 1755 authorizes DWR to
+“…partner with an existing nonprofit organization, with a new nonprofit organization that the
+department creates…, or with another state agency to create, operate, or maintain, or any combination
+thereof, the platform.” The Partner Agency Team has opted to expand investment in two existing
+platforms, the data.ca.gov and data.cnra.ca.gov platforms, rather than create totally new data
+platforms.
+
+These two state government data platforms will be “federated,” meaning that they will be made
+interoperable. Besides avoiding redundancy, creating a federation of data platforms enables connection
+with other federal and local data platforms that meet state standards and protocols. This approach
+provides the potential to exponentially expand data access and utilizations. The Strategic Plan
+recognizes that responsibility and authority over publishing state data and operating state-run portals
+needs to remain with state agencies but that a “shared governance space will provide the
+organizational infrastructure to support broad engagement, investment, adoption, and persistence of
+open data infrastructure” (Governing California’s Open Water Data Infrastructure, p.2).
+
+Inclusive engagement by a broad range of stakeholders will be enabled by the formation of a Water
+Data Consortium, which has been developed by the Water Foundation and other stakeholders and
+refined by the Water Data Advisory Council, a body convened by the Governor’s Office of Planning and
+Research. The Consortium has been designed to enable broad stakeholder participation; a continuous
+discourse centered around the needs of water data users; a shared venue for dialog and collaborative
+projects; and a dialogue to inform the state’s own use of water data. The Consortium steering
+committee will include state agency representatives, water managers, NGOs, and others with expertise
+on water data.
+
+The California Natural Resources Agency, the California Environmental Protection Agency, and the
+members of the Partner Agency Team support the creation of a Water Data Consortium and commit to
+close coordination between state agencies and the activities of the Consortium. Our vision for the
+relationship between the state agencies and the Consortium is outlined in the attached table. We
+welcome the Consortium’s initial focus on streamlining data submissions to state agencies.
+
+We greatly appreciate the commitment and investment being made by a broad range of groups and
+leaders working to create the Consortium. This shared effort provides an early example of the
+collaborative spirit we expect the Consortium to nurture.
+Sincerely,
+
+ ncere
+
+
+
+
+Wade Crowfoot                                  Jared Blumenfeld
+Secretary for Natural Resources                Secretary for Environmental Protection
+Partner Agency Team
+Department of Water Resources
+Karla Nemeth, Director
+Kamyar Guivetchi, Team Member
+Christina McCready, Team Member
+
+Department of Fish and Wildlife
+Chuck Bonham, Director
+Tom Lupo, Team Member
+
+State Water Resources Control Board
+Joaquin Esquivel, Chair
+Greg Gearhart, Team Member
+Rafael Maestu, Team Member
+
+Water Quality Monitoring Council
+Nicholas Martorano, Executive Director, Team Member
+
+California Natural Resources Agency
+Wade Crowfoot, Secretary
+Tim Garza, Team Member
+David Harris, Team Member
+
+Delta Stewardship Council
+Susan Tatayon, Chair
+George Isaac, Team Member
+
+California Government Operation Agency
+Marybel Batjer, Secretary
+Stuart Drown, Team Member
+Angelica Quirarte, Team Member
+
+Governor’s Office of Planning and Research
+Kate Gordon, Director
+Debbie Franco, Team Member
+
+
+
+Note: this page was re-formatted for improved readability with a screen reader.
+                                     Open Water Data Infrastructure Activities
+
+                                Consortium                                               Partner Agency Team
+        Gather feedback from stakeholders and make                  Collect, federate, and make available water and
+        recommendations to improve data collection and              ecosystem data.
+        publication by state agencies.
+        Gather feedback from stakeholders and make                  Maintain and expand federation of existing and
+        recommendations to improve federation of existing and       future data portals.
+        new data portals.
+        Develop shared data standards and protocols for voluntary   Adopt and implement state standards and protocols.
+        adoption by organizations external to the state.
+
+        Solicit input on and develop recommendations to improve     Consider and possibly implement recommendations for
+        the process of data submission to the state.                streamlining local agency data submission to the state.
+        Develop pathway to leverage non-state funding for AB 1755   Ensure adequate state funding for state responsibilities
+        related activities.                                         related to AB 1755.
+
+Tasks   Promote innovation and lay the groundwork for pursuit of    Consider new opportunities developed by the
+        new opportunities.                                          Consortium.
+        Build trust with data producers, providers, users, and      Build trust with data producers, providers, users, and
+        consumers.                                                  consumers.
+        Create a venue for stakeholders that includes state         Evaluate progress on the implementation of the open
+        agencies to identify shared benchmarks and performance      water data infrastructure towards achieving identified
+        measures to ensure that water and ecological data are       shared benchmarks and performance measures.
+        sufficient, accessible, useful, and used.
+        Develop, collect, and recommend use cases to increase       Prioritize data transformation to serve use
+        effective decision making.                                  cases, as appropriate and feasible.
+        Recommend strategic direction for data standards,           Collaborate with the Consortium on updates to the AB
+        federation, and operation and maintenance of the data       1755 Strategic Plan, as needed to support water
+        platform.                                                   management
+

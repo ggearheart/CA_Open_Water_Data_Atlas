@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scorecard · CA Open Water Data Atlas</title>
+<link rel="stylesheet" href="../assets/atlas.css">
+<style>
+  .tally { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin: 24px 0; }
+  .tally .card { padding: 12px 14px; }
+  .tally .v { font-size: 30px; font-weight: 700; line-height: 1.1; }
+  .tally .l { display: flex; gap: 6px; align-items: center; font-size: 14px; color: var(--ink-2); }
+  .goalrow { display: grid; grid-template-columns: 110px 1fr; gap: 12px; align-items: start; padding: 10px 0; border-top: 1px solid var(--grid); }
+  .goalrow > b { font-size: 14px; padding-top: 6px; }
+  .tiles { display: flex; flex-wrap: wrap; gap: 4px; }
+  .tile { width: 52px; height: 40px; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-size: 11px; font-variant-numeric: tabular-nums; color: #0b0b0b; cursor: pointer; border: 0; font-family: inherit; }
+  .tile .i { font-size: 13px; line-height: 1; }
+  .tile.dim { opacity: .2; }
+  .tile.unverified, .tile.superseded { color: var(--ink); }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+  .filters button { font: inherit; font-size: 13px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
+  .filters button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-wash); }
+  td.id { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr.hl { background: var(--accent-wash); }
+  @media (max-width: 560px) { .goalrow { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="plate-no">Plate IV</div>
+  <h1>Scorecard: 49 actions, eight years on</h1>
+  <p class="lede">Each strategic action in the 2018 plan, graded against public evidence. The pattern: <b>platform and access goals mostly happened</b>, through federation of existing portals. <b>Standards, interoperability and measuring use mostly did not</b>, or left no public record.</p>
+  <p class="callout">This is a <b>draft</b>. "Unverified" means no public evidence was found, not that the work didn't happen. Corrections go in <a href="../data/strategic_actions.csv">strategic_actions.csv</a> (columns <code>status</code>, <code>evidence</code>, <code>source</code>).</p>
+
+  <div class="tally" id="tally"></div>
+
+  <h2>By goal</h2>
+  <p>One tile per action. Hover for evidence; click to jump to its row.</p>
+  <div class="card" id="tiles"></div>
+
+  <h2>Evidence table</h2>
+  <div class="filters" id="filters"></div>
+  <div class="card tbl-scroll"><table>
+    <thead><tr><th>#</th><th>Action</th><th>Planned</th><th>Status</th><th>Evidence</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+</main>
+<script src="../assets/atlas.js"></script>
+<script>
+(async () => {
+  const rows = await loadCSV("data/strategic_actions.csv");
+  const ORDER = ["done", "partial", "superseded", "not_done", "unverified"];
+  const GOALS = ["Sufficient", "Accessible", "Useful", "Used"];
+  const badge = k => `<span class="badge"><span class="dot" style="background:${STATUS[k].color}"></span>${STATUS[k].icon} ${STATUS[k].label}</span>`;
+  const n = k => rows.filter(r => r.status === k).length;
+
+  document.getElementById("tally").innerHTML = ORDER.map(k =>
+    `<div class="card"><div class="v">${n(k)}</div><div class="l">${badge(k)}</div></div>`).join("");
+
+  document.getElementById("tiles").innerHTML = GOALS.map(g => `<div class="goalrow"><b>${g}</b><div class="tiles">${
+    rows.filter(r => r.goal === g).map(r => `<button class="tile ${r.status}" data-id="${r.id}" style="background:${STATUS[r.status].color}" aria-label="${r.id} ${esc(r.action)}: ${STATUS[r.status].label}"><span class="i">${STATUS[r.status].icon}</span>${r.id}</button>`).join("")
+  }</div></div>`).join("");
+
+  const link = src => !src ? "" : ` <a href="${/^https?:/.test(src) ? src : "../" + src}">source</a>`;
+  document.getElementById("rows").innerHTML = rows.map(r => `<tr id="a${r.id.replaceAll(".", "-")}" data-status="${r.status}">
+    <td class="id">${r.id}</td><td><b>${esc(r.action)}</b><br><span class="src">${esc(r.description)}</span></td>
+    <td>${esc(r.planned)}</td><td>${badge(r.status)}</td><td>${esc(r.evidence)}${link(r.source)}</td></tr>`).join("");
+
+  const byId = Object.fromEntries(rows.map(r => [r.id, r]));
+  document.querySelectorAll(".tile").forEach(t => {
+    const r = byId[t.dataset.id];
+    t.addEventListener("mousemove", e => tip.show(`<b>${r.id} · ${esc(r.action)}</b><br>${badge(r.status)}<br>${esc(r.evidence)}`, e));
+    t.addEventListener("mouseleave", tip.hide);
+    t.addEventListener("click", () => {
+      const tr = document.getElementById("a" + r.id.replaceAll(".", "-"));
+      setFilter("all");
+      document.querySelectorAll("tr.hl").forEach(x => x.classList.remove("hl"));
+      tr.classList.add("hl"); tr.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  });
+
+  const fl = document.getElementById("filters");
+  fl.innerHTML = `<button data-k="all" aria-pressed="true">All ${rows.length}</button>` +
+    ORDER.map(k => `<button data-k="${k}" aria-pressed="false"><span class="dot" style="background:${STATUS[k].color}"></span>${STATUS[k].label} ${n(k)}</button>`).join("");
+  function setFilter(k) {
+    fl.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
+    document.querySelectorAll("#rows tr").forEach(tr => tr.hidden = k !== "all" && tr.dataset.status !== k);
+    document.querySelectorAll(".tile").forEach(t => t.classList.toggle("dim", k !== "all" && !t.classList.contains(k)));
+  }
+  fl.addEventListener("click", e => { const b = e.target.closest("button"); if (b) setFilter(b.dataset.k); });
+})();
+</script>
+</body>
+</html>

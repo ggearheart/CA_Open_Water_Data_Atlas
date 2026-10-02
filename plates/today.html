@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today · CA Open Water Data Atlas</title>
+<link rel="stylesheet" href="../assets/atlas.css">
+<style>
+  #growth svg { width: 100%; height: auto; display: block; }
+  td.req { font-weight: 600; white-space: nowrap; }
+  .next { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .next h3 { margin-top: 0; }
+  .next p { margin: 0; font-size: 15px; color: var(--ink-2); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="plate-no">Plate VI</div>
+  <h1>Today: the Act at ten</h1>
+  <p class="lede">As of October 2026, the parts of AB 1755 that could be met by <em>publishing</em> have largely been met. The parts that needed <em>standards, money, or new data</em> are still open: interoperability protocols, the water-transfers dataset, and the Water Data Administration Fund.</p>
+
+  <div class="grid" style="margin-top:24px">
+    <div class="card stat"><div class="v">21,451</div><div class="l">datasets on data.cnra.ca.gov (2026-10-02)</div></div>
+    <div class="card stat"><div class="v">1</div><div class="l">water-transfer dataset on the portals; §12415(c) asks for all completed transfers</div></div>
+    <div class="card stat"><div class="v">$0</div><div class="l">found deposited in the Water Data Administration Fund (§12420)</div></div>
+    <div class="card stat"><div class="v">0</div><div class="l">Strategic Plan updates since 2018; the plan promised one every 5 years</div></div>
+  </div>
+
+  <h2>The statute, requirement by requirement</h2>
+  <div class="card tbl-scroll"><table>
+    <thead><tr><th>Requirement</th><th>Status</th><th>What happened</th></tr></thead>
+    <tbody id="req"></tbody>
+  </table></div>
+  <p class="src">Sources: DWR AB 1755 Implementation Journal (last updated Nov 2024); 2018 Progress Report and protocols; live CKAN API. Draft judgments; see <a href="scorecard.html">Plate IV</a> for the plan-level scorecard.</p>
+
+  <h2>The catalog grew by federation, once</h2>
+  <p>Almost all of the growth came in 2019, when ocean and federal water records were harvested in to meet the statutory deadlines. Since 2020 the catalog has added about 2,000 records, under 2% a year.</p>
+  <div class="card" id="growth"></div>
+  <p class="src">Total datasets on data.cnra.ca.gov. 2018 figure as reported ("over 1,300"); 2020–2026 from Internet Archive snapshots and the live API. Data: <a href="../data/cnra_dataset_counts.csv">cnra_dataset_counts.csv</a>.</p>
+
+  <h2>Open questions for the next decade</h2>
+  <div class="next">
+    <div class="card"><h3>Is a catalog a platform?</h3><p>Federation produced findability, not integration. Plan action 3.1.7 called for querying like data through one access point. Nothing does that across agencies yet.</p></div>
+    <div class="card"><h3>Who funds the plumbing?</h3><p>The Consortium's 2026 Prop 4 report found that bonds "rarely fund the coordination, governance" behind data. The Act's own fund was never capitalized.</p></div>
+    <div class="card"><h3>Program systems vs. the platform</h3><p>The decade's largest water-data investment, water-rights modernization (UPWARD/CalWATRS, a reported $60M over two budgets), came through the Water Board's own program, not AB 1755. Is AB 1755 now the publishing layer for program systems rather than a system of its own?</p></div>
+    <div class="card"><h3>A plan update</h3><p>The plan was to be refreshed with each Water Plan. SB 72 launched Water Plan 2028 in February 2026, which is a natural vehicle.</p></div>
+    <div class="card"><h3>Amending the Act</h3><p>AB 2728 (2026) was introduced to add hatchery data and a 2027 deadline. It was chaptered on Sept 30, 2026 under a groundwater-fees title, so the AB 1755 amendments appear to have been dropped. <em>Unconfirmed.</em></p></div>
+    <div class="card"><h3>Standards</h3><p>Ten protocol topics listed in 2018 are still "to be developed," including interoperability, QC, federation and security. The Internet of Water's ingestion frameworks offer a template.</p></div>
+  </div>
+</main>
+<script src="../assets/atlas.js"></script>
+<script>
+(async () => {
+  const REQ = [
+    ["§12406(a)", "partial", "Protocols with a report to the Legislature by Jan 1, 2018. Three minimum protocols issued Jan 2018, finalized Apr 2018. Ten further topics were never adopted. Formal filing with the Legislature not confirmed."],
+    ["§12406(b)–(c)", "unverified", "Grantees must follow the protocols to stay eligible for funding. No evidence this condition is enforced."],
+    ["§12410(a)(1)", "done", "Strategic plan by Jan 1, 2018: draft Jan 2018, final Apr 2018. Never updated."],
+    ["§12410(a)(2)", "superseded", "RFP for the platform by Apr 1, 2018. Not issued, by choice: the agencies federated the existing CNRA and GovOps portals instead (§12410(b)–(c))."],
+    ["§12410(a)(3)", "done", "State data by Sept 1, 2019. DWR reports it met: 2,700+ critical datasets (500+ water, 2,000+ wildlife). The required quarterly updates are not verified."],
+    ["§12410(a)(4)", "done", "Federal data by Aug 1, 2020. Met through keyword harvest: Water Data Partners 1,410; NOAA 152; USGS 86; USFWS 35; USBR 9; USFS 2. DWR notes the keyword selection needs refining."],
+    ["§12415(a)", "partial", "Consistent, standardized formats. The interoperability protocol was never finished."],
+    ["§12415(b)", "partial", "The named state and federal datasets are findable. Water rights and diversions became public through CalWATRS (2025), not the platform itself."],
+    ["§12415(c)", "not_done", "Completed water transfers and exchanges (volume, price, parties, water right). One dataset found: State Water Project Facilitated Non-Project Water Transfers."],
+    ["§12420", "not_done", "Water Data Administration Fund: available 'upon appropriation.' No deposits found. DWR says the Act came with no appropriation."],
+  ];
+  const badge = k => `<span class="badge"><span class="dot" style="background:${STATUS[k].color}"></span>${STATUS[k].icon} ${STATUS[k].label}</span>`;
+  document.getElementById("req").innerHTML = REQ.map(([s, k, t]) => `<tr><td class="req">${s}</td><td>${badge(k)}</td><td>${esc(t)}</td></tr>`).join("");
+
+  const pts = (await loadCSV("data/cnra_dataset_counts.csv"))
+    .filter(r => r.metric === "data.cnra.ca.gov total datasets")
+    .map(r => ({ d: new Date(r.date.slice(0, 7) + "-15T12:00"), v: parseInt(r.value), label: r.date.replace(" (approx)", ""), method: r.method }));
+  const W = 960, H = 300, L = 64, R = 20, T = 16, B = 30;
+  const t0 = new Date("2018-01-01"), t1 = new Date("2026-12-31");
+  const x = d => L + (d - t0) / (t1 - t0) * (W - L - R);
+  const y = v => T + (1 - v / 25000) * (H - T - B);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="data.cnra.ca.gov dataset count, 2018 to 2026">`;
+  for (let v = 0; v <= 25000; v += 5000) s += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="${v ? "var(--grid)" : "var(--axis)"}"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end" font-size="12" fill="var(--muted)" style="font-variant-numeric:tabular-nums">${v.toLocaleString()}</text>`;
+  for (let yr = 2018; yr <= 2026; yr++) s += `<text x="${x(new Date(yr + "-07-01"))}" y="${H - 8}" text-anchor="middle" font-size="12" fill="var(--muted)">${yr}</text>`;
+  // Gap between the 2018 report and first snapshot: dashed, because no observations exist in between.
+  s += `<path d="M${x(pts[0].d)},${y(pts[0].v)} L${x(pts[1].d)},${y(pts[1].v)}" stroke="var(--s1)" stroke-width="2" stroke-dasharray="4 4" fill="none"/>`;
+  s += `<path d="${pts.slice(1).map((p, i) => (i ? "L" : "M") + x(p.d) + "," + y(p.v)).join(" ")}" stroke="var(--s1)" stroke-width="2" fill="none"/>`;
+  s += `<text x="${x(new Date("2019-03-01"))}" y="${y(11000)}" font-size="12" fill="var(--ink-2)">2019 federation harvests:</text><text x="${x(new Date("2019-03-01"))}" y="${y(11000) + 16}" font-size="12" fill="var(--ink-2)">+16,000 ocean, +1,300 federal water</text>`;
+  pts.forEach((p, i) => s += `<g class="p" data-i="${i}"><circle cx="${x(p.d)}" cy="${y(p.v)}" r="12" fill="transparent"/><circle cx="${x(p.d)}" cy="${y(p.v)}" r="4.5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"/></g>`);
+  const last = pts[pts.length - 1];
+  s += `<text x="${x(last.d) - 6}" y="${y(last.v) - 12}" text-anchor="end" font-size="13" font-weight="600" fill="var(--ink)">${last.v.toLocaleString()}</text>`;
+  document.getElementById("growth").innerHTML = s + "</svg>";
+  document.querySelectorAll("#growth .p").forEach(g => {
+    const p = pts[g.dataset.i];
+    g.addEventListener("mousemove", e => tip.show(`<b>${p.v.toLocaleString()} datasets</b><br>${esc(p.label)}<br><span class="src">${esc(p.method)}</span>`, e));
+    g.addEventListener("mouseleave", tip.hide);
+  });
+})();
+</script>
+</body>
+</html>

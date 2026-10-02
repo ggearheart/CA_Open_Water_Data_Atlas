@@ -1,0 +1,162 @@
+                                                                                                                                       Briefing held May 2018
+CCST Expert Briefing
+The Open and Transparent Water Data Act                                                                                        One      For more details
+                                                                                                                               Pager    about this briefing:
+                                                                                                                                        ccst.us/expert-briefings
+
+
+
+
+Long-Standing Challenges of Water Data Management in California
+The past decade, which has included a five-year drought, has seen increased recognition that access
+to and management of the state’s water data will be critical for managing the state’s water resources.
+Complementing efforts by the state, a series of reports by CCST in 2011 and 2014 highlighted the
+economic importance of managing the state’s water supply and recommended that the state develop
+and implement an integrated water information management system. This is no small task, as the state’s
+existing water datasets are housed in a number of places and managed by various entities including                      Select Experts
+local, state, and federal agencies as well as non-governmental organizations and universities.                          The following can advise and share
+                                                                                                                        insights on water data management in
+                                                                                                                        California.
+The Open and Transparent Water Data Act
+In 2016, AB 1755 (Dodd), known as the Open and Transparent Water Data Act, was approved by                              Susan Hubbard, PhD
+Governor Brown. AB 1755 requires the California Department of Water Resources (DWR) along with the                      CCST Council Member
+California Water Quality Monitoring Council, the State Water Resources Control Board (Water Board),                     UC Water Director’s Council
+and the California Department of Fish and Wildlife (CDFW) to create an open water data platform that                    Associate Lab Director for Earth and
+integrates state and federal water data by 2020 (see timeline).                                                         Environmental Sciences Area
+                                                                                                                        Lawrence Berkeley National Laboratory
+• Shared, open data: AB 1755 required these agencies to develop a range of protocols for data sharing,                  sshubbard@lbl.gov
+  documentation, and quality control as well as for public access and the promotion of open-source                      Office: 510-486-5266
+  platforms. The bill also created the Water Data Administration Fund and required recipients of state
+                                                                                                                        Expertise: Civil and environmental
+  funds for water data projects to adhere to those protocols.
+                                                                                                                        engineering; contaminant remediation,
+                                                                                                                        carbon cycling, water resources
+• State and federal data: In addition to data on water transfers and exchanges, the platform must
+  integrate data from DWR’s State Water Project reservoir operations, groundwater use and levels, urban
+                                                                                                                        Michael Kiparsky, PhD
+  water and land use, the Water Board’s data on water rights, water diversions, and water quality, CDFW’s
+                                                                                                                        Director, UC Water (UC Berkeley)
+  data on fish abundance and distribution, as well as federal data from the US Geological Survey, the US
+                                                                                                                        Director, Wheeler Water Institute,
+  Bureau of Reclamation, the US Fish and Wildlife Service, the US Forest Service, and NOAA Fisheries.
+                                                                                                                        Center for Law, Energy & the
+                                                                                                                        Environment (CLEE)
+Implementation of AB 1755                                                                                               UC Berkeley
+State agencies are working together (Figure 1) to create a federated network of data platforms, aimed at                kiparsky@berkeley.edu
+providing decision makers with data that are sufficient, accessible, useful, and used:                                  Office: 510-643-6044
+                                                                                                                        Expertise: Intersection of technical
+• Data platform: Where databases are accessed (through a data portal) and stored                                        and policy aspects of water resources
+• Federated network: A group of independent data platforms that have adopted common standards and                       management
+  practices in order to enable the compatible exchange of data from different sources (interoperability)
+• Sufficient: Data are appropriate and substantive enough to support water resources management and                     Chris McCready
+  answer water-resource related questions                                                                               Chief, Integrated Data and Analysis
+• Accessible: Data are both available for use and easily discoverable                                                   Branch, Division of Statewide Integrated
+• Useful/Used: Data are provided in common formats enabling their applied use in models, figures, or                    Water Management
+  reports and are used to support data-driven decision making and innovation                                            Department of Water Resources
+                                                                                                                        christina.mccready@water.ca.gov
+  AB 1755 Implementation Timeline                                                                                       Office: 916-651-9298
+
+  Progress to date and important deadlines for the platform development process.                                        Expertise: Integrated data and analysis;
+                                                                                                                        implementation and statewide data
+                                                     Sept. 1, 2019 - DWR                                                integration
+       Jan. 2018 - DWR
+                                                     must make available
+       released draft strategic
+                                                     existing water and                                                 Mike Myatt
+       plan and preliminary water                                                      Aug. 1, 2020 - DWR must
+                                                     ecological data held                                               Program Officer
+       data protocols for data                                                         make available on the platform
+                                                     by state agencies on                                               The Water Foundation
+       management (See DWR’s                                                           any data that relates to CA
+                                                     the platform, updated                                              mmyatt@waterfdn.org
+       Jan. 2018 Progress Report1)                                                     water supply and management
+                                                     quarterly                                                          Office: 916-414-3305
+                                                                                       held by the US Bureau of
+                                                                                       Reclamation, US Fish and         Expertise: Development and
+ Sept. 23, 2016 -
+                                                                                       Wildlife Service, NOAA,          implementation of water strategies and
+ AB 1755 approved                                                                                                       projects; budget and long-term financing
+                                                                                       US Geological Survey, and
+ by Gov. Brown                                                                                                          strategies
+                                                                                       US Forest Service, updated
+                                                                                       quarterly.
+
+            2017              2018              2019             2020               2021                                        Download this
+                                                                                                                                  Document
+ Source: Timeline modified from “Data for Water Decision Making,” UC Berkeley Wheeler Water Institute, Jan. 2018   2
+                                                                                                                                          ccst.us/expert-briefings
+     Figure 1. A visualization of the
+     implementation of AB 1755 (Dodd, 2016).
+     AB 1755 requires state agencies to produce a
+     strategic plan and protocols for data sharing,
+     quality control, etc. (blue puzzle pieces).
+     The contributions of voluntary partners and
+     engaged stakeholders (green pieces) include
+     the development of use cases, an Open Water
+     Information Architecture (OWIA), exciting data
+     challenges and test beds that harness creativity
+     and innovation in addressing California’s
+     most pressing water management issues, and
+     recommendations for long-term governance
+     and funding of the statewide integrated water
+     data platform3. These pieces, taken together,
+     are the essential components that will enable
+     California to realize the vision of useful data for
+     sound, sustainable water resource management                 Source: California Department of Water Resources, as included in their progress
+                                                                  report, “Implementing the Open and Transparent Water Data Act,” 2018.
+     through federated interoperable portals.
+
+   Ways That an Open Water Data Platform Can Enhance California Water Management:
+   In their Jan. 2018 report, Data for Water Decision Making: Informing the Implementation of California’s Open and Transparent Water Data Act
+   through Research and Engagement, the Center for Law, Energy and the Environment (CLEE) at the UC Berkeley School of Law included a list of
+   20 use cases that they developed and analyzed in collaboration with a multi-institution group of collaborators. Below is a subset of example use
+   cases and their objectives, as provided in the report:
+        • Planning a groundwater recharge project: Determine                   efficiency targets in order to visualize the changing
+           when, where, and how to recharge groundwater, and                   water conditions to enable effective decisions about
+           with what water, in order to avoid undesirable results              adaptations.
+          including declining groundwater levels.                                 • Water shortage contingency planning vulnerability
+        • Management of environmental flows to protect salmon                        assessment: Conduct a vulnerability assessment of a
+          habitat: Manage environmental flows for winter run                         rural community in the San Joaquin Valley to determine
+          Chinook Salmon in the Upper Sacramento River through                       the extent to which water shortage puts it at risk of not
+          reservoir management.                                                      having sufficient clean water supplies for household use,
+                                                                                     including consumption.
+        • Groundwater basin water budgets: Quantify inputs,
+          outputs, and changes in storage (i.e., water budget)                    • Decision support system to track and evaluate mercury
+          within the basin, at appropriate spatial and temporal                      control actions: Implement mercury control actions
+          scale and resolution, with accuracy sufficient to inform                   to maximize effectiveness of reducing exposure to
+          groundwater management and pumping.                                        humans and wildlife. Evaluate the potential of wetland
+                                                                                     restoration, salmonid population restoration, and other
+        • Wetland and riparian mitigation and monitoring:                            on-the- ground projects to increase mercury exposure
+          Provide regional estimates of the ecological integrity                     to humans and wildlife.
+          and biological conditions of wetlands, to ensure no
+          overall net loss and achieve a long-term gain in the                    • Agricultural water management plan: Improve water
+          quantity, quality, and permanence of wetlands acreage                      management and water use efficiency, as well as
+          in California.                                                             plan and prepare for periods of limited water supply
+                                                                                     and severe drought by developing an Agricultural
+        • Urban Water Efficiency Explorer tool: Provide a                            Water Management Plan (AWMP) to serve as a water
+          data visualization and scenario planning tool to help                      management planning tool within an agricultural water
+          California water retailers estimate residential water                      supplier’s service area.
+Helpful Resources:
+1. Implementing the Open and Transparent Water Data Act, DWR Progress Report, Jan. 31, 2018
+2. Data for Water Decision Making: Informing the Implementation of California’s Open and Transparent Water Data Act through Research and
+Engagement, Cantor et al., Center for Law, Energy and the Environment, UC Berkeley School of Law, Jan. 2018
+3. Governance and Funding for Open and Transparent Water Data: Implementing AB 1755, Redstone & Water Foundation, May 10, 2018
+
+
+
+
+                                                           CCST is a nonpartisan, nonprofit organization
+                                                           established in 1988 via ACR 162.
+                                                                                                                              CCSTorg
+                                                                                                                                              Social icon
+
+
+
+
+                                                           Learn more: www.ccst.us                     Follow us:                                                              @CCSTorg
+                                                                                                                                              Circle
+                                                                                                                                              Only use blue and/or white.
+
+                                                                                                                                              For more details check out our
+                                                                                                                                              Brand Guidelines.
+

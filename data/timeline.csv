@@ -1,0 +1,33 @@
+date,track,event,detail,source
+2016-09-23,Law & policy,AB 1755 signed,"Gov. Brown signs the Open and Transparent Water Data Act (Dodd), Ch. 506, Stats. 2016. No appropriation.",https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160AB1755
+2017-01-01,Law & policy,Act takes effect,Water Code Part 4.9 (§§12400–12420) in force.,
+2017-07,Governance,Partner Agency Team convenes,"Eight agencies: DWR, SWRCB, CDFW, Water Quality Monitoring Council, OPR, CNRA, GovOps, Delta Stewardship Council. Stakeholder process began July 2017.",sources/strategic_plan_2018.txt
+2018-01,Platform,Draft plan + 3 protocols,"First Progress Report with draft Strategic Plan and three minimum protocols; OWIA v2.0; UC Berkeley/CCST report with 20 use cases. (Exact day not verified.)",sources/progress_report_apr2018_baydeltalive.txt
+2018-03,Platform,CNRA Open Data portal launches,"data.cnra.ca.gov goes live; ~1,300 datasets by April.",sources/progress_report_apr2018_baydeltalive.txt
+2018-04,Law & policy,Final Strategic Plan,"Four goals, 49 actions. Federation of existing portals instead of an RFP for a new platform.",sources/strategic_plan_2018.pdf
+2018-05-09,Governance,Redstone governance report,"'Sustainable Governance and Funding for Open Water Data' recommends an external consortium.",https://www.redstonestrategy.com/publications/ca-open-water-data/
+2018-05-17,Funding,$800k for implementation,"May Revision: $450k DWR, $200k SWRCB, $150k CDFW from the Environmental License Plate Fund. Only AB 1755 line item found.",sources/senate_sub2_2018-05-17_closeout.txt
+2018-07-10,Law & policy,Water Board open data resolution,SWRCB Resolution 2018-0032 adopts an open data policy.,https://www.waterboards.ca.gov/board_decisions/adopted_orders/resolutions/2018/rs2018_0032.pdf
+2018-10-18,Platform,Safe Drinking Water Data Challenge,"First civic data challenge (OPR, West Big Data Hub).",https://www.westbigdatahub.org/water-data-challenge
+2019-03-27,Governance,Water Data Advisory Council,13-member council convened by OPR recommends a Water Data Consortium.,sources/wdac_recommendations.txt
+2019-04-05,Governance,CNRA + CalEPA back a Consortium,Agency secretaries' letter supports the Consortium and commits to federating data.ca.gov and data.cnra.ca.gov.,sources/cnra_calepa_letter_consortium.txt
+2019-04-29,Law & policy,Executive Order N-10-19,Orders a Water Resilience Portfolio.,sources/wrp_2020_final.txt
+2019-09-01,Platform,Deadline: state data,"DWR reports the requirement met; Ocean and Water Data Partners federations (~17,000 records) date from 2019.",sources/ab1755_implementation_journal_2023-2024.txt
+2019-09-27,Law & policy,SB 19 stream gages,"Dodd's follow-on bill: stream gaging plan, 'upon appropriation.'",https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201920200SB19
+2020-06-26,Governance,Water Data Consortium launches,"Nonprofit authorized by §12410(b) launches at a DWR public meeting; Tara Moran, CEO.",https://water.ca.gov/News/Events/2020/June-20/AB-1755-Online-Public-Meeting-and-Reception---Launch-of-California-Water-Data-Consortium
+2020-07-28,Law & policy,Water Resilience Portfolio,"Action 22 'Modernize water data systems': AB 1755 training, compliance, streamlined reporting, SB 19 gages, rebuild water-rights database.",sources/wrp_2020_final.txt
+2020-08-01,Platform,Deadline: federal data,"Federated USGS, NOAA, USFWS, USBR, USFS records harvested by keyword.",sources/cnra_cumulative_by_metadata_created.csv
+2020-10-13,Governance,Consortium Steering Committee,11 members including 6 state agencies.,https://insider.govtech.com/california/news/water-data-consortium-names-steering-committee.html
+2021-05,Platform,Groundwater Accounting Platform,"DWR, SWRCB, Consortium and EDF partner on an open-source platform and data standards.",https://water.ca.gov/News/News-Releases/2021/May-21/Groundwater-Accounting-Platform-and-Data-Standards
+2021-07,Funding,$30M water-rights data (UPWARD),"One-time 2021-22 funding, plus $30M in 2022-23. Outside AB 1755. (Verify against budget acts.)",
+2022-08-11,Law & policy,Water Supply Strategy,"Pillar 4: 430 new and 200 upgraded stream gages, water-rights data modernization.",sources/water_supply_strategy_2022.txt
+2022-10,Governance,Consortium joins Internet of Water Coalition,"Inaugural organizational member; California IoW pilots include the FHAB data-ingestion framework.",https://nicholasinstitute.duke.edu/articles/internet-water-coalition
+2023-02-15,Governance,'Putting Data to Work',Consortium report with six recommendations.,https://cawaterdata.org/news/new-report-putting-data-to-work/
+2024-08-01,Governance,New Consortium CEO,Robyn Grimm succeeds Tara Moran.,https://cawaterdata.org/news/robyn-grimm-new-ceo-of-the-california-water-data-consortium/
+2024-11-05,Funding,Prop 4 climate bond,"$10B bond, ~$3.8B for water resilience.",https://cawaterdata.org/news/prop-4-report-release/
+2024-11-20,Platform,Implementation Journal last updated,"DWR's AB 1755 story map, the main official status record.",sources/ab1755_implementation_journal_2023-2024.txt
+2025-10-07,Platform,CalWATRS launches,"Water Board's new water-rights system replaces eWRIMS; ~40,000 records public.",https://www.waterboards.ca.gov/press_room/press_releases/2025/pr20251023-a1-calwtrs.html
+2025-10-01,Law & policy,SB 72 Water Plan modernization,"Ch. 210/2025: 9 MAF supply target by 2040, includes improving data.",
+2026-03-19,Funding,Consortium Prop 4 report,"Bonds 'rarely fund the coordination, governance' that water data needs.",https://cawaterdata.org/news/prop-4-report-release/
+2026-06-04,Governance,10-year panel,"Consortium 'Data for Lunch': DWR, CDT, CNRA Data Center on workforce and platform gaps.",https://cawaterdata.org/events/data-for-lunch-panel-inside-californias-open-data-ecosystem/
+2026-09-30,Law & policy,AB 2728 chaptered — without AB 1755 changes?,"Introduced to amend §§12405–12415 (hatchery data, Aug 2027 deadline); chaptered as a groundwater-fees bill after Senate amendments. AB 1755 changes appear dropped. Unconfirmed.",https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2728

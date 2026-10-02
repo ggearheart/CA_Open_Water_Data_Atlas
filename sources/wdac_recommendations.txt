@@ -1,0 +1,825 @@
+Photo: Kelly M. Grow/Department of Water Resources
+
+
+
+
+Advisory Council Members
+
+       John Callaway            Delta Stewardship Council
+       Adrian Covert            Bay Area Council
+       Stuart Drown             California Government Operations Agency
+       Joaquin Esquivel         State Water Resources Control Board
+       Debbie Franco            Governor’s Office of Planning and Research
+       Kamyar Guivetchi         California Department of Water Resources
+       Maurice Hall             Environmental Defense Fund
+       Meredith Lee             West Big Data Innovation Hub
+       Joone Lopez              Moulton Niguel Water District
+       Glen Low                 Earth Genome
+       Tom Lupo                 California Department of Fish and Wildlife
+       Karen Mogus              California Water Quality Monitoring Council
+       Jack Rice*               Farmer and Rancher
+
+
+
+*Jack Rice was formerly with the California Farm Bureau Federation
+
+Note: Advisory Council affiliation is listed for reference and should not be
+construed as organizational endorsement of the contents of this report.
+March 27, 2019
+
+
+The Governor’s Office of Planning and Research thanks the Advisory Council for
+sharing their expertise, perspectives, and vision for the Water Data Consortium.
+The final version of the recommendations will be posted on the DWR AB 1755 web
+page.
+
+These recommendations will inform the process of actually forming the
+Consortium. The formation will require a group of individuals and/or organizations
+to collaborate to found the new organization. The Water Foundation convened a
+Funders’ Table in parallel with the Advisory Council. The Water Foundation will
+continue discussions with that group to develop commitments to fund the
+Consortium and will determine the best process to begin development of a
+founding board of directors and initial organizational documents. As agreed in
+the third Advisory Council meeting, there will be opportunity for the public to
+engage and to provide feedback on the initial formation of the Consortium.
+Once the Consortium is operational it will have ample opportunity for people to
+plug-in according to their interests and expertise.
+
+The Advisory Council members agreed to continue serving in an advisory
+capacity until the Consortium is up and running. They may expect to receive
+direct inquiries soliciting advice and feedback on an as needed basis and to be
+invited to group phone calls occasionally. Their advice is desired, in particular, to
+guide the development of recommendations to streamline data submission to
+the state.
+
+The contributions of the Advisory Council members and of everyone who
+participated in the process were essential to building the foundation to form the
+Consortium. Special thanks to the Water Foundation and Department of Water
+Resources for funding consultants to assist in the process of developing these
+recommendations and thanks to the consultant team: Nancy Saracino, Meghan
+Roberts, and Ariel Ambruster. The provision of meeting space by the Water
+Foundation, Moulton Niguel Water District, and East Bay Municipal Utilities District
+and the provision of food by Moulton Niguel Water District and Water Foundation
+was also much appreciated.
+
+
+
+Contact Debbie Franco, Governor’s Office of Planning and Research, for more
+information.
+Introduction
+Reliable and readily available data are fundamental to managing
+California’s water resources. The importance of data that can be easily
+deployed in water management decisions will only increase as we
+contend with the effects of climate change, aging infrastructure, a
+growing population, and other stressors. Data can expand and align
+understanding, suggest alternative actions, allow comparison between
+different options, and contribute to collaborative learning environments in
+which monitored projects yield new knowledge that informs future
+decisions—an iterative, knowledge-gathering process known as adaptive
+management. To achieve these results, data must be available and
+comprehensible, not only to decision-makers and public agencies, but
+also to the public.
+
+In 2016, during one of the most severe droughts on record, California
+passed the Open and Transparent Water Data Act, Assembly Bill 1755
+(Dodd), a call to action for a renewed approach to accessing water data
+that builds trust, supports planning, improves operations, and produces
+exponential benefits. To chart a successful path forward, the Department
+of Water Resources mobilized a team of eight partner agencies, called
+the Partner Agency Team, and quickly launched an impressive effort to
+collaborate with and learn from a broad range of data experts, data
+providers, and data consumers.
+
+The early results of this work are a Strategic Plan for Assembly Bill 1755
+released in January 2018 and finalized in April 2018 and a progress report
+released in April 2018. The Strategic Plan establishes an ambitious strategy
+to integrate and accelerate efforts to make water data useable through
+a federated open data platform by ensuring that data are machine-
+readable, easily accessible, curated, and useful to water management
+decisions. In the Strategic Plan, the Partner Agency Team recognizes that
+it will take broad collaboration inside and outside of state government to
+achieve this vision and implement AB 1755 statutory requirements, and it
+has collaborated with external partners to convene workshops and other
+opportunities for stakeholder engagement on a variety of related topics.
+
+
+
+
+                                                                  1|Page
+The Water Foundation assisted the Partner Agency Team by convening
+multiple water data experts and stakeholders and facilitating a series of
+collaborative workshops focused on data governance. The Water
+Foundation and Redstone Strategies made recommendations stemming
+from these discussions in the Governance and Funding for Open and
+Transparent Water Data, Implementing Assembly Bill 1755 (Redstone
+Report). The Partner Agency Team considered the recommendations and
+issued a state governance document, Governing California’s Open Water
+Data Infrastructure, in June 2018 (updated March 14, 2019). The State
+Governance Document contains recommendations that are closely
+aligned with those of the Redstone Report.
+
+The State Governance Document and Redstone Report both
+recommended the creation of an organization external to the state and
+referred to as the Water Data Consortium. The Governor’s Office of
+Planning and Research convened a Water Data Advisory Council for a
+focused engagement to seek further advice on how to structure an
+external organization to complement and inform the Partner Agency
+Team’s implementation of AB 1755 and facilitate a renewed approach to
+providing and using water data.
+
+This report describes the Water Data Advisory Council’s deliberations and
+recommendations. The recommendations are independent from, but
+supportive of the state’s AB 1755 Strategic Plan. The Advisory Council
+reached the recommendations summarized here, and described in more
+detail below, about a governance structure and areas of focus for a
+Water Data Consortium. The Advisory Council also provided guidance on
+other essential aspects necessary to succeed, which follow this
+introduction.
+
+The Advisory Council members were pleased to have the opportunity to
+engage in this focused effort. The Advisory Council submits this document
+setting forth its recommendations to the Governor’s Office of Planning
+and Research.
+
+
+
+
+                                                               2|Page
+    Summary of Recommendations
+    This figure, reviewed by the Advisory Council, depicts the proposed
+    governance structure for the Consortium and generally describes the
+    recommended roles of its board, committees and working groups, as well
+    as coordination with the Partner Agency Team:
+
+
+
+                                            Consortium           Responsible for organizational
+                                         Board of Directors       governance, such as overarching
+                                                                  strategy, personnel, finance and
+                                                                  procurement
+
+   Oversees substantive work of the         Steering                           Partner Agency
+    Consortium                              Committee                                Team
+   Sets priorities
+   Communicates priorities and
+    recommendations to the Partner                                            Collects and publishes
+    Agency Team                                                                open data
+   Provides direction to                                                     Maintains and expands
+    management and staff                                                       data portals
+                                                                              Adopts and implements
+                                                                               standards and protocols
+
+                                            Management
+                                             and Staff
+
+
+
+
+                                                                               Data Users
+               Technical                                                      Working Group
+             Working Group
+
+
+        Collaborates with the Data Users                             Articulates data users’ needs and
+         Working Group                                                 priorities
+        Identifies, develops, and recommends                         Facilitates communication with the
+         the functional and technical                                  technical working group and
+         requirements (standards and                                   stakeholders to address those needs
+         protocols)                                                    and priorities
+        Supports awareness and adoption of                           Provides recommendations to the
+         standards by data providers                                   Water Data Steering Committee
+                                                                       regarding sustainable funding
+                                                                       mechanism to support the
+                                                                       Consortium’s work
+
+
+
+
+                                                                                       3|Page
+The Advisory Council makes the following recommendations discussed in
+more detail in the Recommendations section below:
+
+Recommendation 1 – Organization Type
+      1.1 The Consortium should be a new nonprofit organization.
+
+Recommendation 2 – Governance Structure
+      2.1 A small Board of Directors should be responsible for
+          organizational governance such as overarching strategy,
+          personnel, finance, and procurement, with a Water Data
+          Steering Committee overseeing the substantive work of the
+          Consortium.
+
+      2.2 Working groups should be set up to augment core
+          organizational functions and provide additional venues for open
+          participation.
+
+      2.3 The Consortium’s governance structure should be designed to
+          facilitate public participation and promote transparency.
+
+      2.4 An Executive Director and staff should be hired to lead and
+          manage the work of the Consortium.
+
+Recommendation 3 – Early Activities
+      3.1 The Consortium’s early programmatic activities should reflect the
+          organization’s key objectives to demonstrate its value.
+
+      3.2 The Consortium should focus on data curation activities and
+      resource prioritization.
+
+
+
+Advisory Council Guidance
+In addition to the structural recommendations summarized above, the
+Advisory Council elected to offer overarching guidance for consideration
+as the Consortium is being created.
+
+Mission Statement
+The Advisory Council advises that a clear mission statement be developed
+for the Water Data Consortium and considered the following draft mission
+
+
+
+                                                                4|Page
+statement to accurately represent how the Advisory Council sees the
+high-level purpose of the Water Data Consortium.
+
+       The Water Data Consortium is a nonprofit organization
+       formed to support more informed decision-making in
+       California about water in the face of climate change and
+       other pressures on water resources. The Water Data
+       Consortium amplifies efforts to improve water data
+       infrastructure by creating a neutral organizational space to
+       build trust and facilitate collaboration across sectors. This
+       neutral forum also fosters entrepreneurship, innovation, and
+       scientific discovery.
+
+While there is general agreement among Advisory Council members on
+this draft mission statement, there is also an understanding that it will need
+to evolve as the founders embark on forming the organization to more
+precisely reflect the function of the Consortium.
+
+The Advisory Council also agreed that the Water Data Consortium’s early
+programmatic activities should be defined from the onset to inform
+governance structure decisions. These activities are incorporated into
+Recommendation 3.
+
+Guiding Principles
+At its second meeting, the Water Data Advisory Council validated its
+recommendations using the following guiding principles and advises that
+these principles inform creation of the Consortium.
+
+The Consortium does:
+      Provide an open and transparent foundation to understand
+       California’s water system
+      Foster trust through public engagement
+      Build alignment around use of data to inform decision-making
+      Complement but does not duplicate related efforts
+      Provide sustainable value.
+
+The Consortium is not:
+      A regulatory body
+      A taxing authority
+      A repository for data
+
+
+                                                                   5|Page
+      Responsible for setting water policy
+      Responsible for coordination across state entities.
+
+Conditions Critical to Success
+The Advisory Council identified actions it considers critical to the Water
+Data Consortium’s success and to designing a governance structure to
+accomplish its mission.
+
+          Define clear goals and objectives for the Consortium and spell
+           out its role and authority.
+
+          Design the structure in a manner that avoids duplication of other
+           efforts and ensures alignment with ongoing work by state
+           agencies to implement AB 1755.
+
+          Create early performance metrics, including those regarding
+           impact, to drive the focus of the organization.
+
+The Advisory Council also discussed and advises that the following
+circumstances will be evidence of success.
+
+          Diverse stakeholders recognize and use the Consortium as a
+           neutral space for active and sustained collaboration around the
+           role of data in water and water-related decisions.
+
+          Water agencies move forward with more streamlined reporting
+           processes for water users and regulated entities.
+
+          Best-in-class open data practices and tools are integrated into
+           the state’s open water data systems and processes.
+
+          The public has easily accessible and transparent ways to
+           understand and influence the Consortium’s work.
+
+          Open water data is used in critical water resource management
+           decisions made by federal, state, and local government entities.
+
+          The Consortium creates and implements a plan for sustainable
+           funding.
+
+          Partnerships form around water data, including open water
+           data, and deliver better services or outcomes for Californians.
+
+
+                                                                  6|Page
+Alignment
+The Advisory Council suggests that the Water Data Consortium should be
+structured to align with and complement the work of the state agencies
+responsible for implementing AB 1755, providing a collaborative venue
+that can be used to amplify the work of the state agencies.
+
+The Partner Agencies agree that the highest benefits of open data
+infrastructure can only be achieved if there is broad support and
+investment in the infrastructure. The State Governance Document asserts
+that “[a] shared governance space will provide the organizational
+infrastructure to support broad engagement, investment, adoption, and
+persistence of open data infrastructure” (p. 2). The State Governance
+Document agreed with the Redstone Report that an external consortium,
+working in concert with an internal state agency governing body, could
+provide the necessary organizational infrastructure to implement AB 1755.
+
+The Advisory Council advises use of The State Governance Document
+table, which follows, to guide development of the working relationship
+between the Water Data Consortium and the Partner Agency Team.
+
+
+
+
+                                                               7|Page
+          Consortium-Partner Agency Team Relationship
+                              Consortium                                        Partner Agency Team
+        Gather feedback from stakeholders and                 Collect, federate, and make available water and
+        make recommendations to improve data                  ecosystem data.
+        collection and publication.
+        Gather feedback from stakeholders and make            Maintain and expand federation of existing and future
+        recommendations to improve federation of              data portals.
+        existing and new data portals.
+        Create a venue for developing agreements on           Adopt and implement standards and protocols.
+        standards and protocols encouraging voluntary
+        adoption by organizations external to the
+        state.
+        Solicit input on and develop recommendations to       Consider and act upon recommendations, as
+        improve the process of data submission to the         appropriate.
+        state.
+        Develop a pathway to solicit and leverage external    Submit budget change proposals using existing state
+        (to the state) resources.                             budget processes to assure adequate state funding for
+Tasks                                                         state responsibilities related to AB 1755.
+        Promote innovation and lay the groundwork for         Consider new opportunities developed by the
+        pursuit of new opportunities.                         Consortium and implement as appropriate and
+                                                              feasible.
+        Build trust with data producers, providers, users,    Build trust with data producers, providers, users, and
+        and consumers.                                        consumers.
+        Create a venue for stakeholders that includes         Evaluate progress on the implementation of the open
+        state agencies to identify shared benchmarks and      water data infrastructure towards achieving
+        performance measures to ensure that water and         identified shared benchmarks and performance
+        ecological data are sufficient, accessible, useful,   measures.
+        and used.
+        Develop, collect, and recommend use cases to          Prioritize data transformation to serve use cases, as
+        increase effective decision making.                   appropriate and feasible.
+        Recommend strategic direction for data                Collaborate with the Consortium on updates to the AB
+        standards, federation, and operation and              1755 Strategic Plan, as needed to support water
+        maintenance of the data platform.                     management decision-making, and implement
+                                                              strategic direction.
+
+          Source: State Governance Document: Governing California’s Open Water Data
+          Infrastructure – DRAFT, v. 3/14/19
+
+
+
+
+                                                                                           8|Page
+Assessment
+The Advisory Council encourages the Consortium to create metrics
+aligned with objectives so that the organization’s performance and
+achievements can be tracked and evaluated over time. Stakeholders
+should have a role in establishing the metrics and how they will be
+evaluated. The Advisory Council also recommends that after a set period
+of time (three years may be a reasonable target), the value of the
+Consortium should be evaluated in an open and transparent process,
+and a decision made by the Consortium’s governing bodies (described
+below) whether the organization, as structured, provides benefit, and if it
+should be restructured or phased out. A third-party could assist with this
+assessment. This is described further below, under Recommendation 1.1.
+
+
+
+Recommendations
+The Advisory Council recommends that a free-standing Water Data
+Consortium be created with a board, staff, steering committee, and
+working groups.
+
+Organization Type
+
+Recommendation 1.1: The Consortium should be a new nonprofit organization.
+There is agreement among the Advisory Council that the Consortium
+should ultimately be a free-standing, non-profit organization. Advisory
+Council members identified the following reasons as supporting the
+recommendation that a free-standing organization is the appropriate
+structure.
+
+      The Consortium will need to be nimble and flexible to adapt to new
+       opportunities and to be on the leading edge of innovation.
+
+      The Consortium’s success relies on its ability to establish itself as a
+       neutral space for collaboration.
+
+The Advisory Council reached general agreement that setting up the
+Water Data Consortium as an independent organization initially, rather
+than using an incubation model, was the preferred approach, since the
+goal is to ultimately set up an independent organization.
+
+
+
+
+                                                                      9|Page
+During its deliberations, the Advisory Council did consider whether to
+initially incubate the Consortium within academia or an existing
+organization. Advisory Council members identified the following possible
+benefits of incubation.
+
+      Incubation allows for further development of the value proposition
+       and a better understanding of what the organization will need to
+       do.
+
+      Incubation may make start-up easier by providing access to the
+       existing organization’s resources and organizational structure.
+
+The Advisory Council identified the following reasons why the incubation
+model may not work for the Water Data Consortium.
+
+      There is less need for an incubator to provide initial organizational
+       infrastructure since the current goal is to obtain financing for the first
+       two or three years of operation prior to formation.
+
+      Transitioning out of the incubating entity could become
+       complicated.
+
+      The Consortium would be associated with the reputation and
+       agenda of the incubating entity, which could hamper the
+       Consortium’s ability to be a neutral place.
+
+      Overhead charged by the incubating entity could be costly.
+
+The Advisory Council discussed the value of building in a planned review
+period, requiring a careful assessment of the value of the Water Data
+Consortium and whether its continuation is beneficial. This automatic
+review could be conducted by the governing bodies, in consultation with
+stakeholders and possibly with the assistance of an independent third
+party. The Water Data Consortium could be dissolved or restructured if it
+completes its mission, becomes obsolete because of shifts in other
+organizations or agencies, or no longer provides sufficient value.
+
+
+
+
+                                                                    10 | P a g e
+Board, Committee, and Working Group Structure
+
+Recommendation 2.1: A small Board of Directors should be responsible for
+organizational governance, such as overarching strategy, personnel, finance,
+and procurement, with a Water Data Steering Committee overseeing the
+substantive work of the Consortium.
+The Advisory Council recommends a Board of Directors of five to seven
+individuals responsible for organizational governance, such as
+overarching strategy, personnel, finance, and procurement. The Advisory
+Council recommends the Board of Directors serve as a public forum to set
+Consortium priorities and actions, resolve disagreements, and act as
+ambassadors for the Consortium.
+
+The Advisory Council recommends that potential members of the Board
+of Directors demonstrate:
+
+      Expertise in areas essential to organizational health, including
+       leadership, communications, finance, and fundraising
+
+      Representation of state government, local agencies, NGOs, and
+       academia
+
+      Influence and professional recognition in areas related to water
+       and ecological data
+
+      Enthusiasm for expanding the use of water and ecological data to
+       inform decision-making.
+
+The Advisory Council recommends a Steering Committee of nine to
+eleven individuals who will guide the substantive activities of the
+Consortium. This includes coordinating with the Board of Directors to
+establish goals and performance metrics. In addition, the Steering
+Committee should coordinate and direct the activities of the technical
+and data users working groups, including establishing and dissolving
+working groups as needed and assuring alignment across all working
+group activities. The Steering Committee should ensure that its work is
+aligned with those of the state agencies and not duplicating efforts.
+
+
+
+
+                                                                   11 | P a g e
+The Steering Committee should also provide a periodic report to the
+Board of Directors and, in collaboration with staff, solicit the assistance of
+the Board of Directors as needed to manage conflict, exert influence,
+and provide feedback on programmatic strategies.
+
+The Advisory Council recommends that potential members of the Steering
+Committee demonstrate:
+
+      Representation of state and local agencies, regional planning
+       entities, NGOs, and academia
+
+      Technical expertise, including data science and water expertise
+
+      Balance of data providers, data users, decision-makers, and
+       funders.
+
+Given the state agencies’ role and authority to implement AB 1755, the
+Advisory Council recommends that a majority of the representatives on
+the Steering Committee be state agency representatives. Finally, to
+ensure the distinction between the Steering Committee, Board and
+Working groups is clear, the Advisory Council recommends that clear
+descriptions be established for the roles and responsibilities, chain of
+command and leadership within the Consortium’s structure.
+
+Recommendation 2.2: Working groups should be set up to augment core
+organizational functions and provide additional venues for open participation.
+The Advisory Council recommends the Consortium establish two standing
+working groups—the Data Users Working Group and the Technical
+Working Group. Recognizing the crucial importance of communications
+and finance, the Advisory Council recommends that these areas receive
+adequate resources and attention, either as part of the two standing
+working groups or as sub-groups.
+
+The Steering Committee, Data Users Working Group, and Technical
+Working Group should serve as the main venues for engagement,
+collaboration, and testing of new ideas, concepts, and strategies. The
+working groups should provide regular reports to the Steering Committee
+and look to the Steering Committee for guidance on how to align efforts
+across working groups. Working groups should also consult with the
+Steering Committee in instances when stakeholder interests may conflict
+on priorities or decisions.
+
+                                                                    12 | P a g e
+The Advisory Council recommends working groups designate
+representatives responsible for coordinating efforts and making
+recommendations to the Steering Committee. The Advisory Council
+recommends that the Steering Committee set a clear charge, scope of
+work, and expectations for both working groups, and establish a process
+for appointing representatives to the working groups. State agency
+participation in both working groups will be important to their success. The
+Advisory Council also recommends that the Steering Committee assign
+Consortium staff to support the working groups to ensure continuity.
+
+The Data Users Working Group should articulate data user needs and
+priorities, facilitate communication with the technical working group and
+stakeholders to address those needs and priorities, and provide
+recommendations to the Steering Committee. While not an exhaustive list,
+the Advisory Council recommends considering the following:
+
+      Representation of federal, tribal, state and local agencies, regional
+       planning entities, NGOs (with a focus on conservation and
+       environmental justice), and academia
+
+      Agricultural and urban water interests
+
+      Communications and finance experts
+
+      Data providers and data users.
+
+The Technical Working Group should identify, develop, and recommend
+the functional and technical data requirements (standards, protocols,
+and standard operating procedures) for the federated open water data
+platform, and support awareness and adoption of standards by data
+providers. Again, without foreclosing other options, the Advisory Council
+recommends the following be considered in selecting members to serve
+on the Technical Working Group:
+
+      Representation of federal, tribal, state and local agencies, regional
+       planning entities, NGOs, and academia
+
+      Technical expertise in data and library science, information
+       technology and architecture, programming and graphic design
+
+      Data providers and data users.
+
+
+
+                                                                 13 | P a g e
+Recommendation 2.3: The Consortium’s governance structure should be
+designed to facilitate public participation and provide transparency.
+The Advisory Council discussed the importance of a robust public
+engagement framework to the Water Data Consortium’s governance.
+The Consortium should consider models for transparent operations and
+decision-making discussed during the course of the Advisory Council’s
+three meetings and incorporate best practices from those models to
+facilitate effective public engagement in the Consortium’s activities and
+governance.
+
+Recommendation 2.4: An executive director and support staff should be hired to
+lead and manage the work of the Consortium.
+The Advisory Council also recommends that an Executive Director familiar
+with data, California water policy, and strong organizational and
+engagement skills lead the Consortium staff. Programmatic staff will also
+be needed to jump-start the working groups and provide ongoing
+support. Staff should act as liaisons between the Executive Director,
+working groups, Steering Committee, and Board of Directors, and they
+should serve as liaisons between the Consortium and the Partner Agency
+Team.
+
+Early Programmatic Activities
+
+Recommendation 3.1: The Consortium’s early programmatic activities should
+reflect the organization’s key objectives to demonstrate its value.
+To demonstrate the Consortium’s value, the Advisory Council
+recommends initial Consortium activities be focused on both core
+functions and an initiative to streamline data reporting to the state.
+
+At its first meeting, the Advisory Council discussed the benefits and value
+that a water data consortium could bring, including collaborative
+procurement to reduce costs, focused analysis and decision-making
+support, and working with data providers to establish protocols and
+standards for the federated platform. In its second and third meetings, the
+Advisory Council specifically focused on two key areas of initial
+Consortium activities, agreeing that the Consortium should provide
+recommendations related to the design and operation of the state’s
+federated water data platform.
+
+
+
+
+                                                                  14 | P a g e
+Specifically, the Advisory Council recommends providing advice on the
+following topics:
+
+      Priority water and ecological data sources to be accessible from
+       the federated data platform
+
+      Protocols for data standardization and quality control
+
+      Data access points that support display of data in an intuitive and
+       useable format.
+
+In addition, the Advisory Council felt that the Consortium should develop
+and recommend protocols for streamlining data that are reported to
+state agencies to reduce reporting redundancies and increase
+transparency and efficiency. Primary tasks might include:
+
+      Build from and expand existing assessments of water data reporting
+       requirements
+
+      Identify reporting redundancies
+
+      Advise on the development of a federated data platform that
+       allows state and federal agencies to access required data in an
+       efficient manner, without requiring the reporter to submit the data
+       multiple times
+
+      Provide recommendations for new state agency processes and
+       protocols to access required data.
+
+
+
+
+                                                                15 | P a g e
+Recommendation 3.2: The Consortium should focus on data curation activities
+and resource prioritization.
+In forming their recommendation for the Consortium’s role in early
+programmatic activities, the Advisory Council discussed the spectrum
+from data curation to derived analytics, illustrated in the diagram below.
+Advisory Council members agreed that the role of the Consortium should
+be to support curation of data at the “harmonized” point of the spectrum,
+and they recognized that certain use cases may require the data be
+available in different forms. The Advisory Council discussed that the
+Consortium may demonstrate value by applying data and demonstrating
+how it informs decision-making. The Consortium should do so only after
+deliberation and consideration of the political implications of any use
+case it decides to demonstrate.
+
+
+
+
+Next Steps
+The Advisory Council provides these recommendations to the Governor’s
+Office of Planning and Research and expresses its appreciation for the
+opportunity to engage in this effort. The Advisory Council recommends
+that steps be taken to establish a Water Data Consortium within the first six
+months of 2019, with the above general structure and guiding principles
+leading its activities.
+
+
+
+
+                                                                 16 | P a g e
+                 Appendix A
+
+Water Data Advisory Council Meeting Highlights
+
+
+
+
+                                         17 | P a g e
+Water Data Advisory Council Meetings
+The Water Data Advisory Council met during three focused, publicly-
+noticed meetings in late 2018 and early 2019 to evaluate a proposed
+governance framework for a Water Data Consortium.
+
+Meeting Highlights
+
+   Meeting 1 – November 15, 2018
+
+         Validated the concept of the Water Data Consortium as
+          envisioned in the Water Foundation and draft State Agency
+          reports
+         Agreed upon the fundamental purpose of improving
+          accessibility and utility of data for better informed decision-
+          making
+         Discussed funding requirements, as well as value the Consortium
+          could provide
+         Conducted preliminary review of governance structures and
+          organizations that may provide successful models on which to
+          pattern governance of the Consortium
+   Meeting 2 – January 16, 2019
+
+         Agreed upon the guiding principles for the Consortium and what
+          the Consortium is not intended to become
+         Reviewed the proposal for streamlining data submission as an
+          initial substantive focus for the Consortium
+         Evaluated options of where best to house the Consortium
+         Assessed attributes of successful governance models
+   Meeting 3 – February 15, 2019
+
+         Reviewed and agreed upon Advisory Council recommendations
+         Provided input on composition of the Governing Board, Water
+          Data Steering Committee, as well as the Data Users and
+          Technical working groups
+         Discussed the spectrum of data curation to data analytics, and
+          the role the Water Data Consortium may play along that
+          spectrum
+
+
+
+                                                                   18 | P a g e
+Appendix B
+
+References
+
+
+
+
+             19 | P a g e
+References
+Assembly Bill 1755 – The Open and Transparent Water Data Act
+
+Water Foundation Report: Governance and Funding for Open and Transparent Water
+Data, Implementing Assembly Bill 1755, published by Redstone
+
+State Agency Report: Governing California’s Open Water Data Infrastructure – DRAFT, v.
+6/28/18
+
+Strategic Plan for Assembly Bill 1755, the Open and Transparent Water Data Act, April
+2018
+
+Governance Examples
+California ISO
+
+       Board of Governors
+
+       Technical Advisory Committee
+
+       Energy Imbalance Market Governing Body
+
+       Reliability Coordinator Oversight Committee
+
+       Public Participation Model
+
+International Organization for Standardization
+
+Internet Engineering Task Force
+
+       IETF Administration LLC
+
+       Internet Society
+
+       Internet Architecture Board
+
+       Internet Engineering Steering Group
+
+       Working Groups
+
+Open Geospatial Consortium
+
+Southern California Coastal Water Research Project
+
+       Southern California Coast Water Research Project Commission
+
+       Technical Advisory Group
+
+
+
+
+                                                                           20 | P a g e
+

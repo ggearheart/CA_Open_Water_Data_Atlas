@@ -3,6 +3,10 @@ const PLATES = [
   ["index.html", "Atlas"],
   ["plates/statute.html", "I · The Law"],
   ["plates/plan.html", "II · The Plan"],
+  ["plates/timeline.html", "III · Timeline"],
+  ["plates/scorecard.html", "IV · Scorecard"],
+  ["plates/ecosystem.html", "V · Ecosystem"],
+  ["plates/today.html", "VI · Today"],
 ];
 
 const ROOT = document.documentElement.dataset.root || "";
