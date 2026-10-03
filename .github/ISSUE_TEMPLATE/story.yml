@@ -1,0 +1,73 @@
+name: Suggest a CA open water data story
+description: Tell us about a decision, tool, discovery or gap involving California's open water data.
+title: "[Story] "
+labels: ["story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the **California Open Water Data Atlas**. Good stories show open water data *being used*: a decision it informed, a tool built on it, a question it answered, or a gap that got in the way.
+
+        Suggestions are public. An editor reviews each one and may edit it for length before adding it to the [Stories page](https://ggearheart.github.io/CA_Open_Water_Data_Atlas/plates/stories.html).
+  - type: input
+    id: title
+    attributes:
+      label: Story title
+      placeholder: "e.g., How a county used groundwater level data to site new wells"
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme
+      options:
+        - Groundwater
+        - Surface water & streamflow
+        - Water quality
+        - Drinking water
+        - Water rights & use
+        - Land & water use
+        - Drought
+        - Fish, wildlife & habitat
+        - Public health
+        - Tools & platforms
+        - Civic engagement
+        - Gaps
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: story
+    attributes:
+      label: The story
+      description: What happened, who was involved, and what difference the data made (or what was missing). A few sentences is plenty.
+    validations:
+      required: true
+  - type: textarea
+    id: datasets
+    attributes:
+      label: Datasets involved
+      description: Links to the datasets, ideally on data.ca.gov or data.cnra.ca.gov. One per line.
+      placeholder: https://data.ca.gov/dataset/...
+  - type: textarea
+    id: sources
+    attributes:
+      label: Links and sources
+      description: Reports, news stories, apps, dashboards or presentations that document the story.
+  - type: input
+    id: year
+    attributes:
+      label: Year
+      placeholder: "2024"
+  - type: input
+    id: credit
+    attributes:
+      label: Credit
+      description: Name or organization to credit on the site. Leave blank to be credited as "Community contributor."
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Permission
+      options:
+        - label: I'm OK with this story being published on the atlas (edited for length) under the credit above.
+          required: true

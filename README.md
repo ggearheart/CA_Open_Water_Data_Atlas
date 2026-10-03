@@ -8,6 +8,7 @@ A multi-page atlas of California's Open and Transparent Water Data Act (AB 1755,
 
 - `index.html` — atlas landing page
 - `plates/` — one page per plate (I The Law, II The Plan, III Timeline, IV Scorecard, V Ecosystem, VI Today, VII Dashboard)
+- `plates/stories.html` + `data/stories.csv` — curated CA open water data stories; suggestions arrive as GitHub issues via `.github/ISSUE_TEMPLATE/story.yml` (label `story`), and accepted ones become a CSV row
 - `data/strategic_actions.csv` — the plan's 49 strategic actions; the scorecard's source of truth
 - `data/water_datasets.csv` — every dataset in the Water group on data.ca.gov and data.cnra.ca.gov, with publisher, topic, page views and its federated twin on the other portal (Plate VII)
 - `scripts/build_water_dashboard_data.py` — rebuilds that CSV from the two CKAN APIs (stdlib Python, ~4 min)

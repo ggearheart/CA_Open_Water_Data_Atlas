@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stories · CA Open Water Data Atlas</title>
+<link rel="stylesheet" href="../assets/atlas.css">
+<style>
+  .cta { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; margin: 24px 0; }
+  .cta p { margin: 0; }
+  .btn { display: inline-block; font: inherit; font-weight: 600; font-size: 15px; padding: 10px 18px; border-radius: 8px; background: var(--accent); color: var(--surface); text-decoration: none; }
+  .btn:hover { filter: brightness(1.1); }
+  .btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 16px; }
+  .chips button { font: inherit; font-size: 13px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); cursor: pointer; }
+  .chips button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-wash); }
+  .stories { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .story { display: flex; flex-direction: column; gap: 8px; }
+  .story .meta { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .story h3 { margin: 0; font-size: 18px; line-height: 1.3; }
+  .story p { margin: 0; font-size: 15px; }
+  .story .angle { font-size: 14px; color: var(--ink-2); border-left: 3px solid var(--accent); padding-left: 10px; }
+  .story ul { margin: 0; padding-left: 18px; font-size: 14px; }
+  .story .credit { margin-top: auto; padding-top: 6px; font-size: 13px; color: var(--muted); }
+  .how ol { padding-left: 20px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="plate-no">Stories</div>
+  <h1>Stories: California open water data at work</h1>
+  <p class="lede">Statutes and scorecards describe the system. Stories show what it's for: a decision made, a tool built, a question answered, or a gap that got in the way. These are seed stories from the atlas editors. Add yours.</p>
+
+  <div class="card cta">
+    <p><b>Know a California open water data story?</b><br><span class="src" style="font-size:14px">Agency staff, researchers, journalists, community groups and technologists all welcome.</span></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" href="https://github.com/ggearheart/CA_Open_Water_Data_Atlas/issues/new?template=story.yml">Suggest a story</a>
+      <a class="btn ghost" href="https://github.com/ggearheart/CA_Open_Water_Data_Atlas/issues?q=is%3Aissue+label%3Astory">See suggestions</a>
+    </div>
+  </div>
+
+  <div class="chips" id="themes"></div>
+  <div class="stories" id="stories"></div>
+
+  <h2>How submissions work</h2>
+  <div class="how">
+    <ol>
+      <li><b>Suggest</b>: the button opens a short form on GitHub (a free GitHub account is required). It asks for a title, theme, the story, dataset links and sources.</li>
+      <li><b>Review</b>: an editor checks the links and sources, and may follow up in the discussion thread.</li>
+      <li><b>Publish</b>: accepted stories are added to <a href="../data/stories.csv">stories.csv</a> and appear here, credited as you choose.</li>
+    </ol>
+    <p class="src">Suggestions are public. Please don't include personal contact details or non-public information.</p>
+  </div>
+</main>
+<script src="../assets/atlas.js"></script>
+<script>
+(async () => {
+  const stories = await loadCSV("data/stories.csv");
+  // "label|url ; label|url" -> links; relative urls are atlas pages.
+  const links = s => s.split(";").map(x => x.trim()).filter(Boolean).map(x => {
+    const [label, url] = x.split("|").map(v => v.trim());
+    const href = /^https?:/.test(url) ? url : ROOT + url;
+    return `<li><a href="${esc(href)}">${esc(label)}</a></li>`;
+  }).join("");
+  const themes = ["All", ...new Set(stories.map(s => s.theme))];
+  const host = document.getElementById("stories"), chips = document.getElementById("themes");
+  chips.innerHTML = themes.map((t, i) => `<button data-t="${esc(t)}" aria-pressed="${i === 0}">${esc(t)}${i ? "" : " " + stories.length}</button>`).join("");
+
+  function render(theme) {
+    host.innerHTML = stories.filter(s => theme === "All" || s.theme === theme).map(s => `
+      <article class="card story" id="${esc(s.id)}">
+        <div class="meta">${esc(s.theme)} · ${esc(s.year)}</div>
+        <h3>${esc(s.title)}</h3>
+        <p>${esc(s.summary)}</p>
+        ${s.ab1755_angle ? `<p class="angle"><b>AB 1755 angle:</b> ${esc(s.ab1755_angle)}</p>` : ""}
+        ${s.datasets ? `<div><div class="src">Datasets</div><ul>${links(s.datasets)}</ul></div>` : ""}
+        ${s.sources ? `<div><div class="src">Sources</div><ul>${links(s.sources)}</ul></div>` : ""}
+        <div class="credit">Contributed by ${esc(s.contributed_by || "Community contributor")}</div>
+      </article>`).join("");
+  }
+  chips.addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    chips.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    render(b.dataset.t);
+  });
+  render("All");
+  if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
+})();
+</script>
+</body>
+</html>
